@@ -1,0 +1,16 @@
+%html
+  %head
+    %title RVMFW - Hidden Rubies for RVM
+    %link{:href => '/stylesheets/screen.css', :media => 'screen, projection', :type => 'text/css', :rel => 'stylesheet'}
+    %link{:href => '/stylesheets/print.css', :media => 'print', :type => 'text/css', :rel => 'stylesheet'}
+    /[if lt IE 8]
+      %link{:href => '/stylesheets/ie.css', :media => 'screen, projection', :type => 'text/css', :rel => 'stylesheet'}
+    %link{:href => '/stylesheets/print.css', :media => 'print', :type => 'text/css', :rel => 'stylesheet'}
+    %link{:href => '/stylesheets/typography.css', :media => 'screen, projection', :type => 'text/css', :rel => 'stylesheet'}
+    %link{:href => '/stylesheets/forms.css', :media => 'screen, projection', :type => 'text/css', :rel => 'stylesheet'}
+    %link{:href => '/stylesheets/application.css', :media => 'all', :type => 'text/css', :rel => 'stylesheet'}
+  %body
+    %h1.title RVM Rubies Firewall Edition
+    %h2.description Exposing hidden Rubies for Firewalled RVM's
+    .container
+      = yield
