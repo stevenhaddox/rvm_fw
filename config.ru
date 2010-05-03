@@ -8,4 +8,4 @@ disable :run
 
 require 'application'
 
-run Sinatra.application
+run Sinatra::Application
