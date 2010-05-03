@@ -1,4 +1,4 @@
-# hello_world.rb
+# rvm_fw main application
 require 'rubygems'
 require 'sinatra'
 
@@ -28,7 +28,7 @@ get '/files' do
 end
 
 get '/rubies/*' do
-  # matches /download/path/to/file.tgz
-  file = File.join(Dir.pwd, '/rubies', params["splat"]) # => ["filename.ext"]
+  # matches /rubies/filename.tar.gz, /rubies/filename.zip, etc.
+  file = File.join(@RUBIES_PATH, params["splat"]) # => ["filename.ext"]
   send_file(file, :disposition => 'attachment', :filename => File.basename(file))
 end
