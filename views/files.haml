@@ -1,0 +1,5 @@
+%ul#files
+  - Dir.entries(@RUBIES_PATH).each do |file|
+    - next if @IGNORED_FILES.include?(file)
+    %li 
+      %a{:href => "/rubies/#{file}"} #{file}
