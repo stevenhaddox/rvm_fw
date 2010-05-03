@@ -5,21 +5,20 @@
   %a{:href=>'http://rvm.beginrescueend.com/'} http://rvm.beginrescueend.com
 %p In short, RVM allows you to install and manage multiple Ruby versions side by side on the same system easily. It also provides a means to install "gemsets" allowing you to group your gems together by application, Rails version, etc.
 
-%h2 What is RVM FW (Firewall)?
+%h2 What is RVM::FW (Firewall)?
 
 %p 
-  RVM FW is a simple Sinatra application that run on a Phusion enabled webserver (but the config.ru can be easily modified for Mongrel, Thin, etc. to fit your needs).  This index page provides a brief explanation of how to use RVM in case you can't access the main RVM page and also explains how to replace your ~/.rvm/config/db file with the dynamically generated db file from RVM FW which lists _only_ the available Ruby installs in this application.
+  RVM::FW is a simple Sinatra application that run on a Phusion enabled webserver (but the config.ru can be easily modified for Mongrel, Thin, etc. to fit your needs).  This index page provides a brief explanation of how to use RVM in case you can't access the main RVM page and also explains how to replace your ~/.rvm/config/db file with the dynamically generated db file from RVM:FW which lists _only_ the available Ruby installs in this application.
 
-%h2 What inspired RVM FW?
+%h2 What inspired RVM::FW?
 
 %p
   Many corporate environments restrict access to the outside web in order to limit the risk of downloading viruses or causing damage throughout the network unintentionally.  A lot of these places require special permission to download and install software.  I work in one of these places, but I still wanted to be able to use the same RVM setup I have at home at work (where I need it the most!)  In turn I dug around and decided the easiest way to use RVM without outside internet access was modifying RVM's ~/.rvm/config/db file to point to an internal website that had many of the same ruby version readily available to install.
 
-%h2 How do I use RVM FW Rubies?
+%h2 How do I use RVM::FW Rubies?
 
 %p
-  This is the easiest part.  Once you've installed RVM FW and have it running on a publicly accessible web server merely download the
+  This is the easiest part.  Once you've installed RVM::FW and have it running on a publicly accessible web server merely download the
   %a{:href => '/db'}customized database file
-  and replace your ~/.rvm/config/db with the new one.  Then you should be able to install any of the available Rubies within RVM FW the same way you would at home.
-  
-  
+  and replace your ~/.rvm/config/db with the new one.  Then you should be able to install any of the available Rubies within RVM::FW the same way you would at home.
+
