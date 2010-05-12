@@ -21,7 +21,7 @@ end
 
 get '/db' do
   content_type 'text/html', :charset => 'utf-8'
-  
+  "I'll eventually return a customized ~/.rvm/config/user file"
 end
 
 get '/files' do
