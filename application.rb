@@ -20,7 +20,8 @@ get '/' do
 end
 
 get '/db' do
-  "I'll eventually return a ~/.rvm/config/db syntax file..."
+  content_type 'text/html', :charset => 'utf-8'
+  
 end
 
 get '/files' do
@@ -31,4 +32,8 @@ get '/rubies/*' do
   # matches /rubies/filename.tar.gz, /rubies/filename.zip, etc.
   file = File.join(@RUBIES_PATH, params["splat"]) # => ["filename.ext"]
   send_file(file, :disposition => 'attachment', :filename => File.basename(file))
+end
+
+not_found do
+  haml :error_404
 end
