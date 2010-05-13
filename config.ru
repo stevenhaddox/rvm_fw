@@ -7,5 +7,4 @@ set :env,  :development #:production
 disable :run
 
 require 'application'
-
 run Sinatra::Application
