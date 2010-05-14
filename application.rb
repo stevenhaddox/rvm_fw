@@ -13,8 +13,6 @@ before do
     "ironruby-1.0.zip"                      => "7a92888837b3507355ed391dbfc0ab83",
     "jruby-bin-1.4.0.tar.gz"                => "f37322c18e9134e91e064aebb4baa4c7",
     "jruby-bin-1.5.0.RC1.tar.gz"            => "47b4ca2a21659d36a2775ade0a2534c4",
-    "jruby-src-1.4.0.tar.gz"                => "a363b6c2ea24f0ef8df478c93ac8cc59",
-    "jruby-src-1.5.0.RC1.tar.gz"            => "fc065b65bfdadeae8b7864fec8a2f390",
     "macruby_nightly-latest.pkg"            => "88327b5f4c5b4041a2f5e0f51e769bff",
     "MacRuby 0.5.zip"                       => "675454a8c7bc19d606d90a726e08427c",
     "MagLev-23275-0.tar.gz"                 => "7591f9f3931f1a352f40e61834c6a063",
