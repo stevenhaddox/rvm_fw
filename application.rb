@@ -41,8 +41,13 @@ get '/' do
 end
 
 get '/db' do
-  content_type 'text/html', :charset => 'utf-8'
-  "I'll eventually return a customized ~/.rvm/config/user file"
+  content_type 'text/plain', :charset => 'utf-8'
+  File.read(APP_ROOT+"/views/db.txt")
+end
+
+get '/md5' do
+  content_type 'text/plain', :charset => 'utf-8'
+  "I'll eventually return a customized ~/.rvm/config/md5 file if it is needed..."
 end
 
 get '/files' do
