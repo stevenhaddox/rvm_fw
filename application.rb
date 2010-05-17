@@ -16,8 +16,7 @@ before do
     "macruby_nightly-latest.pkg"            => "88327b5f4c5b4041a2f5e0f51e769bff",
     "MacRuby 0.5.zip"                       => "675454a8c7bc19d606d90a726e08427c",
     "MagLev-23275-0.tar.gz"                 => "7591f9f3931f1a352f40e61834c6a063",
-    "rubinius-1.0.0-rc3-20100216.tar.gz"    => "c72d060c574cd1214ec3a9560a64c4fe",
-    "rubinius-1.0.0-rc4-20100331.tar.gz"    => "7daac881eb5916458a60affe16bcfbbf",
+    "rubinius-1.0.0-20100514.tar.gz"        => "b05f4e791d3712c5a50b3d210dac6eb0",
     "ruby-1.8.5-p231.tar.gz"                => "e900cf225d55414bffe878f00a85807c",
     "ruby-1.8.6-p399.tar.gz"                => "c3d16cdd3c1ee8f3b7d1c399d4884e33",
     "ruby-1.8.7-p249.tar.gz"                => "d7db7763cffad279952eb7e9bbfc221c",
@@ -68,3 +67,9 @@ end
 not_found do
   haml :error_404
 end
+
+
+# External download paths
+################################################
+#jruby
+#jruby_url + '/1.4.0/jruby-bin-1.4.0.tar.gz'
