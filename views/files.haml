@@ -4,9 +4,9 @@
       %h3 Ruby Filename
     %div.md5.span-6
       %h3 MD5 Hash
-  - @rubies.each do |ruby|
+  - @rubies.each do |filename, params|
     %li.file
       %div.filename.span-6
-        %a{:href => "/rubies/#{ruby[:name]}"} #{ruby[:name]}
+        %a{:href => "/rubies/#{params[:path_prefix]}#{filename}"} #{filename}
       %div.md5.span-6
-        #{MD5_HASHES["#{ruby[:name]}"]}
+        #{params[:md5]}
