@@ -45,7 +45,7 @@ get '/files' do
   @rubies = {
       "ironruby-1.0.zip" => {
         :md5 => "7a92888837b3507355ed391dbfc0ab83",
-        :path_prefix => nil
+        :path_prefix => "ironruby/"
       },
       "jruby-bin-1.4.0.tar.gz" => {
         :md5 => "f37322c18e9134e91e064aebb4baa4c7",
@@ -57,19 +57,19 @@ get '/files' do
       },
       "macruby_nightly-latest.pkg" => {
         :md5 => "88327b5f4c5b4041a2f5e0f51e769bff",
-        :path_prefix => nil
+        :path_prefix => "macruby/"
       },
       "MacRuby 0.5.zip" => {
         :md5 => "675454a8c7bc19d606d90a726e08427c",
-        :path_prefix => nil
+        :path_prefix => "macruby/"
       },
       "MagLev-23275-0.tar.gz" => {
         :md5 => "7591f9f3931f1a352f40e61834c6a063",
-        :path_prefix => nil
+        :path_prefix => "maglev/"
       },
       "rubinius-1.0.0-20100514.tar.gz" => {
         :md5 => "b05f4e791d3712c5a50b3d210dac6eb0",
-        :path_prefix => nil
+        :path_prefix => "rubinius/"
       },
       "ruby-1.8.5-p231.tar.gz" => {
         :md5 => "e900cf225d55414bffe878f00a85807c",
@@ -93,19 +93,19 @@ get '/files' do
       },
       "ruby-enterprise-1.8.6-20090610.tar.gz" => {
         :md5 => "0bf66ee626918464a6eccdd83c99d63a",
-        :path_prefix => nil
+        :path_prefix => "ree/"
       },
       "ruby-enterprise-1.8.7-2010.01.tar.gz" => {
         :md5 => "587aaea02c86ddbb87394a340a25e554",
-        :path_prefix => nil
+        :path_prefix => "ree/"
       },
       "rubygems-1.3.5.tgz" => {
         :md5 => "6e317335898e73beab15623cdd5f8cff",
-        :path_prefix => nil
+        :path_prefix => "rubygems/"
       },
       "rubygems-1.3.6.tgz" => {
         :md5 => "789ca8e9ad1d4d3fe5f0534fcc038a0d",
-        :path_prefix => nil
+        :path_prefix => "rubygems/"
       }
     }
   
@@ -117,3 +117,13 @@ end
 ################################################
 #jruby
 #jruby_url + '/1.4.0/jruby-bin-1.4.0.tar.gz'
+
+
+#TODO
+##################
+# Download MagLev version 23464 (RVM current)
+#  - Make sure to get ALL versions (such as MagLev-23464.Darwin-i386.tar.gz, & MagLev-23464.tar.gz)
+#  - Download all the GemStone versions too: GemStone-23464.Darwin-i386.tar.gz, etc.
+# Download MacRuby 0.6
+# Download RubyGems 1.3.7
+#
