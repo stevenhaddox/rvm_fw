@@ -113,17 +113,3 @@ get '/files' do
 end
 
 
-# External download path_prefixs
-################################################
-#jruby
-#jruby_url + '/1.4.0/jruby-bin-1.4.0.tar.gz'
-
-
-#TODO
-##################
-# Download MagLev version 23464 (RVM current)
-#  - Make sure to get ALL versions (such as MagLev-23464.Darwin-i386.tar.gz, & MagLev-23464.tar.gz)
-#  - Download all the GemStone versions too: GemStone-23464.Darwin-i386.tar.gz, etc.
-# Download MacRuby 0.6
-# Download RubyGems 1.3.7
-#
