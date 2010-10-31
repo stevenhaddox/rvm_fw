@@ -4,10 +4,13 @@ RVM::FW is meant to be a simple Sinatra application that you can easily deploy o
 
 ## Setting up RVM::FW
 
-NOTE: This will eventually work, right now we are still working on the boot:strap rake task. If you want to help feel free to pitch in by looking at the [related issue](http://github.com/stevenhaddox/rvm_fw/issues#issue/6).  
+### Download Rubies to Serve to RVM
+
 Once you have RVM::FW downloaded locally you need to download the rubies that you want to serve (probably before you deploy if you're behind a firewall).  In order to do this simply run:
 
     $ rake boot:strap
+
+### Update User DB Config
 
 NOTE: This will eventually become [dynamic](http://github.com/stevenhaddox/rvm_fw/issues#issue/3), but in the interim you need to modify the views/db.txt file to hardcode your final deployed URL instead of 'rvm-fw.local'.
 
@@ -22,7 +25,6 @@ Just visit: http://[your-server]/db to get a plain-text file that your users nee
 # I could benefit from RVM::FW - How do I help?
 
 Fork away and start hacking on any of our [open issues](http://github.com/stevenhaddox/rvm_fw/issues).
-
 
 
 ## Random miscellaneous self-notes:
