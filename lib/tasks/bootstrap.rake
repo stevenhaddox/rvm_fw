@@ -4,7 +4,8 @@ namespace :boot do
   task :strap do
     @rubies = YAML::load_file('config/rubies.yml')
     @rubies.each do |ruby, params|
-      puts "---"
+      puts ""
+      puts "-"*20
       puts "Starting #{ruby}"
       
       #create path from params[:path_prefix]
@@ -13,7 +14,7 @@ namespace :boot do
       
       #download each ruby from params[:url]
       puts "Downloading #{ruby}..."
-      # wget #{params[:url]} public/rubies/#{params[:path_prefix]}
+      `wget #{params[:url]} -P public/rubies/#{params[:path_prefix]}`
       puts "Completed download"
     end
   end
