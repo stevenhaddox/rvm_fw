@@ -1,5 +1,6 @@
 config.ru
 *.log
 .bundle
+public/rubies/*
 .DS_Store
 TODO
