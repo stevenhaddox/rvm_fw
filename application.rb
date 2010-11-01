@@ -24,7 +24,10 @@ end
 
 get '/db' do
   content_type 'text/plain', :charset => 'utf-8'
-  File.read(APP_ROOT+"/views/db.txt")
+  protocol = request.port==443 ? 'https://' : 'http://'
+  @host = protocol + request.host
+  @host += ":#{request.port}" unless [80, 443].include?(request.port)
+  erb :db
 end
 
 get '/md5' do
