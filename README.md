@@ -10,10 +10,6 @@ Once you have RVM::FW downloaded locally you need to download the rubies that yo
 
     $ rake boot:strap
 
-### Update User DB Config
-
-NOTE: This will eventually become [dynamic](http://github.com/stevenhaddox/rvm_fw/issues#issue/3), but in the interim you need to modify the views/db.txt file to hardcode your final deployed URL instead of 'rvm-fw.local'.
-
 ## Deploy
 
 The application comes pre-configured to work with Phusion Passenger easily.  Overall it's just a simple Sinatra application so feel free to customize as needed and push it all to your server (just make sure the ruby installs are included in your deploy).
