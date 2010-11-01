@@ -35,7 +35,7 @@ jruby-bin-1.5.3.tar.gz:
   :md5: ccb0b2dbc300d8dd4ad1bd4da48b8320
   :path_prefix: jruby/1.5.3/
   :url: http://jruby.org.s3.amazonaws.com/downloads/1.5.3/jruby-bin-1.5.3.tar.gz
-rubinius-1.1.0-2010923.tar.gz: 
+rubinius-1.1.0-20100923.tar.gz: 
   :md5: e2ae16238b201de09975abe19da09ea9
   :path_prefix: rubinius/
   :url: http://asset.rubini.us/rubinius-1.1.0-20100923.tar.gz
