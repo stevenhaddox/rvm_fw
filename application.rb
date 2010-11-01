@@ -1,7 +1,7 @@
 # rvm_fw main application
 require 'rubygems'
 require 'sinatra'
-require 'FileUtils'
+require 'fileutils'
 require 'digest/md5'
 require 'yaml'
 
