@@ -24,8 +24,7 @@ end
 
 get '/db' do
   content_type 'text/plain', :charset => 'utf-8'
-  protocol = request.port==443 ? 'https://' : 'http://'
-  @host = protocol + request.host
+  @host = "#{request.scheme}://#{request.host}"
   @host += ":#{request.port}" unless [80, 443].include?(request.port)
   erb :db
 end
