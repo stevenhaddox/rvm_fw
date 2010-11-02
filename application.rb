@@ -36,8 +36,12 @@ end
 
 get '/rubies/*' do
   # matches /rubies/filename.tar.gz, /rubies/filename.zip, etc.
-  file = File.join(@RUBIES_PATH, params["splat"]) # => ["filename.ext"]
-  send_file(file, :disposition => 'attachment', :filename => File.basename(file))
+  if File.exist?("public/rubies/#{params['splat']}")
+    file = File.join(@RUBIES_PATH, params["splat"]) # => ["filename.ext"]
+    send_file(file, :disposition => 'attachment', :filename => File.basename(file))
+  else 
+    halt 404
+  end
 end
 
 not_found do
