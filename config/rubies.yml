@@ -1,21 +1,21 @@
 --- 
-ruby-1.9.2-p0.tar.gz: 
+ruby-1.9.2-p0.tar.bz2: 
   :md5: 755aba44607c580fddc25e7c89260460
   :path_prefix: ruby-lang/1.9/
   :url: ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p0.tar.bz2
-ruby-1.9.1-p378.tar.gz: 
+ruby-1.9.1-p378.tar.bz2: 
   :md5: 9fc5941bda150ac0a33b299e1e53654c
   :path_prefix: ruby-lang/1.9/
   :url: ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-p378.tar.bz2
-ruby-1.8.7-p302.tar.gz: 
+ruby-1.8.7-p302.tar.bz2: 
   :md5: a6a9e37079ed8cf8726b455dad3de939
   :path_prefix: ruby-lang/1.8/
   :url: ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p302.tar.bz2
-ruby-1.8.6-p399.tar.gz: 
+ruby-1.8.6-p399.tar.bz2: 
   :md5: c3d16cdd3c1ee8f3b7d1c399d4884e33
   :path_prefix: ruby-lang/1.8/
   :url: ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.6-p399.tar.bz2
-ruby-1.8.5-p231.tar.gz: 
+ruby-1.8.5-p231.tar.bz2: 
   :md5: e900cf225d55414bffe878f00a85807c
   :path_prefix: ruby-lang/1.8/
   :url: ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.5-p231.tar.bz2
