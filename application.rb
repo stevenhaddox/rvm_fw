@@ -10,6 +10,9 @@ before do
   IGNORED_FILES = ['.','..','.DS_Store','.git','.svn']
   APP_ROOT = File.join(Dir.pwd)
   RUBIES_PATH = File.join(APP_ROOT,'/public/rubies')
+  RVM_VERSION = '1.0.21' 
+  HOST = "#{request.scheme}://#{request.host}"
+  HOST += ":#{request.port}" unless [80, 443].include?(request.port)
 end
 
 # CSS path_prefixs
@@ -24,14 +27,7 @@ end
 
 get '/db' do
   content_type 'text/plain', :charset => 'utf-8'
-  @host = "#{request.scheme}://#{request.host}"
-  @host += ":#{request.port}" unless [80, 443].include?(request.port)
   erb :db
-end
-
-get '/md5' do
-  content_type 'text/plain', :charset => 'utf-8'
-  "I'll eventually return a customized ~/.rvm/config/md5 file if it is needed..."
 end
 
 get '/rubies/*' do
@@ -51,4 +47,19 @@ end
 get '/files' do
   @rubies = YAML::load_file('config/rubies.yml')
   haml :files
+end
+
+get '/releases/rvm-install-latest' do
+  content_type 'text/plain', :charset => 'utf-8'
+  erb :rvm_install
+end
+
+get '/releases/stable-version.txt' do
+  content_type 'text/plain', :charset => 'utf-8'
+  RVM_VERSION
+end
+
+get '/md5' do
+  content_type 'text/plain', :charset => 'utf-8'
+  "I'll eventually return a customized ~/.rvm/config/md5 file if it is needed..."
 end
