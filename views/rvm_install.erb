@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+set -o errtrace
+export PS4='+[${BASH_SOURCE}] : ${LINENO} : ${FUNCNAME[0]:+${FUNCNAME[0]}() $ }'
+
+if [[ -f /etc/rvmrc ]] ; then source /etc/rvmrc ; fi
+
+if [[ -f "$HOME/.rvmrc" ]] ; then source "$HOME/.rvmrc" ; fi
+
+rvm_path="${rvm_path:-$HOME/.rvm}"
+
+mkdir -p $rvm_path/src/
+
+builtin cd $rvm_path/src
+
+stable_version=$(curl -B <%= HOST %>/releases/stable-version.txt 2>/dev/null)
+
+echo "rvm-${stable_version}"
+
+curl -L "<%= HOST %>/rubies/packages/rvm/rvm-${stable_version}.tar.gz" -o "rvm-${stable_version}.tar.gz"
+
+tar zxf "rvm-${stable_version}.tar.gz"
+
+builtin cd "rvm-${stable_version}"
+
+bash ./scripts/install
+

@@ -1,6 +1,7 @@
 require 'yaml'
 
 namespace :boot do
+
   task :strap do
     @rubies = YAML::load_file('config/rubies.yml')
     @rubies.each do |ruby, params|
@@ -20,4 +21,5 @@ namespace :boot do
       puts ""
     end
   end
+  
 end

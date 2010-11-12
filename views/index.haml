@@ -1,24 +1,76 @@
-%h2 What is RVM?
+%h2#rvm What is RVM?
 
 %p 
   RVM stands for "Ruby Version Manager" and can be found online at: 
   %a{:href=>'http://rvm.beginrescueend.com/'} http://rvm.beginrescueend.com
 %p In short, RVM allows you to install and manage multiple Ruby versions side by side on the same system easily. It also provides a means to install "gemsets" allowing you to group your gems together by application, Rails version, etc.
 
-%h2 What is RVM::FW (Firewall)?
+%h2#rvm_fw What is RVM::FW (Firewall)?
 
 %p 
   RVM::FW is a simple Sinatra application that runs on a Phusion enabled webserver (but the config.ru can be easily modified for Mongrel, Thin, etc. to fit your needs).  This index page provides a brief explanation of how to use RVM in case you can't access the main RVM page and also explains how to replace your ~/.rvm/config/db file with the dynamically generated db file from RVM:FW which lists _only_ the available Ruby installs in this application.
 
-%h2 What inspired RVM::FW?
+%h2#inspiration What inspired RVM::FW?
 
 %p
   Many corporate environments restrict access to the outside web in order to limit the risk of downloading viruses or causing damage throughout the network unintentionally.  A lot of these places require special permission to download and install software.  I work in one of these places, but I still wanted to be able to use the same RVM setup I have at home at work (where I need it the most!)  In turn I dug around and decided the easiest way to use RVM without outside internet access was modifying RVM's ~/.rvm/config/db file to point to an internal website that had many of the same Ruby versions readily available to install.
 
-%h2 How do I use RVM::FW Rubies?
+%h2#install_rvm_fw How do I use RVM::FW Rubies with RVM?
 
 %p
-  This is the easiest part.  Make sure that you have installed RVM on your OS X / Linux system and then download the
+  This is the easiest part.  Ensure that you have already 
+  %a{:href => '#install_rvm'} installed RVM 
+  on your OS X / Linux system and then download the
   %a{:href => '/db'} customized database file
   and save it as ~/.rvm/config/user.  This will override the default config settings and enable you to install any of the available Rubies within RVM::FW the same way you would at home.
 
+
+%h2#install_rvm How do I install RVM?
+
+%p
+  You can install RVM from the most recent RVM::FW compatible source by running:
+%pre
+  :preserve
+    $ bash < <( curl #{HOST}/releases/rvm-install-latest )
+
+%p What this script essentially does is the following, with some extra checks and tweaks:
+
+%pre
+  :preserve
+    version=$(curl #{HOST}/releases/stable-version.txt);
+    mkdir -p ~/.rvm/src/ && cd ~/.rvm/src/ && curl -O #{HOST}/releases/rvm-${version}.tar.gz | tar zxf - && cd rvm-${version} && ./install
+
+%p
+  The first time you install RVM, you must put the following line into your profile at the very end, after all path loads etc:
+
+%pre
+  :preserve
+    [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+
+%p
+  Doing so ensures rvm is loaded as a function (versus as a binary), ensuring commands such as rvm use work as expected. Please note that you can confirm this worked correctly by opening a new shell and running:
+
+%pre
+  :preserve
+    $ type rvm | head -n1
+
+%p
+  If this was performed correctly, you should see:
+
+%pre
+  :preserve
+    rvm is a function
+
+%p
+  Next, you can manually load the new code into your current shell and start using RVM ! w00t!
+
+%pre
+  :preserve
+    $ source ~/.rvm/scripts/rvm
+
+%p
+  Be sure to install any dependencies for your operating system by running:
+
+%pre
+  :preserve
+    $ rvm notes
