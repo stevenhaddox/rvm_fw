@@ -1,101 +1,105 @@
 --- 
+rvm-1.6.2.tar.gz:
+  :md5: bd8d27f194b5f0f5003f415a8f5eca21
+  :path_prefix: packages/rvm/
+  :url: http://rvm.beginrescueend.com/releases/rvm-1.6.2.tar.gz
 rvm-1.0.21.tar.gz:
   :md5: 
   :path_prefix: packages/rvm/
-  :url: http://rvm.beginrescueend.com/releases/rvm-1.0.21.tar.gz
-ruby-1.9.2-p0.tar.bz2:
-  :md5: 755aba44607c580fddc25e7c89260460
+  :url://rvm.beginrescueend.com/releases/rvm-1.0.21.tar.gz
+ruby-1.9.2-p180.tar.bz2:
+  :md5: 68510eeb7511c403b91fe5476f250538
   :path_prefix: ruby-lang/1.9/
-  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p0.tar.bz2
-ruby-1.9.1-p378.tar.bz2:
-  :md5: 9fc5941bda150ac0a33b299e1e53654c
+  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p180.tar.bz2
+ruby-1.9.1-p431.tar.bz2:
+  :md5: 03179138ae95dbfae872ef49e9cc6da7
   :path_prefix: ruby-lang/1.9/
-  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-p378.tar.bz2
-ruby-1.8.7-p302.tar.bz2:
-  :md5: a6a9e37079ed8cf8726b455dad3de939
+  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-p431.tar.bz2
+ruby-1.8.7-p334.tar.bz2:
+  :md5: 2f14f604bf981bb938ab5fc8b09eb1a6
   :path_prefix: ruby-lang/1.8/
-  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p302.tar.bz2
-ruby-1.8.6-p399.tar.bz2:
-  :md5: c3d16cdd3c1ee8f3b7d1c399d4884e33
+  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p334.tar.bz2
+ruby-1.8.6-p420.tar.bz2:
+  :md5: 1c7a978e9ffd4f56dc2ad74bbd2c34f3
   :path_prefix: ruby-lang/1.8/
-  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.6-p399.tar.bz2
-ruby-1.8.5-p231.tar.bz2:
-  :md5: e900cf225d55414bffe878f00a85807c
-  :path_prefix: ruby-lang/1.8/
-  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.5-p231.tar.bz2
+  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.6-p420.tar.bz2
+rubygems-1.7.2.tgz:
+  :md5: 8d67d0bc44b0317dc37e200dcf6627ea
+  :path_prefix: rubygems/
+  :url: http://production.cf.rubygems.org/rubygems/rubygems-1.7.2.tgz
+rubygems-1.6.2.tgz:
+  :md5: 0c95a9869914ba1a45bf71d3b8048420
+  :path_prefix: rubygems/
+  :url: http://production.cf.rubygems.org/rubygems/rubygems-1.6.2.tgz
 rubygems-1.3.7.tgz:
   :md5: e85cfadd025ff6ab689375adbf344bbe
   :path_prefix: rubygems/
   :url: http://rubyforge.org/frs/download.php/70696/rubygems-1.3.7.tgz
-rubygems-1.3.6.tgz:
-  :md5: 789ca8e9ad1d4d3fe5f0534fcc038a0d
-  :path_prefix: rubygems/
-  :url: http://rubyforge.org/frs/download.php/69365/rubygems-1.3.6.tgz
-rubygems-1.3.5.tgz:
-  :md5: 6e317335898e73beab15623cdd5f8cff
-  :path_prefix: rubygems/
-  :url: http://rubyforge.org/frs/download.php/60718/rubygems-1.3.5.tgz  
-jruby-bin-1.5.3.tar.gz:
-  :md5: ccb0b2dbc300d8dd4ad1bd4da48b8320
-  :path_prefix: jruby/1.5.3/
-  :url: http://jruby.org.s3.amazonaws.com/downloads/1.5.3/jruby-bin-1.5.3.tar.gz
-rubinius-1.1.0-20100923.tar.gz:
-  :md5: e2ae16238b201de09975abe19da09ea9
+jruby-bin-1.6.1.tar.gz:
+  :md5: bba5d6afeb6048079eeba9f39725e4bc
+  :path_prefix: jruby/1.6.1/
+  :url: http://jruby.org.s3.amazonaws.com/downloads/1.6.1/jruby-bin-1.6.1.tar.gz
+jruby-bin-1.6.0.tar.gz:
+  :md5: f4d7e339dfc0fbaef5b878d1c0a66fbe
+  :path_prefix: jruby/1.6.0/
+  :url: http://jruby.org.s3.amazonaws.com/downloads/1.6.0/jruby-bin-1.6.0.tar.gz
+rubinius-1.2.3-20110315.tar.gz:
+  :md5: 9782dab18c2dd440af6b76e8eb5bc0f0
   :path_prefix: rbx/
-  :url: http://asset.rubini.us/rubinius-1.1.0-20100923.tar.gz
-ruby-enterprise-1.8.7-2010.02.tar.gz:
-  :md5: 4df7b09c01adfd711b0ab76837611542
+  :url: http://asset.rubini.us/rubinius-1.2.3-20110315.tar.gz
+ruby-enterprise-1.8.7-2011.03.tar.gz:
+  :md5: 038604ce25349e54363c5df9cd535ec8
   :path_prefix: ree/
-  :url: http://rubyforge.org/frs/download.php/71096/ruby-enterprise-1.8.7-2010.02.tar.gz
-MacRuby 0.7.1.zip:
-  :md5: e8245dcd03c0757dfae7e6fee913947a
+  :url: http://rubyenterpriseedition.googlecode.com/files/ruby-enterprise-1.8.7-2011.03.tar.gz
+MacRuby 0.10.zip:
+  :md5: 1662d13d2f73cfc26258598f6988dcbc
   :path_prefix: macruby/
-  :url: http://www.macruby.org/files/MacRuby%200.7.1.zip
+  :url: http://www.macruby.org/files/MacRuby%200.10.zip
 readline-5.2.tar.gz:
-  :md5: 
+  :md5: e39331f32ad14009b9ff49cc10c5e751
   :path_prefix: packages/readline/
   :url: ftp://ftp.gnu.org/gnu/readline/readline-5.2.tar.gz
 libiconv-1.13.1.tar.gz:
-  :md5: 
+  :md5: 7ab33ebd26687c744a37264a330bbe9a
   :path_prefix: packages/iconv/
   :url: http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz
 curl-7.19.7.tar.gz:
-  :md5: 
+  :md5: ecb2e37e45c9933e2a963cabe03670ab
   :path_prefix: packages/curl/
   :url: http://curl.haxx.se/download/curl-7.19.7.tar.gz
 openssl-0.9.8n.tar.gz:
-  :md5: 
+  :md5: 076d8efc3ed93646bd01f04e23c07066
   :path_prefix: packages/openssl/
   :url: http://www.openssl.org/source/openssl-0.9.8n.tar.gz
 zlib-1.2.5.tar.gz:
-  :md5: 
+  :md5: c735eab2d659a96e5a594c9e8541ad63
   :path_prefix: packages/zlib/
   :url: http://zlib.net/zlib-1.2.5.tar.gz
 autoconf-2.65.tar.gz:
-  :md5: 
+  :md5: 46cfb40e0babf4c64f8325f03da81c9b
   :path_prefix: packages/autoconf/
   :url: ftp://ftp.gnu.org/gnu/autoconf/autoconf-2.65.tar.gz
 ncurses-5.7.tar.gz:
-  :md5: 
+  :md5: cce05daf61a64501ef6cd8da1f727ec6
   :path_prefix: packages/ncurses/
   :url: http://ftp.gnu.org/pub/gnu/ncurses/ncurses-5.7.tar.gz
 pkg-config-0.23.tar.gz:
-  :md5: 
+  :md5: d922a88782b64441d06547632fd85744
   :path_prefix: packages/pkgconfig/
   :url: http://pkgconfig.freedesktop.org/releases/pkg-config-0.23.tar.gz
 gettext-0.17.tar.gz:
-  :md5: 
+  :md5: 58a2bc6d39c0ba57823034d55d65d606
   :path_prefix: packages/gettext/
   :url: ftp://ftp.gnu.org/pub/gnu/gettext/gettext-0.17.tar.gz
 libxml2-2.7.3.tar.gz:
-  :md5: 
+  :md5: 8f4fda3969237c2a33bdb1583b5d06b2
   :path_prefix: packages/libxml2/
   :url: ftp://xmlsoft.org/libxml2/libxml2-2.7.3.tar.gz
 glib-2.23.1.tar.gz:
-  :md5: 
+  :md5: ea32c834a8c7b166e05aeaaa41a021f4
   :path_prefix: packages/glib/
   :url: http://ftp.acc.umu.se/pub/gnome/sources/glib/2.23/glib-2.23.1.tar.gz
-mono-2.6.1.tar.bz2:
-  :md5: 
-  :path_prefix: packages/mono/
-  :url: http://ftp.novell.com/pub/mono/sources/mono/mono-2.6.1.tar.bz2
+yaml-0.1.3.tar.gz:
+  :md5: b8ab9064e8e0330423fe640de76608cd
+  :path_prefix: packages/yaml/
+  :url: http://pyyaml.org/download/libyaml/yaml-0.1.3.tar.gz

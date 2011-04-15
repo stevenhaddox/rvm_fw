@@ -1,0 +1,6 @@
+$ rvm package help
+'rvm package {install,uninstall} {readline,iconv,curl,openssl,zlib,autoconf,ncurses,pkgconfig,gettext,glib,mono,llvm,libxml2}'
+  'ree_dependencies' installs zlib, ncurses, readline, openssl and iconv in this order.
+  still need to add '-C --with-readline-dir=$rvm_path/usr,--with-iconv-dir=$rvm_path/usr,--with-zlib-dir=$rvm_path/usr,--with-openssl-dir=$rvm_path/usr' to 'rvm install ree'
+
+$ rvm install ree -C --with-readline-dir=$rvm_path/usr,--with-iconv-dir=$rvm_path/usr,--with-zlib-dir=$rvm_path/usr,--with-openssl-dir=$rvm_path/usr

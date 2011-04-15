@@ -8,12 +8,12 @@
 %h2#rvm_fw What is RVM::FW (Firewall)?
 
 %p 
-  RVM::FW is a simple Sinatra application that runs on a Phusion enabled webserver (but the config.ru can be easily modified for Mongrel, Thin, etc. to fit your needs).  This index page provides a brief explanation of how to use RVM in case you can't access the main RVM page and also explains how to replace your ~/.rvm/config/db file with the dynamically generated db file from RVM:FW which lists _only_ the available Ruby installs in this application.
+  RVM::FW is a simple Sinatra application that runs on a Phusion enabled webserver (but the config.ru can be easily modified for Mongrel, Thin, etc. to fit your needs).  This index page provides a brief explanation of how to use RVM in case you can't access the main RVM page and also explains how to replace your ~/.rvm/user/db file with the dynamically generated db file from RVM:FW which lists _only_ the available Ruby installs in this application.
 
 %h2#inspiration What inspired RVM::FW?
 
 %p
-  Many corporate environments restrict access to the outside web in order to limit the risk of downloading viruses or causing damage throughout the network unintentionally.  A lot of these places require special permission to download and install software.  I work in one of these places, but I still wanted to be able to use the same RVM setup I have at home at work (where I need it the most!)  In turn I dug around and decided the easiest way to use RVM without outside internet access was modifying RVM's ~/.rvm/config/db file to point to an internal website that had many of the same Ruby versions readily available to install.
+  Many corporate environments restrict access to the outside web in order to limit the risk of downloading viruses or causing damage throughout the network unintentionally.  A lot of these places require special permission to download and install software.  I work in one of these places, but I still wanted to be able to use the same RVM setup I have at home at work (where I need it the most!)  In turn I dug around and decided the easiest way to use RVM without outside internet access was modifying RVM's ~/.rvm/user/db file to point to an internal website that had many of the same Ruby versions readily available to install.
 
 %h2#install_rvm_fw How do I use RVM::FW Rubies with RVM?
 
@@ -22,7 +22,7 @@
   %a{:href => '#install_rvm'} installed RVM 
   on your OS X / Linux system and then download the
   %a{:href => '/db'} customized database file with:
-  <pre>$ wget #{HOST}/db -O ~/.rvm/config/user</pre>
+  <pre>$ wget #{HOST}/db -O ~/.rvm/user/db</pre>
   This will override the default config settings and enable you to install any of the available Rubies within RVM::FW the same way you would at home.
 
 
