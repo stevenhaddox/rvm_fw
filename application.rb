@@ -1,16 +1,19 @@
 # rvm_fw main application
-require 'rubygems'
+require "rubygems"
+require "bundler/setup"
+
 require 'sinatra'
 require 'fileutils'
 require 'digest/md5'
 require 'yaml'
+
 
 before do
   #app variables
   IGNORED_FILES = ['.','..','.DS_Store','.git','.svn']
   APP_ROOT = File.join(Dir.pwd)
   RUBIES_PATH = File.join(APP_ROOT,'/public/rubies')
-  RVM_VERSION = '1.0.21' 
+  RVM_VERSION = '1.0.21' #1.6.2 seems to be broken 
   HOST = "#{request.scheme}://#{request.host}"
   HOST += ":#{request.port}" unless [80, 443].include?(request.port)
 end

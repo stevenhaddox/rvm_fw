@@ -1,0 +1,27 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    haml (3.0.25)
+    less (1.2.21)
+      mutter (>= 0.4.2)
+      treetop (>= 1.4.2)
+    mutter (0.5.3)
+    polyglot (0.3.1)
+    rack (1.2.2)
+    rake (0.8.7)
+    sinatra (1.2.3)
+      rack (~> 1.1)
+      tilt (< 2.0, >= 1.2.2)
+    tilt (1.2.2)
+    treetop (1.4.9)
+      polyglot (>= 0.3.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  haml
+  less
+  rack
+  rake
+  sinatra
