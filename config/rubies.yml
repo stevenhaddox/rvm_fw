@@ -3,10 +3,6 @@ rvm-1.6.2.tar.gz:
   :md5: bd8d27f194b5f0f5003f415a8f5eca21
   :path_prefix: packages/rvm/
   :url: http://rvm.beginrescueend.com/releases/rvm-1.6.2.tar.gz
-rvm-1.0.21.tar.gz:
-  :md5: 
-  :path_prefix: packages/rvm/
-  :url://rvm.beginrescueend.com/releases/rvm-1.0.21.tar.gz
 ruby-1.9.2-p180.tar.bz2:
   :md5: 68510eeb7511c403b91fe5476f250538
   :path_prefix: ruby-lang/1.9/
