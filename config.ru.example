@@ -1,4 +1,7 @@
 # This file goes in domain.com/config.ru
+
+path = File.expand_path "../", __FILE__
+
 require 'rubygems'
 require 'bundler'
 
@@ -7,5 +10,6 @@ Bundler.require
 set :env,  :development #:production
 disable :run
 
-require 'application'
+require "#{path}/application"
 run Sinatra::Application
+
