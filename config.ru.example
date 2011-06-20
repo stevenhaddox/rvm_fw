@@ -1,8 +1,8 @@
 # This file goes in domain.com/config.ru
 require 'rubygems'
-require 'bundler/setup'
-require 'sinatra'
-require 'less'
+require 'bundler'
+
+Bundler.require
 
 set :env,  :development #:production
 disable :run
