@@ -30,7 +30,7 @@ get '/rubies/*' do
   if File.exist?("public/rubies/#{params['splat']}")
     file = File.join(@RUBIES_PATH, params["splat"]) # => ["filename.ext"]
     send_file(file, :disposition => 'attachment', :filename => File.basename(file))
-  else 
+  else
     halt 404
   end
 end

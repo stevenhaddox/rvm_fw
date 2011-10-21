@@ -1,4 +1,4 @@
---- 
+---
 rvm-1.6.2.tar.gz:
   :md5: bd8d27f194b5f0f5003f415a8f5eca21
   :path_prefix: packages/rvm/

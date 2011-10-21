@@ -8,11 +8,11 @@ namespace :boot do
       puts "-"*80
       puts "Starting #{ruby}"
       puts "-"*80
-      
+
       #create path from params[:path_prefix]
       puts "Creating directory public/rubies/#{params[:path_prefix]}"
       FileUtils.mkdir_p "public/rubies/#{params[:path_prefix]}"
-      
+
       #download each ruby from params[:url]
       puts "Downloading #{ruby}..."
       `wget #{params[:url]} -P public/rubies/#{params[:path_prefix]}`
@@ -21,5 +21,5 @@ namespace :boot do
       puts ""
     end
   end
-  
+
 end
