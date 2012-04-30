@@ -1,11 +1,9 @@
-# This file goes in domain.com/config.ru
 require 'rubygems'
-require 'bundler/setup'
-require 'sinatra'
-require 'less'
+require 'bundler'
+Bundler.require
+require File.join(File.dirname(__FILE__), 'lib/rvm_fw.rb')
 
-set :env,  :development #:production
-disable :run
+require 'sass/plugin/rack'
+use Sass::Plugin::Rack
 
-require 'application'
-run Sinatra::Application
+run RvmFw
