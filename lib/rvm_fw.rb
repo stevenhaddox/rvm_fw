@@ -10,7 +10,6 @@ class RvmFw < Sinatra::Base
   require 'digest/md5'
   require 'yaml'
 
-
   before do
     #app variables
     IGNORED_FILES = ['.','..','.DS_Store','.git','.svn']
@@ -24,7 +23,7 @@ class RvmFw < Sinatra::Base
   # CSS path_prefixs
   get '/stylesheets/application.css' do
     content_type 'text/css', :charset => 'utf-8'
-    less :application
+    scss :application, :style => :expanded
   end
 
   get '/' do
