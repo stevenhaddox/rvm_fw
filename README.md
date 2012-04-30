@@ -1,6 +1,10 @@
 # RVM::FW Edition
 
+[![Build Status](https://secure.travis-ci.org/stevenhaddox/rvm_fw.png)](http://travis-ci.org/stevenhaddox/rvm_fw)
+
 RVM::FW is meant to be a simple Sinatra application that you can easily deploy on an intranet/local network server and enable quick and easy access to install multiple ruby versions side-by-side the way RVM does at home.
+
+Status](https://secure.travis-ci.org/[YOUR_GITHUB_USERNAME]/[YOUR_PROJECT_NAME].png)](http://travis-ci.org/[YOUR_GITHUB_USERNAME]/[YOUR_PROJECT_NAME])
 
 ## Setting up RVM::FW
 
