@@ -1,17 +1,17 @@
 source "http://rubygems.org"
 gem "rack"
 gem "rake"
-gem "sinatra"
+gem "sinatra", :require => "sinatra/base"
 gem "haml"
-gem "less"
+gem "sass"
 
 group :development do
-  gem 'travis-lint'
+  gem "travis-lint"
 end
 
 group :test do
-  gem 'capybara'
-  gem 'cucumber'
-  gem 'cucumber-sinatra'
-  gem 'rspec'
+  gem "capybara"
+  gem "cucumber"
+  gem "cucumber-sinatra"
+  gem "rspec"
 end
