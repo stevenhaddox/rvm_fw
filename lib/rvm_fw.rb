@@ -14,10 +14,10 @@ class RvmFw < Sinatra::Base
 
   before do
     #app variables
-    IGNORED_FILES ||= ['.','..','.DS_Store','.git','.svn']
-    APP_ROOT      ||= File.join(Dir.pwd)
-    RUBIES_PATH   ||= File.join(APP_ROOT,'/public/rubies')
-    RVM_VERSION   ||= '1.6.2'
+    IGNORED_FILES = ['.','..','.DS_Store','.git','.svn']
+    APP_ROOT      = File.join(Dir.pwd)
+    RUBIES_PATH   = File.join(APP_ROOT,'/public/rubies')
+    RVM_VERSION   = '1.6.2'
     HOST          = "#{request.scheme}://#{request.host}"
     HOST          += ":#{request.port}" unless [80, 443].include?(request.port)
   end
