@@ -1,7 +1,8 @@
 config.ru
+config/rubies.yml
+public/rubies/*
 *.log
 .bundle
 .sass-cache
-public/rubies/*
 .DS_Store
 TODO
