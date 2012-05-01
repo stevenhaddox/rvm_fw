@@ -10,6 +10,8 @@ class RvmFw < Sinatra::Base
   require 'digest/md5'
   require 'yaml'
 
+  set :views, File.join(File.dirname(__FILE__), '..', 'views')
+
   before do
     #app variables
     IGNORED_FILES ||= ['.','..','.DS_Store','.git','.svn']
