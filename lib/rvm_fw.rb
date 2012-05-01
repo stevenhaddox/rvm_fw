@@ -10,13 +10,13 @@ class RvmFw < Sinatra::Base
   require 'digest/md5'
   require 'yaml'
 
-  set :views, File.join(File.dirname(__FILE__), '..', 'views')
+  set :views, File.expand_path('../../views', __FILE__)
 
   before do
     #app variables
     IGNORED_FILES = ['.','..','.DS_Store','.git','.svn']
-    APP_ROOT      = File.join(Dir.pwd)
-    RUBIES_PATH   = File.join(APP_ROOT,'/public/rubies')
+    APP_ROOT      = File.expand_path('../..', __FILE__)
+    RUBIES_PATH   = File.expand_path('../../public/rubies', __FILE__)
     RVM_VERSION   = '1.6.2'
     HOST          = "#{request.scheme}://#{request.host}"
     HOST          += ":#{request.port}" unless [80, 443].include?(request.port)
@@ -38,9 +38,10 @@ class RvmFw < Sinatra::Base
   end
 
   get '/rubies/*' do
+    file_path = params['splat'].is_a?(Array) ? params['splat'][0] : params['splat']
     # matches /rubies/filename.tar.gz, /rubies/filename.zip, etc.
-    if File.exist?("public/rubies/#{params['splat']}")
-      file = File.join(@RUBIES_PATH, params["splat"]) # => ["filename.ext"]
+    if File.exist?("#{RUBIES_PATH}/#{file_path}")
+      file = File.join(RUBIES_PATH, file_path) # => ["filename.ext"]
       send_file(file, :disposition => 'attachment', :filename => File.basename(file))
     else 
       halt 404
