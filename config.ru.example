@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'rubygems/deprecate'
 require 'bundler'
 Bundler.require
 require File.join(File.dirname(__FILE__), 'lib/rvm_fw.rb')

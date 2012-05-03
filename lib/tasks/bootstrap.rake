@@ -3,6 +3,7 @@ require 'yaml'
 namespace :boot do
 
   task :strap do
+
     # Delete the 'public/rubies' directory to ensure we only download Rubies &
     # packages specified in the rubies.yml file.
     FileUtils.rm_rf File.expand_path("../../../public/rubies", __FILE__)
@@ -36,6 +37,15 @@ namespace :boot do
       puts ""
       puts ""
     end
+
+    # Rename rvm packages to fit old script naming style:
+    Dir.glob(File.expand_path('../../../public/rubies/packages/rvm/*', __FILE__)).each do |rvm_file|
+      unless File.basename(rvm_file).include? '.tar.gz'
+        puts "Renaming #{File.basename(rvm_file)} to rvm-#{File.basename(rvm_file)}.tar.gz"
+        File.rename( rvm_file, rvm_file.gsub( File.basename(rvm_file), "rvm-#{File.basename(rvm_file)}.tar.gz" ) )
+      end
+    end
+
   end
   
 end
