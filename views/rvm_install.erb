@@ -22,7 +22,8 @@ curl -L "<%= HOST %>/rubies/packages/rvm/rvm-${stable_version}.tar.gz" -o "rvm-$
 tar zxf "rvm-${stable_version}.tar.gz"
 
 #builtin cd "rvm-${stable_version}"
-# extracted file doesn't match naming syntax for sure, cd to last modified dir
-builtin "cd "$(\ls -1dt */ | head -n 1)"
+# extracted file doesn't match naming syntax for sure, cd to last modified
+rvm_src_dir="$(\ls -1dt */ | head -n 1)"
+builtin "cd $rvm_src_dr"
 
 bash ./scripts/install
