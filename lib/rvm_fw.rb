@@ -53,7 +53,14 @@ class RvmFw < Sinatra::Base
   end
 
   get '/files' do
-    @rubies = YAML::load_file('config/rubies.yml')
+    # See if we have a custom rubies.yml file, if not use the .example default.
+    if File.exist? File.expand_path("../../config/rubies.yml", __FILE__)
+      rubies_yaml_file = File.expand_path("../../config/rubies.yml", __FILE__)
+    else
+      rubies_yaml_file = File.expand_path("../../config/rubies.yml.example", __FILE__)
+    end
+
+    @rubies = YAML::load_file(rubies_yaml_file)
     haml :files
   end
 
