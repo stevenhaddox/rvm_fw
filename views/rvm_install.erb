@@ -19,11 +19,13 @@ echo "rvm-${stable_version}"
 
 curl -L "<%= HOST %>/rubies/packages/rvm/rvm-${stable_version}.tar.gz" -o "rvm-${stable_version}.tar.gz"
 
+
+# set name of folder we cd into after file is extracted
+rvm_src_dir=$(tar tzf "rvm-${stable_version}.tar.gz" | tail -1 | awk '{split ($0, a, "/"); print a[1]}')
+# extract the downloaded tarball
 tar zxf "rvm-${stable_version}.tar.gz"
+# cd into the extracted directory
+builtin cd "${rvm_src_dir}"
 
-#builtin cd "rvm-${stable_version}"
-# extracted file doesn't match naming syntax for sure, cd to last modified
-rvm_src_dir="$(\ls -1dt */ | head -n 1)"
-builtin "cd $rvm_src_dr"
-
+# INSTALL RVM!!!
 bash ./scripts/install
