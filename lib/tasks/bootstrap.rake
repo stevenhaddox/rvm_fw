@@ -18,9 +18,7 @@ namespace :boot do
       rubies_yaml_file = File.expand_path("#{app_root}/config/rubies.yml")
     else
       rubies_yaml_file = File.expand_path("#{app_root}/config/rubies.yml.example")
-      puts ""
-      puts "You haven't customized config/rubies.yml, installing default RVM::FW Rubies..."
-      puts ""
+      puts "\r\nYou haven't customized config/rubies.yml, installing default RVM::FW Rubies...\r\n\r\n"
       sleep 5
     end
 
@@ -54,16 +52,17 @@ namespace :boot do
     # dynamic to handle both possible situations. We're nice like that ;)
     if File.exist?(File.expand_path("#{rubies_dir}/packages/yaml"))
       # Create symlink for libyaml
-      puts "Creating symlink from #{rubies_dir}/packages/yaml to #{rubies_dir}/packages/libyaml\r\n\r\n"
-      `ln -s #{rubies_dir}/packages/yaml #{rubies_dir}/packages/libyaml`
+      puts "Creating symlink from yaml to libyaml\r\n\r\n"
+      `cd #{rubies_dir}/packages; ln -s yaml libyaml`
     elsif File.exist?(File.expand_path("#{rubies_dir}/packages/libyaml"))
       # Create symlink for yaml
-      puts "Creating symlink from #{rubies_dir}/packages/libyaml to #{rubies_dir}/packages/yaml\r\n\r\n"
-      `ln -s #{rubies_dir}/packages/libyaml #{rubies_dir}/packages/yaml`
+      puts "Creating symlink from libyaml to yaml\r\n\r\n"
+      `cd #{rubies_dir}/packages; ln -s libyaml yaml`
     else
       puts "!"*80
       puts "libyaml / yaml package folder wasn't found, you probably want this to exist for MRI!\r\n\r\n"
     end
+    `cd #{app_root}`
 
   end
   
