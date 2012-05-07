@@ -40,7 +40,8 @@ namespace :boot do
     end
 
     # Rename rvm packages to fit old script naming style:
-    Dir.glob(File.expand_path('#{rubies_dir}/packages/rvm/*')).each do |rvm_file|
+    Dir.glob(File.expand_path("#{rubies_dir}/packages/rvm/*")).each do |rvm_file|
+      puts rvm_file.inspect
       unless File.basename(rvm_file).include? '.tar.gz'
         puts "Renaming #{File.basename(rvm_file)} to rvm-#{File.basename(rvm_file)}.tar.gz\r\n\r\n"
         File.rename( rvm_file, rvm_file.gsub( File.basename(rvm_file), "rvm-#{File.basename(rvm_file)}.tar.gz" ) )
