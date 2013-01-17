@@ -1,4 +1,12 @@
---- 
+---
+rvm-1.17.9.tar.gz:
+  :md5: 2d67ee56a7d8cded80af8cd8dc3293ce
+  :path_prefix: packages/rvm/
+  :url: https://github.com/wayneeseguin/rvm/archive/1.17.9.tar.gz
+rvm-1.17.0.tar.gz:
+  :md5: 4b56d7fdc8cdd02e89cac1bc2f7fd9f1
+  :path_prefix: packages/rvm/
+  :url: https://github.com/wayneeseguin/rvm/archive/1.17.0.tar.gz 
 rvm-1.13.0.tar.gz:
   :md5: 00484e8bfcb95ceb049efdba80ca47e1
   :path_prefix: packages/rvm/
@@ -7,6 +15,10 @@ rvm-1.6.2.tar.gz:
   :md5: bd8d27f194b5f0f5003f415a8f5eca21
   :path_prefix: packages/rvm/
   :url: https://rvm.io/releases/rvm-1.6.2.tar.gz
+ruby-1.9.3-p362.tar.gz
+  :md5: 1efc2316dc50e97591792d90647fade2
+  :path_prefix: ruby-lang/1.9/
+  :url: http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p362.tar.gz
 ruby-1.9.3-p194.tar.bz2:
   :md5: 2278eff4cfed3cbc0653bc73085caa34
   :path_prefix: ruby-lang/1.9/
@@ -35,6 +47,14 @@ rubygems-1.3.7.tgz:
   :md5: e85cfadd025ff6ab689375adbf344bbe
   :path_prefix: rubygems/
   :url: http://rubyforge.org/frs/download.php/70696/rubygems-1.3.7.tgz
+jruby-bin-1.7.2.tar.gz:
+  :md5: 6ec9293b6dffd1e8ee57e9b7c6d18cbe
+  :path_prefix: jruby/1.7.2/
+  :url: http://jruby.org.s3.amazonaws.com/downloads/1.7.2/jruby-bin-1.7.2.tar.gz
+jruby-bin-1.7.0.tar.gz:
+  :md5: 21861e0ecdbf48cda713c8ade82fdddb
+  :path_prefix: jruby/1.7.0/
+  :url: http://jruby.org.s3.amazonaws.com/downloads/1.7.0/jruby-bin-1.7.0.tar.gz
 jruby-bin-1.6.7.tar.gz:
   :md5: fd1b8d7389aa92da69ea6efb4782e40a
   :path_prefix: jruby/1.6.7/
@@ -51,52 +71,96 @@ MacRuby 0.10.zip:
   :md5: 1662d13d2f73cfc26258598f6988dcbc
   :path_prefix: macruby/
   :url: http://www.macruby.org/files/MacRuby%200.10.zip
+readline-6.2.tar.gz:
+  :md5: 67948acb2ca081f23359d0256e9a271c
+  :path_prefix: packages/readline/
+  :url: ftp://ftp.cwru.edu/pub/bash/readline-6.2.tar.gz
 readline-5.2.tar.gz:
   :md5: e39331f32ad14009b9ff49cc10c5e751
   :path_prefix: packages/readline/
   :url: ftp://ftp.gnu.org/gnu/readline/readline-5.2.tar.gz
+libiconv-1.14.tar.gz:
+  :md5: e34509b1623cec449dfeb73d7ce9c6c6
+  :path_prefix: packages/iconv/
+  :url: http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.14.tar.gz
 libiconv-1.13.1.tar.gz:
   :md5: 7ab33ebd26687c744a37264a330bbe9a
   :path_prefix: packages/iconv/
   :url: http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz
+curl-7.26.0.tar.gz:
+  :md5: 3fa4d5236f2a36ca5c3af6715e837691
+  :path_prefix: packages/curl/
+  :url: http://curl.haxx.se/download/curl-7.26.0.tar.gz
 curl-7.19.7.tar.gz:
   :md5: ecb2e37e45c9933e2a963cabe03670ab
   :path_prefix: packages/curl/
   :url: http://curl.haxx.se/download/curl-7.19.7.tar.gz
+openssl-1.0.1c.tar.gz:
+  :md5: ae412727c8c15b67880aef7bd2999b2e
+  :path_prefix: packages/openssl/
+  :url: http://www.openssl.org/source/openssl-1.0.1c.tar.gz
 openssl-0.9.8n.tar.gz:
   :md5: 076d8efc3ed93646bd01f04e23c07066
   :path_prefix: packages/openssl/
   :url: http://www.openssl.org/source/openssl-0.9.8n.tar.gz
+zlib-1.2.7.tar.gz:  
+  :md5: 60df6a37c56e7c1366cca812414f7b85
+  :path_prefix: packages/zlib/
+  :url: http://zlib.net/zlib-1.2.7.tar.gz
 zlib-1.2.6.tar.gz:
   :md5: 
   :path_prefix: packages/zlib/
   :url: http://zlib.net/zlib-1.2.6.tar.gz
+autoconf-2.69.tar.gz:
+  :md5: 82d05e03b93e45f5a39b828dc9c6c29b
+  :path_prefix: packages/autoconf/
+  :url: ftp://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.gz
 autoconf-2.65.tar.gz:
   :md5: 46cfb40e0babf4c64f8325f03da81c9b
   :path_prefix: packages/autoconf/
   :url: ftp://ftp.gnu.org/gnu/autoconf/autoconf-2.65.tar.gz
+ncurses-5.9.tar.gz:
+  :md5: 8cb9c412e5f2d96bc6f459aa8c6282a1
+  :path_prefix: packages/ncurses/
+  :url: http://ftp.gnu.org/pub/gnu/ncurses/ncurses-5.9.tar.gz
 ncurses-5.7.tar.gz:
   :md5: cce05daf61a64501ef6cd8da1f727ec6
   :path_prefix: packages/ncurses/
   :url: http://ftp.gnu.org/pub/gnu/ncurses/ncurses-5.7.tar.gz
+pkg-config-0.27.1.tar.gz:
+  :md5:
+  :path_prefix: packages/pkgconfig/
+  :url: http://pkgconfig.freedesktop.org/releases/pkg-config-0.27.1.tar.gz
 pkg-config-0.23.tar.gz:
   :md5: d922a88782b64441d06547632fd85744
   :path_prefix: packages/pkgconfig/
   :url: http://pkgconfig.freedesktop.org/releases/pkg-config-0.23.tar.gz
+gettext-0.18.2.tar.gz:
+  :md5: d52a3e061032a1ed13856d42fc86f0fd
+  :path_prefix: packages/gettext/
+  :url: ftp://ftp.gnu.org/pub/gnu/gettext/gettext-0.18.2.tar.gz
 gettext-0.17.tar.gz:
   :md5: 58a2bc6d39c0ba57823034d55d65d606
   :path_prefix: packages/gettext/
   :url: ftp://ftp.gnu.org/pub/gnu/gettext/gettext-0.17.tar.gz
+libxml2-2.9.0.tar.gz:
+  :md5: 5b9bebf4f5d2200ae2c4efe8fa6103f7
+  :path_prefix: packages/libxml2/
+  :url: ftp://xmlsoft.org/libxml2/libxml2-2.9.0.tar.gz
 libxml2-2.7.3.tar.gz:
   :md5: 8f4fda3969237c2a33bdb1583b5d06b2
   :path_prefix: packages/libxml2/
   :url: ftp://xmlsoft.org/libxml2/libxml2-2.7.3.tar.gz
+glib-2.35.4.tar.xz:
+  :md5: 5dd69d52722a9c123015b9b6dd45ab3d
+  :path_prefix: packages/glib/
+  :url: http://ftp.acc.umu.se/pub/gnome/sources/glib/2.35/glib-2.35.4.tar.xz
 glib-2.23.1.tar.gz:
   :md5: ea32c834a8c7b166e05aeaaa41a021f4
   :path_prefix: packages/glib/
   :url: http://ftp.acc.umu.se/pub/gnome/sources/glib/2.23/glib-2.23.1.tar.gz
 yaml-0.1.4.tar.gz:
-  :md5: 
+  :md5: 36c852831d02cf90508c29852361d01b 
   :path_prefix: packages/libyaml/
   :url: http://pyyaml.org/download/libyaml/yaml-0.1.4.tar.gz
 yaml-0.1.3.tar.gz:
