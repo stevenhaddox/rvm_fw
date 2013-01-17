@@ -17,7 +17,7 @@ class RvmFw < Sinatra::Base
     IGNORED_FILES = ['.','..','.DS_Store','.git','.svn']
     APP_ROOT      = File.expand_path('../..', __FILE__)
     RUBIES_PATH   = File.expand_path('../../public/rubies', __FILE__)
-    RVM_VERSION   = '1.13.0'
+    RVM_VERSION   = '1.17.9'
     HOST          = "#{request.scheme}://#{request.host}"
     HOST          += ":#{request.port}" unless [80, 443].include?(request.port)
   end
