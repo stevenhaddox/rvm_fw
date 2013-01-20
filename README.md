@@ -18,7 +18,19 @@ The application comes pre-configured to work with Phusion Passenger easily.  Ove
 
 ## Configuring RVM to work with RVM::FW
 
-Just visit: http://[your-server]/db to get a plain-text file that your users need to copy and paste into: ~/.rvm/user/db.  This file overrides the defaults built into RVM's ~/.rvm/config/db and will point it to your RVM::FW instance to download it's rubies.
+Just visit: http://[your-server]/db to get a plain-text file that your users need to copy and paste into: `~/.rvm/user/db`.  This file overrides the defaults built into RVM's `~/.rvm/config/db` and will point it to your RVM::FW instance to download it's rubies.
+
+You can also visit: http://[your-server]/known to get a plain-text file that a user can be put into: `~.rvm/config/known`. This will provide a more a accurate list of available rubies when a user runs `rvm list known`.
+
+## Adding more rubies
+
+To add more rubies you must:
+
+* update views/db.erb
+* update views/known.erb
+* update config/rubies.yml.example
+
+One day it would be nice to make this all tied together a bit better.
 
 # I could benefit from RVM::FW - How do I help?
 
