@@ -15,7 +15,7 @@ rvm-1.6.2.tar.gz:
   :md5: bd8d27f194b5f0f5003f415a8f5eca21
   :path_prefix: packages/rvm/
   :url: https://rvm.io/releases/rvm-1.6.2.tar.gz
-ruby-1.9.3-p362.tar.gz
+ruby-1.9.3-p362.tar.gz:
   :md5: 1efc2316dc50e97591792d90647fade2
   :path_prefix: ruby-lang/1.9/
   :url: http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p362.tar.gz
@@ -59,6 +59,10 @@ jruby-bin-1.6.7.tar.gz:
   :md5: fd1b8d7389aa92da69ea6efb4782e40a
   :path_prefix: jruby/1.6.7/
   :url: http://jruby.org.s3.amazonaws.com/downloads/1.6.7/jruby-bin-1.6.7.tar.gz
+jruby-bin-1.6.5.tar.gz:
+  :md5: 54354082673bd115f945890dc6864413
+  :path_prefix: jruby/1.6.5/
+  :url: http://jruby.org.s3.amazonaws.com/downloads/1.6.5/jruby-bin-1.6.5.tar.gz
 rubinius-1.2.4-20110705.tar.gz:
   :md5: 403c777d19b3553e9cb36701fe002c5e
   :path_prefix: rbx/
@@ -67,10 +71,10 @@ ruby-enterprise-1.8.7-2012.02.tar.gz:
   :md5: 8d086d2fe68a4c57ba76228e97fb3116
   :path_prefix: ree/
   :url: http://rubyenterpriseedition.googlecode.com/files/ruby-enterprise-1.8.7-2012.02.tar.gz
-MacRuby 0.10.zip:
-  :md5: 1662d13d2f73cfc26258598f6988dcbc
+MacRuby 0.12.zip:
+  :md5: e1c5fa1b007a1cdc38c527a47302bf5e
   :path_prefix: macruby/
-  :url: http://www.macruby.org/files/MacRuby%200.10.zip
+  :url: https://github.com/downloads/MacRuby/MacRuby/MacRuby%200.12.zip
 readline-6.2.tar.gz:
   :md5: 67948acb2ca081f23359d0256e9a271c
   :path_prefix: packages/readline/
