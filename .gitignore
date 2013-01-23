@@ -1,6 +1,5 @@
 config.ru
 config/rubies.yml
-public/rubies/*
 *.log
 .bundle
 .sass-cache

@@ -14,12 +14,14 @@ class RvmFw < Sinatra::Base
 
   before do
     #app variables
-    IGNORED_FILES = ['.','..','.DS_Store','.git','.svn']
-    APP_ROOT      = File.expand_path('../..', __FILE__)
-    RUBIES_PATH   = File.expand_path('../../public/rubies', __FILE__)
-    RVM_VERSION   = '1.13.0'
-    HOST          = "#{request.scheme}://#{request.host}"
-    HOST          += ":#{request.port}" unless [80, 443].include?(request.port)
+    IGNORED_FILES = ['.','..','.DS_Store','.git','.svn'] unless defined?(IGNORED_FILES)
+    APP_ROOT      = File.expand_path('../..', __FILE__) unless defined?(APP_ROOT)
+    RUBIES_PATH   = File.expand_path('../../public/rubies', __FILE__) unless defined?(RUBIES_PATH)
+    RVM_VERSION   = '1.17.9' unless defined?(RVM_VERSION)
+    unless defined?(HOST)
+      HOST          = "#{request.scheme}://#{request.host}" 
+      HOST          += ":#{request.port}" unless [80, 443].include?(request.port) 
+    end
   end
 
   # CSS path_prefixs
@@ -35,6 +37,11 @@ class RvmFw < Sinatra::Base
   get '/db' do
     content_type 'text/plain', :charset => 'utf-8'
     erb :db
+  end
+
+  get '/known' do
+    content_type 'text/plain', :charset => 'utf-8'
+    erb :known
   end
 
   get '/rubies/*' do
