@@ -1,32 +1,20 @@
 ---
-rvm-1.17.9.tar.gz:
-  :md5: 2d67ee56a7d8cded80af8cd8dc3293ce
+rvm-1.18.14.tar.gz:
+  :md5: ef07d0373073113b9aaa0d2a00f64da1
   :path_prefix: packages/rvm/
-  :url: https://github.com/wayneeseguin/rvm/archive/1.17.9.tar.gz
-rvm-1.17.0.tar.gz:
-  :md5: 4b56d7fdc8cdd02e89cac1bc2f7fd9f1
-  :path_prefix: packages/rvm/
-  :url: https://github.com/wayneeseguin/rvm/archive/1.17.0.tar.gz 
-rvm-1.13.0.tar.gz:
-  :md5: 00484e8bfcb95ceb049efdba80ca47e1
-  :path_prefix: packages/rvm/
-  :url: https://github.com/wayneeseguin/rvm/tarball/1.13.0
+  :url: https://github.com/wayneeseguin/rvm/archive/1.18.14.tar.gz
 rvm-1.6.2.tar.gz:
   :md5: bd8d27f194b5f0f5003f415a8f5eca21
   :path_prefix: packages/rvm/
   :url: https://rvm.io/releases/rvm-1.6.2.tar.gz
-ruby-1.9.3-p374.tar.gz:
-  :md5: 90b6c327abcdf30a954c2d6ae44da2a9
+ruby-2.0.0-p0.tar.bz2:
+  :md5: 895c1c581f8d28e8b3bb02472b2ccf6a
+  :path_prefix: ruby-lang/2.0/
+  :url: ftp://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.tar.bz2
+ruby-1.9.3-p392.tar.bz2:
+  :md5: a810d64e2255179d2f334eb61fb8519c
   :path_prefix: ruby-lang/1.9/
-  :url: http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p374.tar.gz
-ruby-1.9.3-p362.tar.gz:
-  :md5: 1efc2316dc50e97591792d90647fade2
-  :path_prefix: ruby-lang/1.9/
-  :url: http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p362.tar.gz
-ruby-1.9.3-p194.tar.bz2:
-  :md5: 2278eff4cfed3cbc0653bc73085caa34
-  :path_prefix: ruby-lang/1.9/
-  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p194.tar.bz2
+  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p392.tar.bz2
 ruby-1.9.2-p320.tar.bz2:
   :md5: b226dfe95d92750ee7163e899b33af00
   :path_prefix: ruby-lang/1.9/
@@ -35,38 +23,34 @@ ruby-1.9.1-p431.tar.bz2:
   :md5: 03179138ae95dbfae872ef49e9cc6da7
   :path_prefix: ruby-lang/1.9/
   :url: ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-p431.tar.bz2
-ruby-1.8.7-p358.tar.bz2:
-  :md5: de35f00997f4ccee3e22dff0f2d01b8a
+ruby-1.8.7-p371.tar.bz2:
+  :md5: c27526b298659a186bdb5107fcec2341
   :path_prefix: ruby-lang/1.8/
-  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p358.tar.bz2
+  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p371.tar.bz2
 ruby-1.8.6-p420.tar.bz2:
   :md5: 1c7a978e9ffd4f56dc2ad74bbd2c34f3
   :path_prefix: ruby-lang/1.8/
   :url: ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.6-p420.tar.bz2
-rubygems-1.8.24.tgz:
-  :md5: 3a555b9d579f6a1a1e110628f5110c6b
+rubygems-2.0.tgz:
+  :md5: 89ce467eb2d55657e9965a46559acbcf
   :path_prefix: rubygems/
-  :url: http://production.cf.rubygems.org/rubygems/rubygems-1.8.24.tgz
+  :url: http://production.cf.rubygems.org/rubygems/rubygems-2.0.0.tgz
+rubygems-1.8.25.tgz:
+  :md5: 1376a258d43c53750a8df30e67853e10
+  :path_prefix: rubygems/
+  :url: http://production.cf.rubygems.org/rubygems/rubygems-1.8.25.tgz
 rubygems-1.3.7.tgz:
   :md5: e85cfadd025ff6ab689375adbf344bbe
   :path_prefix: rubygems/
   :url: http://rubyforge.org/frs/download.php/70696/rubygems-1.3.7.tgz
-jruby-bin-1.7.2.tar.gz:
-  :md5: 6ec9293b6dffd1e8ee57e9b7c6d18cbe
-  :path_prefix: jruby/1.7.2/
-  :url: http://jruby.org.s3.amazonaws.com/downloads/1.7.2/jruby-bin-1.7.2.tar.gz
-jruby-bin-1.7.0.tar.gz:
-  :md5: 21861e0ecdbf48cda713c8ade82fdddb
-  :path_prefix: jruby/1.7.0/
-  :url: http://jruby.org.s3.amazonaws.com/downloads/1.7.0/jruby-bin-1.7.0.tar.gz
+jruby-bin-1.7.3.tar.gz:
+  :md5: f0adf8ccee6f6777f7ab8e5e1d7a1f47
+  :path_prefix: jruby/1.7.3/
+  :url: http://jruby.org.s3.amazonaws.com/downloads/1.7.3/jruby-bin-1.7.3.tar.gz
 jruby-bin-1.6.7.tar.gz:
   :md5: fd1b8d7389aa92da69ea6efb4782e40a
   :path_prefix: jruby/1.6.7/
   :url: http://jruby.org.s3.amazonaws.com/downloads/1.6.7/jruby-bin-1.6.7.tar.gz
-jruby-bin-1.6.5.tar.gz:
-  :md5: 54354082673bd115f945890dc6864413
-  :path_prefix: jruby/1.6.5/
-  :url: http://jruby.org.s3.amazonaws.com/downloads/1.6.5/jruby-bin-1.6.5.tar.gz
 rubinius-1.2.4-20110705.tar.gz:
   :md5: 403c777d19b3553e9cb36701fe002c5e
   :path_prefix: rbx/
@@ -99,10 +83,6 @@ curl-7.26.0.tar.gz:
   :md5: 3fa4d5236f2a36ca5c3af6715e837691
   :path_prefix: packages/curl/
   :url: http://curl.haxx.se/download/curl-7.26.0.tar.gz
-curl-7.19.7.tar.gz:
-  :md5: ecb2e37e45c9933e2a963cabe03670ab
-  :path_prefix: packages/curl/
-  :url: http://curl.haxx.se/download/curl-7.19.7.tar.gz
 openssl-1.0.1c.tar.gz:
   :md5: ae412727c8c15b67880aef7bd2999b2e
   :path_prefix: packages/openssl/
@@ -111,32 +91,24 @@ openssl-0.9.8n.tar.gz:
   :md5: 076d8efc3ed93646bd01f04e23c07066
   :path_prefix: packages/openssl/
   :url: http://www.openssl.org/source/openssl-0.9.8n.tar.gz
-zlib-1.2.7.tar.gz:  
+zlib-1.2.7.tar.gz:
   :md5: 60df6a37c56e7c1366cca812414f7b85
   :path_prefix: packages/zlib/
   :url: http://zlib.net/zlib-1.2.7.tar.gz
 zlib-1.2.6.tar.gz:
-  :md5: 
+  :md5:
   :path_prefix: packages/zlib/
   :url: http://zlib.net/zlib-1.2.6.tar.gz
 autoconf-2.69.tar.gz:
   :md5: 82d05e03b93e45f5a39b828dc9c6c29b
   :path_prefix: packages/autoconf/
   :url: ftp://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.gz
-autoconf-2.65.tar.gz:
-  :md5: 46cfb40e0babf4c64f8325f03da81c9b
-  :path_prefix: packages/autoconf/
-  :url: ftp://ftp.gnu.org/gnu/autoconf/autoconf-2.65.tar.gz
 ncurses-5.9.tar.gz:
   :md5: 8cb9c412e5f2d96bc6f459aa8c6282a1
   :path_prefix: packages/ncurses/
   :url: http://ftp.gnu.org/pub/gnu/ncurses/ncurses-5.9.tar.gz
-ncurses-5.7.tar.gz:
-  :md5: cce05daf61a64501ef6cd8da1f727ec6
-  :path_prefix: packages/ncurses/
-  :url: http://ftp.gnu.org/pub/gnu/ncurses/ncurses-5.7.tar.gz
 pkg-config-0.27.1.tar.gz:
-  :md5:
+  :md5: 5392b4e3372879c5bf856173b418d6a2
   :path_prefix: packages/pkgconfig/
   :url: http://pkgconfig.freedesktop.org/releases/pkg-config-0.27.1.tar.gz
 pkg-config-0.23.tar.gz:
@@ -159,6 +131,10 @@ libxml2-2.7.3.tar.gz:
   :md5: 8f4fda3969237c2a33bdb1583b5d06b2
   :path_prefix: packages/libxml2/
   :url: ftp://xmlsoft.org/libxml2/libxml2-2.7.3.tar.gz
+libxslt-1.1.26.tar.gz:
+  :md5: e61d0364a30146aaa3001296f853b2b9
+  :path_prefix: packages/libxslt/
+  :url: ftp://xmlsoft.org/libxslt/libxslt-1.1.26.tar.gz
 glib-2.35.4.tar.xz:
   :md5: 5dd69d52722a9c123015b9b6dd45ab3d
   :path_prefix: packages/glib/
@@ -168,7 +144,7 @@ glib-2.23.1.tar.gz:
   :path_prefix: packages/glib/
   :url: http://ftp.acc.umu.se/pub/gnome/sources/glib/2.23/glib-2.23.1.tar.gz
 yaml-0.1.4.tar.gz:
-  :md5: 36c852831d02cf90508c29852361d01b 
+  :md5: 36c852831d02cf90508c29852361d01b
   :path_prefix: packages/libyaml/
   :url: http://pyyaml.org/download/libyaml/yaml-0.1.4.tar.gz
 yaml-0.1.3.tar.gz:
