@@ -1,53 +1,55 @@
-# Rubies
+#General
+niceness=0
 
+# Rubies
 interpreter=ruby
-ruby_version=1.9.3
-ruby_configure_flags=--enable-shared --disable-install-doc
-ruby_patchlevel=194
-ruby_1.9.3_patch_level=194
-ruby_1.9.2_patch_level=320
-ruby_1.9.1_patch_level=431
-ruby_1.8.7_patch_level=358
-ruby_1.8.6_patch_level=420
+default_ruby=ruby
+ruby_configure_flags=--disable-install-doc
 ruby_url=<%= HOST %>/rubies/ruby-lang
 ruby_2.0_url=<%= HOST %>/rubies/ruby-lang/2.0
 ruby_1.9_url=<%= HOST %>/rubies/ruby-lang/1.9
 ruby_1.8_url=<%= HOST %>/rubies/ruby-lang/1.8
+ruby_version=2.0.0
+ruby_2.0.0_patch_level=p0
+ruby_1.9.3_patch_level=p392
+ruby_1.9.2_patch_level=p320
+ruby_1.9.1_patch_level=p431
+ruby_1.8.7_patch_level=p371
+ruby_1.8.6_patch_level=p420
+ruby_1.8.5_patch_level=p231
 
 rubygems_url=<%= HOST %>/rubies/rubygems
-rubygems_version=latest-1.8
+rubygems_version=1.8.25
+ruby_2.0.0_rubygems_version=2.0.0
+# ruby_1.9.3_head_rubygems_version=1.8.5
 
-rubygems_1.3.7_url=<%= HOST %>/rubies/rubygems
+rbx_version=1.2.4
+rbx_1.2.4_patch_level=20110705
+rbx_url=<%= HOST %>/rubies/rbx
 
-jruby_version=1.6.7
+ree_version=1.8.7
+ree_configure_flags=--dont-install-useful-gems --no-dev-docs
+ree_1.8.7_patch_level=2012.02
+ree_1.8.7_url=<%= HOST %>/rubies/ree
+
+jruby_version=1.7.3
 jruby_url=<%= HOST %>/rubies/jruby
-
-jruby_1.7.0_url=<%= HOST %>/rubies/jruby
-jruby_1.7.2_url=<%= HOST %>/rubies/jruby
 
 macruby_url=<%= HOST %>/rubies/macruby
 macruby_version=0.12
 
-rbx_url=<%= HOST %>/rubies/rbx
-rbx_version=1.2.4
-rbx_1.2.4_patch_level=20110705
-
-ree_version=1.8.7
-ree_1.8.7_patch_level=2012.02
-ree_1.8.7_url=<%= HOST %>/rubies/ree
-
-
 # Packages
-
 readline_url=<%= HOST %>/rubies/packages/readline
 libiconv_url=<%= HOST %>/rubies/packages/iconv
 curl_url=<%= HOST %>/rubies/packages/curl
 openssl_url=<%= HOST %>/rubies/packages/openssl
+openssl_version=1.0.1c
 zlib_url=<%= HOST %>/rubies/packages/zlib
 autoconf_url=<%= HOST %>/rubies/packages/autoconf
 ncurses_url=<%= HOST %>/rubies/packages/ncurses
 pkg-config_url=<%= HOST %>/rubies/packages/pkgconfig
 gettext_url=<%= HOST %>/rubies/packages/gettext
 libxml2_url=<%= HOST %>/rubies/packages/libxml2
-glib_url=<%= HOST %>/rubies/packages/glib
+libxslt_url=<%= HOST %>/rubies/packages/libxslt
 yaml_url=<%= HOST %>/rubies/packages/libyaml
+glib_url=<%= HOST %>/rubies/packages/glib
