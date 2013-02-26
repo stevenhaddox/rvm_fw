@@ -30,16 +30,8 @@ To add more rubies you must:
 * update views/known.erb
 * update config/rubies.yml.example
 
-One day it would be nice to make this all tied together a bit better.
+One day it would be nice to make this all tied together a bit better. Hopefully we can automate the rendering of db.erb and known.erb dynamically based upon your custom configuration or the default configuration of [config/rubies.yml](config/rubies.yml.example).
 
 # I could benefit from RVM::FW - How do I help?
 
 Fork away and start hacking on any of our [open issues](http://github.com/stevenhaddox/rvm_fw/issues).
-
-
-## Random miscellaneous self-notes:
-
-### RVM install workflow
-
-- Downloads into .rvm/archives
-- Extracts downloads into .rvm/src
