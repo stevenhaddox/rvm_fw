@@ -1,17 +1,14 @@
-require 'sinatra/base'
+
+require "rubygems"
+require "bundler/setup"
+
+require 'sinatra'
+require 'fileutils'
+require 'digest/md5'
+require 'yaml'
+require 'haml'
 
 class RvmFw < Sinatra::Base
-  # rvm_fw main application
-  require "rubygems"
-  require "bundler/setup"
-
-  require 'sinatra'
-  require 'fileutils'
-  require 'digest/md5'
-  require 'yaml'
-  require 'haml'
-  require 'sass'
-
   set :root, File.expand_path('../',File.dirname(__FILE__))
 
   before do

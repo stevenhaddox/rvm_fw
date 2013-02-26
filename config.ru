@@ -4,9 +4,6 @@ require 'rubygems'
 # require 'rubygems/deprecate'
 require 'bundler'
 Bundler.require
-require File.join(File.dirname(__FILE__), 'lib/rvm_fw.rb')
 
-require 'sass/plugin/rack'
-use Sass::Plugin::Rack
-
+require File.join(File.dirname(__FILE__), 'app/rvm_fw.rb')
 run RvmFw
