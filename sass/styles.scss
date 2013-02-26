@@ -1,13 +1,24 @@
-@import "bootstrap";
-@import "bootstrap-responsive";
-
 // Colors
+$rvm_maroon: #ad2222;
 $rvm_red: #9c1f1f;
 $rvm_tan: #fafaf2;
 $blue: blue;
 $dark_grey: #555658;
 $light_grey: #cccccc;
 $white: white;
+
+// Bootstrap vars
+$navbarHeight: 45px;
+$navbarBackground: $rvm_maroon;
+$navbarBackgroundHighlight: $rvm_red;
+$navbarText: $white;
+$navbarBrandColor: $white;
+$navbarLinkColor: $rvm_tan;
+$navbarLinkColorActive: $rvm_tan;
+$navbarLinkColorHover: $white;
+
+@import "bootstrap";
+@import "bootstrap-responsive";
 
 // Sticky Footer
 $footer_height: 60px;
@@ -44,6 +55,16 @@ html, body {
 body {
   background-color: $rvm_tan;
   font-family: $serifFontFamily;
+}
+
+.navbar {
+  font-family: $monoFontFamily !important;
+}
+.navbar.brand {
+  font-size: 1.35em;
+}
+.navbar ul.nav {
+  font-size: 1.25em;
 }
 
 h1, h2, h3, h4, h5, h6 { font-family: $sansFontFamily; }
