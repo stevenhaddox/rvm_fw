@@ -10,6 +10,7 @@ $light_grey: #cccccc;
 $white: white;
 
 // Sticky Footer
+$footer_height: 60px;
 html, body {
   height: 100%;
 }
@@ -18,16 +19,19 @@ html, body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -60px; /* match footer height */
+  margin: 0 auto -$footer_height; /* match footer height */
 }
 
-#push, #footer {
-  height: 60px;
+#wrap > .container {
+  padding-top: 40px;
 }
-#footer { background-color: $rvm_red; }
+
+#push, footer {
+  height: $footer_height;
+}
 
 @media (max-width: 767px) {
-  #footer {
+  footer {
     margin-left: -20px;
     margin-right: -20px;
     padding-left: 20px;
@@ -39,8 +43,10 @@ html, body {
 
 body {
   background-color: $rvm_tan;
-  font-family: Georgia, Palatino, Times, "Times New Roman", sans-serif;
+  font-family: $serifFontFamily;
 }
+
+h1, h2, h3, h4, h5, h6 { font-family: $sansFontFamily; }
 
 h1 {
   text-align: center;
@@ -50,7 +56,6 @@ h1 {
 h2 {
   font-size: 1.5em;
   color: $rvm_red;
-  padding-bottom: 10px;
   border-bottom: 1px solid $light_grey;
 }
 
@@ -76,6 +81,7 @@ pre {
   border: 1px solid $rvm_red;
   padding: 0.75em;
   overflow: auto;
+  font-family: $monoFontFamily;
 }
 
 @mixin rounded_corners($radius: 15px) {
@@ -85,56 +91,35 @@ pre {
 }
 
 h1.title {
-  margin-top: 0.5em;
+  margin-top: 0.5em auto 0 !important;
+  padding: 0;
   color: $rvm_red;
 }
 
 h2.description {
+  margin-top: 0 !important;
+  padding: 0 5px 5px;
   text-align: center;
-  padding: 5px;
   color: $dark_grey;
 }
 
-article {
-  padding: 1em;
-  @include rounded_corners;
-  margin: 1.5em auto;
+article { }
+
+footer {
+  background-color: $rvm_red;
+  color: $white;
+}
+footer > .container { display: table; }
+footer p {
+  height: $footer_height;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 1.5em;
 }
 
-ul#menu {
-  width: 640px;
-  margin: 0 auto;
-  padding: 0;
-  height: 1.3em;
-  li.link {
-    list-style-type: none;
-    float: left;
-    margin-right: 3em;
-  }
+footer p a:link, footer p a:visited {
+  color: $white;
 }
 
-ul#menu li.link.last {
-  margin-right: 0 !important;
-}
-
-ul#files {
-  list-style-type: none;
-  margin: 0 auto;
-  padding: 0;
-  li.title {
-    border-top-width: 0;
-    h3 {
-      font-size: 1.2em;
-      font-weight: bold;
-      margin-bottom: 0.5em; 
-    }
-  }
-  li.file {
-    clear: left;
-    margin: 0 auto;
-    border-top: 1px dashed #cccccc;
-    padding: 0.5em 0;
-    div.filename { text-align: right; }
-    div.md5 {}
-  }
-}
+article ul#files li.file { list-style-type: none; }

@@ -31,6 +31,7 @@
         %header
           %h1.title RVM::FW
           %h2.description Exposing hidden Rubies for firewalled RVM's.
+
         %article
           = yield
       #push
@@ -39,3 +40,6 @@
       .container
         %p
           %a{:href => 'https://github.com/stevenhaddox/rvm_fw'} Fork RVM::FW on GitHub
+
+    %script{:src => '/javascripts/jquery-1.9.1.min.js'}
+    %script{:src => '/javascripts/bootstrap-collapse.js'}
