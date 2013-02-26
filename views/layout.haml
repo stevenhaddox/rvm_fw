@@ -1,26 +1,45 @@
 %html
   %head
     %title RVM::FW - Hidden Rubies for RVM
-    %meta{'http-equiv'=>'Content-Type', :content=>'text/html; charset=utf-8'}
-    %link{:href => '/stylesheets/screen.css', :media => 'screen, projection', :type => 'text/css', :rel => 'stylesheet'}
-    %link{:href => '/stylesheets/print.css', :media => 'print', :type => 'text/css', :rel => 'stylesheet'}
-    /[if lt IE 8]
-      %link{:href => '/stylesheets/ie.css', :media => 'screen, projection', :type => 'text/css', :rel => 'stylesheet'}
-    %link{:href => '/stylesheets/typography.css', :media => 'screen, projection', :type => 'text/css', :rel => 'stylesheet'}
-    %link{:href => '/stylesheets/forms.css', :media => 'screen, projection', :type => 'text/css', :rel => 'stylesheet'}
-    %link{:href => '/stylesheets/application.css', :media => 'all', :type => 'text/css', :rel => 'stylesheet'}
-  
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
+    %meta{'viewport' => 'width=device-width, initial-scale=1.0'}
+    %link{:href => '/stylesheets/styles.css', :media => 'screen, projection', :type => 'text/css', :rel => 'stylesheet'}
+    /[if lt IE 9]
+      %script{:src => '/javascripts/html5shiv.js'}
+    %link{:rel => 'shortcut icon', :href => 'images/favicon.png'}
+
   %body
-    %h1.title RVM::FW
-    %h2.description 
-      Exposing hidden Rubies for firewalled RVM's.
-      %ul#menu
-        %li.link
-          %a{:href => "/"} Home
-        %li.link
-          %a{:href => "/db"} RVM::FW Config
-        %li.link.last
-          %a{:href => "/files"} Available Rubies
-  
-    .container
-      = yield
+    #wrap
+      .navbar.navbar-fixed-top
+        .navbar-inner
+          .container
+            %button.btn.btn-navbar{:type => 'button', :data_toggle => 'collapse', :data_target => '.nav-collapse'}
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a.brand{:href => '/'} RVM::FW
+            .nav-collapse.collapse
+              %ul.nav
+                %li
+                  %a{:href => '/files'} Rubies
+                %li
+                  %a{:href => '/db' } DB
+                %li
+                  %a{:href => '/known' } Known
+
+      .container
+        %header
+          %h1.title RVM::FW
+          %h2.description Exposing hidden Rubies for firewalled RVM's.
+
+        %article
+          = yield
+      #push
+
+    %footer#footer
+      .container
+        %p
+          %a{:href => 'https://github.com/stevenhaddox/rvm_fw'} Fork RVM::FW on GitHub
+
+    %script{:src => '/javascripts/jquery-1.9.1.min.js'}
+    %script{:src => '/javascripts/bootstrap-collapse.js'}

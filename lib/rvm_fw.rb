@@ -12,7 +12,7 @@ class RvmFw < Sinatra::Base
   require 'haml'
   require 'sass'
 
-  set :views, File.expand_path('../../views', __FILE__)
+  set :root, File.expand_path('../',File.dirname(__FILE__))
 
   before do
     #app variables
@@ -21,15 +21,9 @@ class RvmFw < Sinatra::Base
     RUBIES_PATH   = File.expand_path('../../public/rubies', __FILE__) unless defined?(RUBIES_PATH)
     RVM_VERSION   = '1.18.14' unless defined?(RVM_VERSION)
     unless defined?(HOST)
-      HOST          = "#{request.scheme}://#{request.host}" 
-      HOST          += ":#{request.port}" unless [80, 443].include?(request.port) 
+      HOST          = "#{request.scheme}://#{request.host}"
+      HOST          += ":#{request.port}" unless [80, 443].include?(request.port)
     end
-  end
-
-  # CSS path_prefixs
-  get '/stylesheets/application.css' do
-    content_type 'text/css', :charset => 'utf-8'
-    scss :application, :style => :expanded
   end
 
   get '/' do
@@ -52,7 +46,7 @@ class RvmFw < Sinatra::Base
     if File.exist?("#{RUBIES_PATH}/#{file_path}")
       file = File.join(RUBIES_PATH, file_path) # => ["filename.ext"]
       send_file(file, :disposition => 'attachment', :filename => File.basename(file))
-    else 
+    else
       halt 404
     end
   end

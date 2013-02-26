@@ -1,19 +1,19 @@
 source "http://rubygems.org"
-gem "rack"
-gem "rake"
+gem "haml", "~> 4.0"
+gem "rake", "~> 10.0"
 gem "sinatra", :require => "sinatra/base"
-gem "haml"
-gem "sass"
 gem "thin"
 gem "puma"
 
 group :development do
+  gem "bootstrap-sass", "~> 2.3.0.1"
+  gem "compass", "~> 0.12"
   gem "travis-lint"
 end
 
 group :test do
   gem "capybara"
-  gem "cucumber"
   gem "cucumber-sinatra"
+  gem "cucumber"
   gem "rspec"
 end

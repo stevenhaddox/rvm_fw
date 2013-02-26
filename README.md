@@ -1,6 +1,6 @@
 # RVM::FW Edition
 
-[![Build Status](https://secure.travis-ci.org/stevenhaddox/rvm_fw.png)](http://travis-ci.org/stevenhaddox/rvm_fw)
+[![Build Status](https://travis-ci.org/stevenhaddox/rvm_fw.png?branch=master)](https://travis-ci.org/stevenhaddox/rvm_fw) [![Dependency Status](https://gemnasium.com/stevenhaddox/rvm_fw.png)](https://gemnasium.com/stevenhaddox/rvm_fw) [![Code Climate](https://codeclimate.com/github/stevenhaddox/rvm_fw.png)](https://codeclimate.com/github/stevenhaddox/rvm_fw)
 
 RVM::FW is meant to be a simple Sinatra application that you can easily deploy on an intranet/local network server and enable quick and easy access to install multiple ruby versions side-by-side the way RVM does at home.
 
@@ -26,6 +26,7 @@ You can also visit: http://[your-server]/known to get a plain-text file that a u
 
 To add more rubies you must:
 
+* customize config/rubies.yml
 * update views/db.erb
 * update views/known.erb
 * update config/rubies.yml.example
