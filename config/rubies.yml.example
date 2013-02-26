@@ -72,7 +72,7 @@ libiconv-1.13.1.tar.gz:
   :path_prefix: packages/iconv/
   :url: http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz
 curl-7.19.7.tar.gz:
-  :md5: 3fa4d5236f2a36ca5c3af6715e837691
+  :md5: 
   :path_prefix: packages/curl/
   :url: http://curl.haxx.se/download/curl-7.19.7.tar.gz
 openssl-1.0.1c.tar.gz:
@@ -96,11 +96,11 @@ ncurses-5.7.tar.gz:
   :path_prefix: packages/ncurses/
   :url: http://ftp.gnu.org/pub/gnu/ncurses/ncurses-5.7.tar.gz
 pkg-config-0.23.tar.gz:
-  :md5: 
+  :md5: d922a88782b64441d06547632fd85744
   :path_prefix: packages/pkgconfig/
   :url: http://pkgconfig.freedesktop.org/releases/pkg-config-0.23.tar.gz
 gettext-0.17.tar.gz:
-  :md5: 
+  :md5: 58a2bc6d39c0ba57823034d55d65d606
   :path_prefix: packages/gettext/
   :url: ftp://ftp.gnu.org/pub/gnu/gettext/gettext-0.17.tar.gz
 libxml2-2.9.0.tar.gz:
@@ -116,7 +116,7 @@ libxslt-1.1.26.tar.gz:
   :path_prefix: packages/libxslt/
   :url: ftp://xmlsoft.org/libxslt/libxslt-1.1.26.tar.gz
 glib-2.23.1.tar.xz:
-  :md5: 
+  :md5: ea32c834a8c7b166e05aeaaa41a021f4
   :path_prefix: packages/glib/
   :url: http://ftp.acc.umu.se/pub/gnome/sources/glib/2.23/glib-2.23.1tar.xz
 yaml-0.1.4.tar.gz:

@@ -6,3 +6,4 @@ public/rubies
 .sass-cache
 .DS_Store
 TODO
+tmp
