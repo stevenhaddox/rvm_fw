@@ -72,7 +72,7 @@ libiconv-1.13.1.tar.gz:
   :path_prefix: packages/iconv/
   :url: http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz
 curl-7.19.7.tar.gz:
-  :md5: 
+  :md5: ecb2e37e45c9933e2a963cabe03670ab
   :path_prefix: packages/curl/
   :url: http://curl.haxx.se/download/curl-7.19.7.tar.gz
 openssl-1.0.1c.tar.gz:
@@ -88,11 +88,11 @@ zlib-1.2.7.tar.gz:
   :path_prefix: packages/zlib/
   :url: http://zlib.net/zlib-1.2.7.tar.gz
 autoconf-2.65.tar.gz:
-  :md5: 
+  :md5: 46cfb40e0babf4c64f8325f03da81c9b
   :path_prefix: packages/autoconf/
   :url: ftp://ftp.gnu.org/gnu/autoconf/autoconf-2.65.tar.gz
 ncurses-5.7.tar.gz:
-  :md5: 
+  :md5: cce05daf61a64501ef6cd8da1f727ec6
   :path_prefix: packages/ncurses/
   :url: http://ftp.gnu.org/pub/gnu/ncurses/ncurses-5.7.tar.gz
 pkg-config-0.23.tar.gz:
