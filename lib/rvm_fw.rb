@@ -9,6 +9,8 @@ class RvmFw < Sinatra::Base
   require 'fileutils'
   require 'digest/md5'
   require 'yaml'
+  require 'haml'
+  require 'sass'
 
   set :views, File.expand_path('../../views', __FILE__)
 
