@@ -1,8 +1,6 @@
 # RVM::FW Edition
 
-<a href="http://travis-ci.org/stevenhaddox/rvm_fw"><img src="https://secure.travis-ci.org/stevenhaddox/rvm_fw.png" height="143" alt="build status" /></a>
-<a href="https://gemnasium.com/stevenhaddox/rvm_fw"><img src="https://gemnasium.com/stevenhaddox/rvm_fw.png" height="143" alt="Dependency Status" /></a>
-<a href="https://codeclimate.com/github/stevenhaddox/rvm_fw"><img src="http://codeclimate.com/github/stevenhaddox/rvm_fw.png" height="143" alt="Code Climate" /></a>
+[![Build Status](https://travis-ci.org/stevenhaddox/rvm_fw.png?branch=master)](https://travis-ci.org/stevenhaddox/rvm_fw) [![Dependency Status](https://gemnsium.com/stevenhaddox/rvm_fw.png)](https://gemnasium.com/stevenhaddox/rvm_fw) [![Code Climate](http://codeclimate.com/github/stevenhaddox/rvm_fw.png)](https://codeclimate.com/github/stevenhaddox/rvm_fw)
 
 RVM::FW is meant to be a simple Sinatra application that you can easily deploy on an intranet/local network server and enable quick and easy access to install multiple ruby versions side-by-side the way RVM does at home.
 
