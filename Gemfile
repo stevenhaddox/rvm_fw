@@ -1,9 +1,8 @@
 source "http://rubygems.org"
-gem "rack"
-gem "rake"
+gem "bootstrap-sass", "~> 2.3"
+gem "haml", "~> 4.0"
+gem "rake", "~> 10.0"
 gem "sinatra", :require => "sinatra/base"
-gem "haml"
-gem "sass"
 gem "thin"
 gem "puma"
 
@@ -13,7 +12,7 @@ end
 
 group :test do
   gem "capybara"
-  gem "cucumber"
   gem "cucumber-sinatra"
+  gem "cucumber"
   gem "rspec"
 end
