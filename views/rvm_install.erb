@@ -15,15 +15,15 @@ builtin cd $rvm_path/src
 
 stable_version=$(curl -B <%= HOST %>/releases/stable-version.txt 2>/dev/null)
 
-echo "rvm-${stable_version}"
+echo "Installing RVM Version: ${stable_version}"
 
-curl -L "<%= HOST %>/rubies/packages/rvm/rvm-${stable_version}.tar.gz" -o "rvm-${stable_version}.tar.gz"
+curl -L "<%= HOST %>/rubies/packages/rvm/${stable_version}.tar.gz" -o "${stable_version}.tar.gz"
 
 
 # set name of folder we cd into after file is extracted
-rvm_src_dir=$(tar tzf "rvm-${stable_version}.tar.gz" | tail -1 | awk '{split ($0, a, "/"); print a[1]}')
+rvm_src_dir=$(tar tzf "${stable_version}.tar.gz" | tail -1 | awk '{split ($0, a, "/"); print a[1]}')
 # extract the downloaded tarball
-tar zxf "rvm-${stable_version}.tar.gz"
+tar zxf "${stable_version}.tar.gz"
 # cd into the extracted directory
 builtin cd "${rvm_src_dir}"
 

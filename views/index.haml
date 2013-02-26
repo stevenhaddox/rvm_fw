@@ -1,13 +1,13 @@
 %h2#rvm What is RVM?
 
-%p 
-  RVM stands for "Ruby Version Manager" and can be found online at: 
-  %a{:href=>'http://rvm.beginrescueend.com/'} http://rvm.beginrescueend.com
+%p
+  RVM stands for "Ruby Version Manager" and can be found online at:
+  %a{:href=>'http://rvm.io'} http://rvm.io
 %p In short, RVM allows you to install and manage multiple Ruby versions side by side on the same system easily. It also provides a means to install "gemsets" allowing you to group your gems together by application, Rails version, etc.
 
 %h2#rvm_fw What is RVM::FW (Firewall)?
 
-%p 
+%p
   RVM::FW is a simple Sinatra application that runs on a Phusion enabled webserver (but the config.ru can be easily modified for Mongrel, Thin, etc. to fit your needs).  This index page provides a brief explanation of how to use RVM in case you can't access the main RVM page and also explains how to replace your ~/.rvm/user/db file with the dynamically generated db file from RVM:FW which lists _only_ the available Ruby installs in this application.
 
 %h2#inspiration What inspired RVM::FW?
@@ -18,8 +18,8 @@
 %h2#install_rvm_fw How do I use RVM::FW Rubies with RVM?
 
 %p
-  This is the easiest part.  Ensure that you have already 
-  %a{:href => '#install_rvm'} installed RVM 
+  This is the easiest part.  Ensure that you have already
+  %a{:href => '#install_rvm'} installed RVM
   on your OS X / Linux system and then download the
   %a{:href => '/db'} customized database file with:
   <pre>$ wget #{HOST}/db -O ~/.rvm/user/db</pre>
@@ -42,7 +42,7 @@
 %pre
   :preserve
     version=$(curl #{HOST}/releases/stable-version.txt);
-    mkdir -p ~/.rvm/src/ && cd ~/.rvm/src/ && curl -O #{HOST}/releases/rvm-${version}.tar.gz | tar zxf - && cd rvm-${version} && ./install
+    mkdir -p ~/.rvm/src/ && cd ~/.rvm/src/ && curl -O #{HOST}/releases/${version}.tar.gz | tar zxf - && cd ${version} && ./install
 
 %p
   The first time you install RVM, you must put the following line into your profile at the very end, after all path loads etc:
