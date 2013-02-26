@@ -7,6 +7,8 @@ gem "thin"
 gem "puma"
 
 group :development do
+  gem "bootstrap-sass", "~> 2.3"
+  gem "compass", "~> 0.12"
   gem "travis-lint"
 end
 
