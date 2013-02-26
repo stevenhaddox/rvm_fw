@@ -1,5 +1,140 @@
-// I gather this file is a starting point for the project.
 @import "bootstrap";
+@import "bootstrap-responsive";
 
-// Include responsive Bootstrap styles
-// @import "bootstrap-responsive";
+// Colors
+$rvm_red: #9c1f1f;
+$rvm_tan: #fafaf2;
+$blue: blue;
+$dark_grey: #555658;
+$light_grey: #cccccc;
+$white: white;
+
+// Sticky Footer
+html, body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -60px; /* match footer height */
+}
+
+#push, #footer {
+  height: 60px;
+}
+#footer { background-color: $rvm_red; }
+
+@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+// Application styles
+
+body {
+  background-color: $rvm_tan;
+  font-family: Georgia, Palatino, Times, "Times New Roman", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: $rvm_red;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $light_grey;
+}
+
+a:link, a:visited, a:hover {
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  color: $rvm_red;
+}
+
+a:hover {
+  color: $blue;
+}
+
+p, pre {
+  font-size: 1.1em;
+}
+
+pre {
+  margin-left: 1em;
+  margin-right: 1em;
+  border: 1px solid $rvm_red;
+  padding: 0.75em;
+  overflow: auto;
+}
+
+@mixin rounded_corners($radius: 15px) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+h1.title {
+  margin-top: 0.5em;
+  color: $rvm_red;
+}
+
+h2.description {
+  text-align: center;
+  padding: 5px;
+  color: $dark_grey;
+}
+
+article {
+  padding: 1em;
+  @include rounded_corners;
+  margin: 1.5em auto;
+}
+
+ul#menu {
+  width: 640px;
+  margin: 0 auto;
+  padding: 0;
+  height: 1.3em;
+  li.link {
+    list-style-type: none;
+    float: left;
+    margin-right: 3em;
+  }
+}
+
+ul#menu li.link.last {
+  margin-right: 0 !important;
+}
+
+ul#files {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  li.title {
+    border-top-width: 0;
+    h3 {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 0.5em; 
+    }
+  }
+  li.file {
+    clear: left;
+    margin: 0 auto;
+    border-top: 1px dashed #cccccc;
+    padding: 0.5em 0;
+    div.filename { text-align: right; }
+    div.md5 {}
+  }
+}
