@@ -26,6 +26,7 @@ You can also visit: http://[your-server]/known to get a plain-text file that a u
 
 To add more rubies you must:
 
+* customize config/rubies.yml
 * update views/db.erb
 * update views/known.erb
 * update config/rubies.yml.example

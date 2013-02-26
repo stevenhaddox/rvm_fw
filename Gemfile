@@ -1,5 +1,4 @@
 source "http://rubygems.org"
-gem "bootstrap-sass", "~> 2.3"
 gem "haml", "~> 4.0"
 gem "rake", "~> 10.0"
 gem "sinatra", :require => "sinatra/base"
