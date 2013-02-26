@@ -87,7 +87,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass (~> 2.3)
+  bootstrap-sass (~> 2.3.0.1)
   capybara
   compass (~> 0.12)
   cucumber
