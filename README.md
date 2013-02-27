@@ -25,9 +25,9 @@ RVM::FW works really well to make it possible to use RVM (or rbenv even) inside 
 
 [View a demo](http://rvm-fw.herokuapp.com) to see RVM::FW's user views & instructions for how to setup and use RVM internally. Obviously there are no rubies due to file-size / RVM itself existing on the real Internet.
 
-Just visit: http://<your_host>/db to get a plain-text file that your users need to copy and paste into: `~/.rvm/user/db`.  This file overrides the defaults built into RVM's `~/.rvm/config/db` and will point it to your RVM::FW instance to download it's rubies.
+Just visit: `http(s)://<your_host>:<port>/db` to get a plain-text file that your users need to copy and paste into: `~/.rvm/user/db`.  This file overrides the defaults built into RVM's `~/.rvm/config/db` and will point it to your RVM::FW instance to download it's rubies.
 
-You can also visit: http://<your_host>/known to get a plain-text file that a user can be put into: `~.rvm/config/known`. This will provide a more a accurate list of available rubies when a user runs `rvm list known`.
+You can also visit: `http(s)://<your_host>:<port>/known` to get a plain-text file that a user can be put into: `~.rvm/config/known`. This will provide a more a accurate list of available rubies when a user runs `rvm list known`.
 
 ## I Want to Help!
 
