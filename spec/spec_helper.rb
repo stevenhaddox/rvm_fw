@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + "/../lib/rvm_fw.rb"
+require File.dirname(__FILE__) + "/../app/rvm_fw.rb"
 require 'rubygems'
 require 'sinatra'
 require 'rack/test'
