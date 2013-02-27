@@ -2,37 +2,45 @@
 
 [![Build Status](https://travis-ci.org/stevenhaddox/rvm_fw.png?branch=master)](https://travis-ci.org/stevenhaddox/rvm_fw) [![Dependency Status](https://gemnasium.com/stevenhaddox/rvm_fw.png)](https://gemnasium.com/stevenhaddox/rvm_fw) [![Code Climate](https://codeclimate.com/github/stevenhaddox/rvm_fw.png)](https://codeclimate.com/github/stevenhaddox/rvm_fw)
 
-RVM::FW is meant to be a simple Sinatra application that you can easily deploy on an intranet/local network server and enable quick and easy access to install multiple ruby versions side-by-side the way RVM does at home.
+RVM::FW works really well to make it possible to use RVM (or rbenv even) inside a restrictive LAN or Firewall just like you do at home.
 
-## Setting up RVM::FW
+## Setup RVM::FW
 
-### Download Rubies to Serve to RVM
+1. Clone RVM::FW:
 
-Once you have RVM::FW downloaded locally you need to download the rubies that you want to serve (probably before you deploy if you're behind a firewall).  In order to do this simply run:
+    $ git clone git://github.com/stevenhaddox/rvm_fw.git
+    $ bundle install
 
-    $ rake boot:strap
+2. [Create & modify config/rubies.yml](#adding-more-rubiez).
 
-## Deploy
+3. Download Rubiez and packages:
 
-The application comes pre-configured to work with Phusion Passenger easily.  Overall it's just a simple Sinatra application so feel free to customize as needed and push it all to your server (just make sure the ruby installs are included in your deploy).
+    $ bundle exec rake boot:strap
 
-## Configuring RVM to work with RVM::FW
+4. Archive your local setup of RVM::FW and import it into your network.
 
-Just visit: http://[your-server]/db to get a plain-text file that your users need to copy and paste into: `~/.rvm/user/db`.  This file overrides the defaults built into RVM's `~/.rvm/config/db` and will point it to your RVM::FW instance to download it's rubies.
+5. Deploy! RVM::FW is a simple Sinatra application so you can deploy it anywhere you have Ruby or Rack available internally!
 
-You can also visit: http://[your-server]/known to get a plain-text file that a user can be put into: `~.rvm/config/known`. This will provide a more a accurate list of available rubies when a user runs `rvm list known`.
+## How to Use RVM::FW Once It's Deployed
 
-## Adding more rubies
+[View a demo](http://rvm-fw.herokuapp.com) to see RVM::FW's user views & instructions for how to setup and use RVM internally. Obviously there are no rubies due to file-size / RVM itself existing on the real Internet.
 
-To add more rubies you must:
+Just visit: http://<your_host>/db to get a plain-text file that your users need to copy and paste into: `~/.rvm/user/db`.  This file overrides the defaults built into RVM's `~/.rvm/config/db` and will point it to your RVM::FW instance to download it's rubies.
 
-* customize config/rubies.yml
-* update views/db.erb
-* update views/known.erb
-* update config/rubies.yml.example
+You can also visit: http://<your_host>/known to get a plain-text file that a user can be put into: `~.rvm/config/known`. This will provide a more a accurate list of available rubies when a user runs `rvm list known`.
 
-One day it would be nice to make this all tied together a bit better. Hopefully we can automate the rendering of db.erb and known.erb dynamically based upon your custom configuration or the default configuration of [config/rubies.yml](config/rubies.yml.example).
+## I Want to Help!
 
-# I could benefit from RVM::FW - How do I help?
+Add your idea or feature requests to the [issue tracker](https://github.com/stevenhaddox/rvm_fw/issues) or [Fork RVM::FW on GitHub](https://github.com/stevenhaddox/rvm_fw) and send me a pull request!
 
-Fork away and start hacking on any of our [open issues](http://github.com/stevenhaddox/rvm_fw/issues).
+## Easter Egg?
+
+**Bonus:** If you're an rbenv fan but still stuck in a restricted environment you can use RVM::FW as a simple way to configure, download, and deploy a central location to keep your Ruby source code. Accessing your desired version of Ruby for rbenv is as simple as querying http://<your_host>/public/rubies/<ruby_platform>/<ruby_specific_path>. All the Ruby source paths & packages are easily discoverable within the [config/rubies.yml](config/rubies.yml.example) file.
+
+## Adding More Rubiez
+
+We're looking into rendering the views for db.erb and known.erb dynamically based upon your custom configuration or the default configuration of [config/rubies.yml](config/rubies.yml.example), but until then you have to manually update and maintain the following files:
+
+* customize config/rubies.yml (defaults to: [config/rubies.yml.example](config/rubies.yml.example))
+* update [views/db.erb](views/db.erb)
+* update [views/known.erb](views/known.erb)
