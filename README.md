@@ -8,14 +8,18 @@ RVM::FW works really well to make it possible to use RVM (or rbenv even) inside 
 
 1. Clone RVM::FW:
 
-    $ git clone git://github.com/stevenhaddox/rvm_fw.git
-    $ bundle install
+```bash
+$ git clone git://github.com/stevenhaddox/rvm_fw.git
+$ bundle install
+```
 
 2. [Create & modify config/rubies.yml](#adding-more-rubiez).
 
 3. Download Rubiez and packages:
 
-    $ bundle exec rake boot:strap
+```bash
+$ bundle exec rake boot:strap
+```
 
 4. Archive your local setup of RVM::FW and import it into your network.
 
