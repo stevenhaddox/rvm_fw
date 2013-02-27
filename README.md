@@ -39,7 +39,7 @@ Add your idea or feature requests to the [issue tracker](https://github.com/stev
 
 ## Adding More Rubiez
 
-We're looking into rendering the views for db.erb and known.erb dynamically based upon your custom configuration or the default configuration of [config/rubies.yml](config/rubies.yml.example), but until then you have to manually update and maintain the following files:
+We're looking into [rendering the views for db.erb and known.erb dynamically](https://github.com/stevenhaddox/rvm_fw/issues/20) based upon your custom configuration or the default configuration of [config/rubies.yml](config/rubies.yml.example), but until then you have to manually update and maintain the following files:
 
 * customize config/rubies.yml (defaults to: [config/rubies.yml.example](config/rubies.yml.example))
 * update [views/db.erb](views/db.erb)
