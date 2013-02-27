@@ -33,9 +33,9 @@ You can also visit: `http(s)://<your_host>:<port>/known` to get a plain-text fil
 
 Add your idea or feature requests to the [issue tracker](https://github.com/stevenhaddox/rvm_fw/issues) or [Fork RVM::FW on GitHub](https://github.com/stevenhaddox/rvm_fw) and send me a pull request!
 
-## Easter Egg?
+## Easter Egg
 
-**Bonus:** If you're an rbenv fan but still stuck in a restricted environment you can use RVM::FW as a simple way to configure, download, and deploy a central location to keep your Ruby source code. Accessing your desired version of Ruby for rbenv is as simple as querying `http(s)://<your_host>:<port>/public/rubies/<ruby_platform>/<ruby_specific_path>`. All the Ruby source paths & packages are easily discoverable within the [config/rubies.yml](config/rubies.yml.example) file.
+**Bonus:** If you're an rbenv fan but still stuck in a restricted environment you can use RVM::FW as a simple way to host a central location to keep your Ruby source code. Accessing your desired version of Ruby for rbenv is as simple as querying `http(s)://<your_host>:<port>/public/rubies/<ruby_platform>/<ruby_specific_path>`. All the Ruby source paths & packages are easily discoverable within the [config/rubies.yml](config/rubies.yml.example) file.
 
 ## Adding More Rubiez
 
