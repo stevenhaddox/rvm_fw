@@ -115,6 +115,7 @@ h1.title {
   margin-top: 0.5em auto 0 !important;
   padding: 0;
   color: $rvm_red;
+  font-family: $monoFontFamily;
 }
 
 h2.description {
@@ -137,6 +138,7 @@ footer p {
   vertical-align: middle;
   text-align: center;
   font-size: 1.5em;
+  font-family: $monoFontFamily;
 }
 
 footer p a:link, footer p a:visited {
