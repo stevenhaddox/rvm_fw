@@ -74,6 +74,11 @@ class RvmFw < Sinatra::Base
     RVM_VERSION
   end
 
+  get '/openssl/haxx.cacert.pem' do
+    content_type 'text/plain', :charset => 'utf-8'
+    send_file 'views/haxx.cacert.pem'
+  end
+
   get '/md5' do
     content_type 'text/plain', :charset => 'utf-8'
     "I'll eventually return a customized ~/.rvm/config/md5 file if it is needed..."
