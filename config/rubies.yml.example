@@ -3,14 +3,14 @@ rvm-1.18.14.tar.gz:
   :md5: ef07d0373073113b9aaa0d2a00f64da1
   :path_prefix: packages/rvm/
   :url: https://github.com/wayneeseguin/rvm/archive/1.18.14.tar.gz
-ruby-2.0.0-p0.tar.bz2:
-  :md5: 895c1c581f8d28e8b3bb02472b2ccf6a
+ruby-2.0.0-p353.tar.bz2:
+  :md5: 20eb8f067d20f6b76b7e16cce2a85a55
   :path_prefix: ruby-lang/2.0/
-  :url: ftp://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.tar.bz2
-ruby-1.9.3-p392.tar.bz2:
-  :md5: a810d64e2255179d2f334eb61fb8519c
+  :url: ftp://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p353.tar.bz2
+ruby-1.9.3-p484.tar.bz2:
+  :md5: 03f5b08804927ceabe5122cb90f5d0a9
   :path_prefix: ruby-lang/1.9/
-  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p392.tar.bz2
+  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p484.tar.bz2
 ruby-1.9.2-p320.tar.bz2:
   :md5: b226dfe95d92750ee7163e899b33af00
   :path_prefix: ruby-lang/1.9/
@@ -19,15 +19,19 @@ ruby-1.9.1-p431.tar.bz2:
   :md5: 03179138ae95dbfae872ef49e9cc6da7
   :path_prefix: ruby-lang/1.9/
   :url: ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-p431.tar.bz2
-ruby-1.8.7-p371.tar.bz2:
-  :md5: c27526b298659a186bdb5107fcec2341
+ruby-1.8.7-p374.tar.bz2:
+  :md5: 83c92e2b57ea08f31187060098b2200b
   :path_prefix: ruby-lang/1.8/
-  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p371.tar.bz2
+  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p374.tar.bz2
 ruby-1.8.6-p420.tar.bz2:
   :md5: 1c7a978e9ffd4f56dc2ad74bbd2c34f3
   :path_prefix: ruby-lang/1.8/
   :url: ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.6-p420.tar.bz2
-rubygems-2.0.tgz:
+rubygems-2.1.7.tgz:
+  :md5: b721ed7d5fd57ed05f77eb21a3a592ee
+  :path_prefix: rubygems/
+  :url: http://production.cf.rubygems.org/rubygems/rubygems-2.1.7.tgz
+rubygems-2.0.0.tgz:
   :md5: 89ce467eb2d55657e9965a46559acbcf
   :path_prefix: rubygems/
   :url: http://production.cf.rubygems.org/rubygems/rubygems-2.0.0.tgz
@@ -83,10 +87,10 @@ openssl-0.9.8n.tar.gz:
   :md5: 076d8efc3ed93646bd01f04e23c07066
   :path_prefix: packages/openssl/
   :url: http://www.openssl.org/source/openssl-0.9.8n.tar.gz
-zlib-1.2.7.tar.gz:
+zlib-1.2.8.tar.gz:
   :md5: 60df6a37c56e7c1366cca812414f7b85
   :path_prefix: packages/zlib/
-  :url: http://zlib.net/zlib-1.2.7.tar.gz
+  :url: http://zlib.net/zlib-1.2.8.tar.gz
 autoconf-2.65.tar.gz:
   :md5: 46cfb40e0babf4c64f8325f03da81c9b
   :path_prefix: packages/autoconf/
@@ -115,10 +119,11 @@ libxslt-1.1.26.tar.gz:
   :md5: e61d0364a30146aaa3001296f853b2b9
   :path_prefix: packages/libxslt/
   :url: ftp://xmlsoft.org/libxslt/libxslt-1.1.26.tar.gz
-glib-2.23.1.tar.xz:
+glib-2.23.1.tar.gz:
   :md5: ea32c834a8c7b166e05aeaaa41a021f4
   :path_prefix: packages/glib/
-  :url: http://ftp.acc.umu.se/pub/gnome/sources/glib/2.23/glib-2.23.1tar.xz
+  :url: http://ftp.acc.umu.se/pub/gnome/sources/glib/2.23/glib-2.23.1.tar.gz
+#  :url: http://ftp.acc.umu.se/pub/gnome/sources/glib/2.23/glib-2.23.1tar.xz
 yaml-0.1.4.tar.gz:
   :md5: 36c852831d02cf90508c29852361d01b
   :path_prefix: packages/libyaml/
