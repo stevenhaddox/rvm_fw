@@ -72,11 +72,11 @@ namespace :boot do
     if File.exist?(File.expand_path("#{rubies_dir}/packages/yaml"))
       # Create symlink for libyaml
       puts "Creating symlink from yaml to libyaml\r\n\r\n"
-      `cd #{rubies_dir}/packages; ln -s yaml libyaml`
+      `ln -s #{rubies_dir}/packages/yaml #{rubies_dir}/packages/libyaml`
     elsif File.exist?(File.expand_path("#{rubies_dir}/packages/libyaml"))
       # Create symlink for yaml
       puts "Creating symlink from libyaml to yaml\r\n\r\n"
-      `cd #{rubies_dir}/packages; ln -s libyaml yaml`
+      `ln -s #{rubies_dir}/packages/libyaml #{rubies_dir}/packages/yaml`
     else
       puts "!"*80
       puts "libyaml / yaml package folder wasn't found, you probably want this to exist for MRI!\r\n\r\n"
