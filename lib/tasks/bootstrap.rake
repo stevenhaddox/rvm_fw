@@ -17,6 +17,9 @@ namespace :boot do
       # Nuke rvm package dir due to weird naming convention and avoiding duplicates
       # TODO: Patch downloading dupes and avoid nuking this directory
       FileUtils.rm_rf "#{rubies_dir}/packages/rvm"
+      # TODO: Fix this, for now nuke libyaml / yaml dir to avoid symlink errors
+      FileUtils.rm_rf "#{rubies_dir}/packages/libyaml"
+      FileUtils.rm_rf "#{rubies_dir}/packages/yaml"
     end
 
     # See if we have a custom rubies.yml file, if not use the .example default.
@@ -81,7 +84,6 @@ namespace :boot do
       puts "!"*80
       puts "libyaml / yaml package folder wasn't found, you probably want this to exist for MRI!\r\n\r\n"
     end
-    `cd #{app_root}`
 
   end
 
