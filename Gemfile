@@ -1,5 +1,6 @@
 source "http://rubygems.org"
 gem "haml", "~> 4.0"
+gem 'json', "~>1.8.0"
 gem "rake", "~> 10.0"
 gem "sinatra", :require => "sinatra/base"
 gem "thin"

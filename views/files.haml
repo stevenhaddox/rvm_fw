@@ -4,7 +4,7 @@
       %h3 Ruby Filename
     %div.md5.span6
       %h3 MD5 Hash
-  - @rubies.sort.reverse.each do |filename, params|
+  - @rubies.sort.each do |filename, params|
     %li.file
       %div.filename.span4.offset2
         %a{:href => "/rubies/#{params[:path_prefix]}#{filename}"} #{filename}
