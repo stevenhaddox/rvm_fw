@@ -87,10 +87,10 @@ openssl-0.9.8n.tar.gz:
   :md5: 076d8efc3ed93646bd01f04e23c07066
   :path_prefix: packages/openssl/
   :url: http://www.openssl.org/source/openssl-0.9.8n.tar.gz
-zlib-1.2.8.tar.gz:
+zlib-1.2.7.tar.gz:
   :md5: 60df6a37c56e7c1366cca812414f7b85
   :path_prefix: packages/zlib/
-  :url: http://zlib.net/zlib-1.2.8.tar.gz
+  :url: http://downloads.sourceforge.net/project/libpng/zlib/1.2.7/zlib-1.2.7.tar.gz
 autoconf-2.65.tar.gz:
   :md5: 46cfb40e0babf4c64f8325f03da81c9b
   :path_prefix: packages/autoconf/
