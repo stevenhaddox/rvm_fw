@@ -1,80 +1,59 @@
-%h2#rvm What is RVM?
+%h2#tldr Getting Started:
 
-%p
-  RVM stands for "Ruby Version Manager" and can be found online at:
-  %a{:href=>'http://rvm.io'} http://rvm.io
-%p In short, RVM allows you to install and manage multiple Ruby versions side by side on the same system easily. It also provides a means to install "gemsets" allowing you to group your gems together by application, Rails version, etc.
-
-%h2#rvm_fw What is RVM::FW (Firewall)?
-
-%p
-  RVM::FW is a simple Sinatra application that runs on a Phusion enabled webserver (but the config.ru can be easily modified for Mongrel, Thin, etc. to fit your needs).  This index page provides a brief explanation of how to use RVM in case you can't access the main RVM page and also explains how to replace your ~/.rvm/user/db file with the dynamically generated db file from RVM:FW which lists _only_ the available Ruby installs in this application.
-
-%h2#inspiration What inspired RVM::FW?
-
-%p
-  Many corporate environments restrict access to the outside web in order to limit the risk of downloading viruses or causing damage throughout the network unintentionally.  A lot of these places require special permission to download and install software.  I work in one of these places, but I still wanted to be able to use the same RVM setup I have at home at work (where I need it the most!)  In turn I dug around and decided the easiest way to use RVM without outside internet access was modifying RVM's ~/.rvm/user/db file to point to an internal website that had many of the same Ruby versions readily available to install.
-
-%h2#install_rvm_fw How do I use RVM::FW Rubies with RVM?
-
-%p
-  This is the easiest part.  Ensure that you have already
-  %a{:href => '#install_rvm'} installed RVM
-  on your OS X / Linux system and then download the
-  %a{:href => '/db'} customized database file with:
-  <pre>$ wget #{HOST}/db -O ~/.rvm/user/db</pre>
-  and the
-  %a{:href => '/known'} customized `known` file with:
-  <pre>$ mv ~/.rvm/config/known ~/.rvm/config/known.bak && wget #{HOST}/known -O ~/.rvm/config/known</pre>
-  This will override the default config settings and enable you to install any of the available Rubies within RVM::FW the same way you would at home.
-
-
-%h2#install_rvm How do I install RVM?
-
-%p
-  You can install RVM from the most recent RVM::FW compatible source by running:
-%pre
-  :preserve
-    $ bash < <( curl #{HOST}/releases/rvm-install-latest )
-
-%p What this script essentially does is the following, with some extra checks and tweaks:
+%h4#simple-install Installing &amp; Updating RVM via RVM::FW:
 
 %pre
   :preserve
-    version=$(curl #{HOST}/releases/stable-version.txt);
-    mkdir -p ~/.rvm/src/ && cd ~/.rvm/src/ && curl -O #{HOST}/releases/${version}.tar.gz | tar zxf - && cd ${version} && ./install
+    $ \curl #{HOST}/releases/rvm-install-latest | bash
+    $ wget #{HOST}/db -O ~/.rvm/user/db
+    $ wget #{HOST}/known -O ~/.rvm/config/known
+
+%h4#packages Packages (Optional)
 
 %p
-  The first time you install RVM, you must put the following line into your profile at the very end, after all path loads etc:
+  One of the biggest benefits of RVM over other Ruby environment managers is it's inclusion of source package installs. If you want to help optimize your Ruby install run the following before installing any Rubies:
 
 %pre
   :preserve
-    [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+    $ rvm pkg install libyaml
+    $ rvm pkg install zlib --verify-downloads 1
+    $ rvm pkg install readline
+    $ rvm pkg install iconv
+    $ rvm pkg install libxml2 --verify-downloads 1
+    $ rvm pkg install libxslt --verify-downloads 1
+    $ rvm pkg install ncurses --verify-downloads 1
+    $ rvm pkg install openssl
+    # NOTE: OpenSSL will install properly, but then throw an error if it can't download updated CA Certificates
+
+%h4#ruby-install Install Rubies
 
 %p
-  Doing so ensures rvm is loaded as a function (versus as a binary), ensuring commands such as rvm use work as expected. Please note that you can confirm this worked correctly by opening a new shell and running:
+  With system installed packages only:
 
 %pre
   :preserve
-    $ type rvm | head -n1
+    $ rvm list known
+    # Install a Ruby without RVM packages (defaulting to any system installed packages):
+    $ rvm install &lt;ruby_version&gt; --verify-downloads 1
+    # e.g.: rvm install ruby-2.0.0-p353 --verify-downloads 1
 
 %p
-  If this was performed correctly, you should see:
+  With RVM installed packages:
 
 %pre
   :preserve
-    rvm is a function
+    $ rvm list known
+    $ rvm install &lt;ruby_version&gt; --with-opt-dir=${HOME}/.rvm/usr --verify-downloads 1
+    # e.g.: rvm install ruby-2.0.0-p353 --with-opt-dir=${HOME}/.rvm/usr --verify-downloads 1
+
+%h2#about About RVM::FW:
+
+%h4#rvm_fw What is RVM::FW (Firewall)?
 
 %p
-  Next, you can manually load the new code into your current shell and start using RVM ! w00t!
+  RVM::FW is a simple Sinatra application that runs on any rack-enabled server.  It's main purpose is to host Ruby tarballs and library packages to facilitate easily installing Ruby via RVM, rbenv, chruby, etc. in a Intranet environment without Internet access.
 
-%pre
-  :preserve
-    $ source ~/.rvm/scripts/rvm
+%h4#inspiration What inspired RVM::FW?
 
 %p
-  Be sure to install any dependencies for your operating system by running:
-
-%pre
-  :preserve
-    $ rvm notes
+  Many corporate environments restrict access to the outside web in order to limit the risk of downloading viruses or causing damage throughout the network unintentionally.  A lot of these places require special permission to download and install software. I've worked on contracts in these Enterprise environments, but I still wanted to be able to use the same RVM setup I have at home where I worked and needed it most! In turn I dug around and decided the easiest way to use RVM without outside internet access was modifying RVM's ~/.rvm/user/db file to point to an internal website that had many of the same Ruby versions readily available to install.
