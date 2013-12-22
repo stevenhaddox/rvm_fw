@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+if hash wget 2>/dev/null; then
+  # Use wget
+  \wget -q -O - <%= HOST %>/releases/rvm-install-latest | bash
+  \wget -q <%= HOST %>/db -O ~/.rvm/user/db
+  \wget -q <%= HOST %>/known -O ~/.rvm/config/known
+else
+  # Use curl
+  \curl <%= HOST %>/releases/rvm-install-latest | bash
+  \curl -s <%= HOST %>/db -o ~/.rvm/user/db
+  \curl -s <%= HOST %>/known -o ~/.rvm/config/known
+fi
+
+source $HOME/.bash_profile
+source $HOME/.bashrc
+source $HOME/.rvm/scripts/rvm
+
+echo " "
+echo "*******************************************************************************"
+echo "Available Rubies via RVM::FW"
+echo "*******************************************************************************"
+echo " "
+rvm list known
+
+echo " "
+echo "*******************************************************************************"
+echo "Install with: "
+echo "rvm install <ruby_type-version-patch>"
+echo "e.g.: $ rvm install ruby-2.0.0-p353"
+echo "*******************************************************************************"

@@ -1,12 +1,13 @@
 %h2#tldr Getting Started:
 
-%h4#simple-install Installing &amp; Updating RVM via RVM::FW:
+%h4#rvm-install Install RVM and configuration files:
 
 %pre
   :preserve
-    $ \curl #{HOST}/releases/rvm-install-latest | bash
-    $ wget #{HOST}/db -O ~/.rvm/user/db
-    $ wget #{HOST}/known -O ~/.rvm/config/known
+    # Using curl:
+    $ \curl #{HOST}/install | bash
+    # Using wget:
+    $ \wget -q -O - #{HOST}/install | bash
 
 %h4#packages Packages (Optional)
 

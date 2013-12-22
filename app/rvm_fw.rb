@@ -27,6 +27,11 @@ class RvmFw < Sinatra::Base
     haml :index
   end
 
+  get '/install' do
+    content_type 'text/plain', :charset => 'utf-8'
+    erb :installer
+  end
+
   get '/db' do
     content_type 'text/plain', :charset => 'utf-8'
     erb :db
