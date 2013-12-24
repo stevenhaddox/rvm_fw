@@ -13,12 +13,19 @@ mkdir -p $rvm_path/src/
 
 builtin cd $rvm_path/src
 
-stable_version=$(curl -B <%= HOST %>/releases/stable-version.txt 2>/dev/null)
+if hash wget; then
+        stable_version=$(wget -O - <%= HOST %>/releases/stable-version.txt 2>/dev/null)
+else
+        stable_version=$(curl -B <%= HOST  %>/releases/stable-version.txt 2>/dev/null)
+fi
 
 echo "Installing RVM Version: ${stable_version}"
 
-curl -L "<%= HOST %>/rubies/packages/rvm/${stable_version}.tar.gz" -o "${stable_version}.tar.gz"
-
+if hash wget; then
+        wget -q "<%= HOST %>/rubies/packages/rvm/${stable_version}.tar.gz" -O "${stable_version}.tar.gz"
+else
+        curl -L "<%= HOST %>/rubies/packages/rvm/${stable_version}.tar.gz" -o "${stable_version}.tar.gz"
+fi
 
 # set name of folder we cd into after file is extracted
 rvm_src_dir=$(tar tzf "${stable_version}.tar.gz" | tail -1 | awk '{split ($0, a, "/"); print a[1]}')
