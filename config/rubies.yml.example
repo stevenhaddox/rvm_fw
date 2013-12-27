@@ -10,27 +10,27 @@ ruby-2.1.0.tar.bz2:
 ruby-2.0.0-p353.tar.bz2:
   :md5: 20eb8f067d20f6b76b7e16cce2a85a55
   :path_prefix: ruby-lang/2.0/
-  :url: ftp://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p353.tar.bz2
+  :url: http://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p353.tar.bz2
 ruby-1.9.3-p484.tar.bz2:
   :md5: 03f5b08804927ceabe5122cb90f5d0a9
   :path_prefix: ruby-lang/1.9/
-  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p484.tar.bz2
+  :url: http://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p484.tar.bz2
 ruby-1.9.2-p320.tar.bz2:
   :md5: b226dfe95d92750ee7163e899b33af00
   :path_prefix: ruby-lang/1.9/
-  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p320.tar.bz2
+  :url: http://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p320.tar.bz2
 ruby-1.9.1-p431.tar.bz2:
   :md5: 03179138ae95dbfae872ef49e9cc6da7
   :path_prefix: ruby-lang/1.9/
-  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-p431.tar.bz2
+  :url: http://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-p431.tar.bz2
 ruby-1.8.7-p374.tar.bz2:
   :md5: 83c92e2b57ea08f31187060098b2200b
   :path_prefix: ruby-lang/1.8/
-  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p374.tar.bz2
+  :url: http://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p374.tar.bz2
 ruby-1.8.6-p420.tar.bz2:
   :md5: 1c7a978e9ffd4f56dc2ad74bbd2c34f3
   :path_prefix: ruby-lang/1.8/
-  :url: ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.6-p420.tar.bz2
+  :url: http://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.6-p420.tar.bz2
 rubygems-2.1.11.tgz:
   :md5: b561b7aaa70d387e230688066e46e448
   :path_prefix: rubygems/

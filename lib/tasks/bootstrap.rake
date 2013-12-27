@@ -69,6 +69,17 @@ namespace :boot do
       end
     end
 
+    # Symlink Ruby 2.1.0+ files to fit old Ruby patch naming style:
+    sem_ver_rubies = {
+      '2.1' => '2.1.0'
+    }
+    sem_ver_rubies.each do |folder, version|
+      unless File.exist?(File.expand_path("#{rubies_dir}/ruby-lang/#{folder}/ruby-#{version}-p0.tar.bz2"))
+        puts "Creating symlink from MRI ruby-#{version}.tar.bz2 to ruby-#{version}-p0.tar.bz2\r\n\r\n"
+        File.symlink( "#{rubies_dir}/ruby-lang/#{folder}/ruby-#{version}.tar.bz2", "#{rubies_dir}/ruby-lang/#{folder}/ruby-#{version}-p0.tar.bz2" )
+      end
+    end
+
     # Symlink yaml dir to libyaml or vice-versa for backwards compatibility
     # We don't control the config/rubies.yml which dictates paths, so we'll be
     # dynamic to handle both possible situations. We're nice like that ;)
