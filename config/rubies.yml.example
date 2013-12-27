@@ -3,6 +3,10 @@ rvm-1.18.14.tar.gz:
   :md5: ef07d0373073113b9aaa0d2a00f64da1
   :path_prefix: packages/rvm/
   :url: https://github.com/wayneeseguin/rvm/archive/1.18.14.tar.gz
+ruby-2.1.0-p0.tar.bz2:
+  :md5: 1546eeb763ac7754365664be763a1e8f
+  :path_prefix: ruby-lang/2.1/
+  :url: http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0.tar.bz2
 ruby-2.0.0-p353.tar.bz2:
   :md5: 20eb8f067d20f6b76b7e16cce2a85a55
   :path_prefix: ruby-lang/2.0/
@@ -31,10 +35,6 @@ rubygems-2.1.11.tgz:
   :md5: b561b7aaa70d387e230688066e46e448
   :path_prefix: rubygems/
   :url: http://production.cf.rubygems.org/rubygems/rubygems-2.1.11.tgz
-rubygems-2.0.0.tgz:
-  :md5: 89ce467eb2d55657e9965a46559acbcf
-  :path_prefix: rubygems/
-  :url: http://production.cf.rubygems.org/rubygems/rubygems-2.0.0.tgz
 rubygems-1.8.25.tgz:
   :md5: 1376a258d43c53750a8df30e67853e10
   :path_prefix: rubygems/
