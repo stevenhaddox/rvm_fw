@@ -48,3 +48,7 @@ We're looking into [rendering the views for db.erb and known.erb dynamically](ht
 ## Special Thanks
 
 Special thanks to [those who've contributed](https://github.com/stevenhaddox/rvm_fw/contributors) and helped me maintain RVM::FW over the years.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/stevenhaddox/rvm_fw/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
