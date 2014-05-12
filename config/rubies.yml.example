@@ -95,14 +95,10 @@ curl-7.19.7.tar.gz:
   :md5: ecb2e37e45c9933e2a963cabe03670ab
   :path_prefix: packages/curl/
   :url: http://curl.haxx.se/download/curl-7.19.7.tar.gz
-openssl-1.0.1c.tar.gz:
-  :md5: ae412727c8c15b67880aef7bd2999b2e
+openssl-1.0.1g.tar.gz:
+  :md5: de62b43dfcd858e66a74bee1c834e959
   :path_prefix: packages/openssl/
-  :url: http://www.openssl.org/source/openssl-1.0.1c.tar.gz
-openssl-0.9.8n.tar.gz:
-  :md5: 076d8efc3ed93646bd01f04e23c07066
-  :path_prefix: packages/openssl/
-  :url: http://www.openssl.org/source/openssl-0.9.8n.tar.gz
+  :url: http://www.openssl.org/source/openssl-1.0.1g.tar.gz
 zlib-1.2.7.tar.gz:
   :md5: 60df6a37c56e7c1366cca812414f7b85
   :path_prefix: packages/zlib/
