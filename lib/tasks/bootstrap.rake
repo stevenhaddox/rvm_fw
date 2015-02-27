@@ -71,6 +71,7 @@ namespace :boot do
 
     # Symlink Ruby 2.1.0+ files to fit old Ruby patch naming style:
     sem_ver_rubies = {
+      '2.2' => '2.2.0',
       '2.1' => '2.1.0'
     }
     sem_ver_rubies.each do |folder, version|
