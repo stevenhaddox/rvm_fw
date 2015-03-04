@@ -3,6 +3,10 @@ rvm-1.18.14.tar.gz:
   :md5: ef07d0373073113b9aaa0d2a00f64da1
   :path_prefix: packages/rvm/
   :url: https://github.com/wayneeseguin/rvm/archive/1.18.14.tar.gz
+ruby-2.2.1.tar.bz2:
+  :md5:
+  :path_prefix: ruby-lang/2.2/
+  :url: http://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.1.tar.bz2
 ruby-2.2.0.tar.bz2:
   :md5:
   :path_prefix: ruby-lang/2.2/
