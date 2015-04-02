@@ -76,7 +76,7 @@ namespace :boot do
       '2.1' => '2.1.0'
     }
     sem_ver_rubies.each do |folder, version|
-      unless File.exist?(File.expand_path("#{RUBIES_PATH}/ruby-lang/#{folder}/ruby-#{version}-p0.tar.bz2"))
+      unless File.exist? "#{RUBIES_PATH}/ruby-lang/#{folder}/ruby-#{version}-p0.tar.bz2"
         puts "Creating symlink from MRI ruby-#{version}.tar.bz2 to ruby-#{version}-p0.tar.bz2\r\n\r\n"
         File.symlink( "#{RUBIES_PATH}/ruby-lang/#{folder}/ruby-#{version}.tar.bz2", "#{RUBIES_PATH}/ruby-lang/#{folder}/ruby-#{version}-p0.tar.bz2" )
       end
