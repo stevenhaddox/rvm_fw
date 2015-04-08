@@ -1,6 +1,8 @@
 require "rubygems"
 require "bundler/setup"
 
+require 'dotenv'
+Dotenv.load
 require 'sinatra'
 require 'fileutils'
 require 'digest/md5'
