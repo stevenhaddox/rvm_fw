@@ -39,7 +39,7 @@
     %footer#footer
       .container
         %p
-          %a{:href => "#{ENV['FOOTER_URL']}"} "#{ENV['FOOTER_TEXT']}"
+          %a{:href => "#{ENV['FOOTER_URL']}"} #{ENV['FOOTER_TEXT']}
 
     %script{:src => "#{ENV['HOST']}/javascripts/jquery-1.9.1.min.js"}
     %script{:src => "#{ENV['HOST']}/javascripts/bootstrap-collapse.js"}
