@@ -145,4 +145,9 @@ footer p a:link, footer p a:visited {
   color: $white;
 }
 
-article ul#files li.file { list-style-type: none; }
+article ul#files li.file {
+  list-style-type: none;
+  clear: both;
+  display: block;
+  width: 100%;
+}
