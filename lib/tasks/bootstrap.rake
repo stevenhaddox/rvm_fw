@@ -1,9 +1,10 @@
 require 'yaml'
+require 'dotenv/tasks'
 
 namespace :boot do
 
   desc "Download Rubies in config/rubies.yml, keep existing with: $ rake boot:strap KEEP=true"
-  task :strap do
+  task :strap => :dotenv do
 
     # Set common directory paths as variables for quick referencing
     IGNORED_FILES = ENV['IGNORED_FILES'] || ['.','..','.DS_Store','.git','.svn']

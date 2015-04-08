@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+gem 'dotenv', '~> 2.0'
 gem 'haml', '~> 3.1.8' # < 4.0 for Ruby 1.8.7
 gem 'json', '~>1.8.0'
 gem 'rake', '~> 10.0'
