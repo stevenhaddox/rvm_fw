@@ -3,10 +3,10 @@
     %title RVM::FW - Hidden Rubies for RVM
     %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
     %meta{'viewport' => 'width=device-width, initial-scale=1.0'}
-    %link{:href => '/stylesheets/styles.css', :media => 'screen, projection', :type => 'text/css', :rel => 'stylesheet'}
+    %link{:href => "#{ENV['HOST']}/stylesheets/styles.css", :media => 'screen, projection', :type => 'text/css', :rel => 'stylesheet'}
     /[if lt IE 9]
-      %script{:src => '/javascripts/html5shiv.js'}
-    %link{:rel => 'shortcut icon', :href => 'images/favicon.png'}
+      %script{:src => "#{ENV['HOST']}/javascripts/html5shiv.js"}
+        %link{:rel => 'shortcut icon', :href => "#{ENV['HOST']}/images/favicon.png"}
 
   %body
     #wrap
@@ -17,15 +17,15 @@
               %span.icon-bar
               %span.icon-bar
               %span.icon-bar
-            %a.brand{:href => '/'} RVM::FW
+            %a.brand{:href => "#{ENV['HOST']}"} RVM::FW
             .nav-collapse.collapse
               %ul.nav
                 %li
-                  %a{:href => '/files'} Rubies
+                  %a{:href => "#{ENV['HOST']}/files"} Rubies
                 %li
-                  %a{:href => '/db' } DB
+                  %a{:href => "#{ENV['HOST']}/db", :target => '_blank' } DB
                 %li
-                  %a{:href => '/known' } Known
+                  %a{:href => "#{ENV['HOST']}/known", :target => '_blank' } Known
 
       .container
         %header
@@ -39,7 +39,7 @@
     %footer#footer
       .container
         %p
-          %a{:href => 'https://github.com/stevenhaddox/rvm_fw'} Fork RVM::FW on GitHub
+          %a{:href => "#{ENV['FOOTER_URL']}"} #{ENV['FOOTER_TEXT']}
 
-    %script{:src => '/javascripts/jquery-1.9.1.min.js'}
-    %script{:src => '/javascripts/bootstrap-collapse.js'}
+    %script{:src => "#{ENV['HOST']}/javascripts/jquery-1.9.1.min.js"}
+    %script{:src => "#{ENV['HOST']}/javascripts/bootstrap-collapse.js"}
