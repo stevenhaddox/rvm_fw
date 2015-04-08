@@ -2,10 +2,8 @@ require 'yaml'
 require 'dotenv/tasks'
 
 namespace :boot do
-
   desc "Download Rubies in config/rubies.yml, keep existing with: $ rake boot:strap KEEP=true"
   task :strap => :dotenv do
-
     # Set common directory paths as variables for quick referencing
     IGNORED_FILES = ENV['IGNORED_FILES'] || ['.','..','.DS_Store','.git','.svn']
     APP_ROOT      = ENV['APP_ROOT']      || File.expand_path('../../..', __FILE__)
@@ -98,7 +96,5 @@ namespace :boot do
       puts "!"*80
       puts "libyaml / yaml package folder wasn't found, you probably want this to exist for MRI!\r\n\r\n"
     end
-
   end
-
 end
