@@ -15,19 +15,14 @@
       .navbar.navbar-fixed-top
         .navbar-inner
           .container
-            %button.btn.btn-navbar{:type => 'button', :data_toggle => 'collapse', :data_target => '.nav-collapse'}
-              %span.icon-bar
-              %span.icon-bar
-              %span.icon-bar
             %a.brand{:href => "#{ENV['HOST']}/"} RVM::FW
-            .nav-collapse.collapse
-              %ul.nav
-                %li
-                  %a{:href => "#{ENV['HOST']}/files"} Rubies
-                %li
-                  %a{:href => "#{ENV['HOST']}/db", :target => '_blank' } DB
-                %li
-                  %a{:href => "#{ENV['HOST']}/known", :target => '_blank' } Known
+            %ul.nav
+              %li
+                %a{:href => "#{ENV['HOST']}/files"} Rubies
+              %li
+                %a{:href => "#{ENV['HOST']}/db", :target => '_blank' } DB
+              %li
+                %a{:href => "#{ENV['HOST']}/known", :target => '_blank' } Known
 
       .container
         %header
