@@ -29,10 +29,6 @@ Just visit: `http(s)://<your_host>:<port>/db` to get a plain-text file that your
 
 You can also visit: `http(s)://<your_host>:<port>/known` to get a plain-text file that a user can be put into: `~.rvm/config/known`. This will provide a more a accurate list of available rubies when a user runs `rvm list known`.
 
-## I Want to Help!
-
-Add your idea or feature requests to the [issue tracker](https://github.com/stevenhaddox/rvm_fw/issues) or [Fork RVM::FW on GitHub](https://github.com/stevenhaddox/rvm_fw) and send me a pull request!
-
 ## Easter Egg
 
 **Bonus:** If you're an rbenv fan but still stuck in a restricted environment you can use RVM::FW as a simple way to host a central location to keep your Ruby source code. Accessing your desired version of Ruby for rbenv is as simple as querying `http(s)://<your_host>:<port>/public/rubies/<ruby_platform>/<ruby_specific_path>`. All the Ruby source paths & packages are easily discoverable within the [config/rubies.yml](config/rubies.yml.example) file.
@@ -45,10 +41,27 @@ We're looking into [rendering the views for db.erb and known.erb dynamically](ht
 * update [views/db.erb](views/db.erb)
 * update [views/known.erb](views/known.erb)
 
+# Development
+
+## CSS Styles
+
+Stylesheets are handled via the gems: `bootstrap-sass` && `compass`.
+
+To update bootstrap, update the version of `bootstrap-sass` and run `bundle update`
+
+If you modfy the variables (`sass/_boostrap_variables.scss`) or the main application styles (`sass/_rvmfw.scss`) then be sure to update the generated CSS files with the appropriate environment command:
+
+```
+$ bundle exec compass compile --output-style compressed -e production
+$ bundle exec compass compile --output-style nested -e development
+```
+
+## I Want to Help!
+
+Add your idea or feature requests to the [issue tracker](https://github.com/stevenhaddox/rvm_fw/issues) or [Fork RVM::FW on GitHub](https://github.com/stevenhaddox/rvm_fw) and send me a pull request!
+
 ## Special Thanks
 
 Special thanks to [those who've contributed](https://github.com/stevenhaddox/rvm_fw/contributors) and helped me maintain RVM::FW over the years.
 
-
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/stevenhaddox/rvm_fw/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-

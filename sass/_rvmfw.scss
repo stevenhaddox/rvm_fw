@@ -1,0 +1,138 @@
+// Sticky Footer
+$footer_height: 60px;
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: $footer_height;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: $footer_height;
+}
+body > .container {
+  padding-top: $footer_height;
+}
+
+// Application styles
+
+body {
+  background-color: $rvm_tan;
+  font-family: $sansFontFamily;
+}
+
+.navbar, .navbar-default, .navbar-fixed-top {
+  // height: 40px;
+  font-family: $monoFontFamily !important;
+  background-color: $rvm_red;
+  .navbar-header {
+    a.navbar-brand, a:link, a:visited, a:hover {
+      font-size: 1.35em;
+      color: $white !important;
+      font-weight: bold;
+    }
+  }
+  #rvmfw-navbar {
+    ul.nav {
+      font-size: 1.25em;
+      a:link, a:visited {
+        color: $rvm_tan !important;
+        font-weight: normal;
+      }
+      a:hover {
+        color: $white !important;
+        font-weight: bold !important;
+      }
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: $sansFontFamily; }
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: $rvm_red;
+  border-bottom: 1px solid $light_grey;
+}
+
+a:link, a:visited, a:hover {
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  color: $rvm_red;
+}
+
+a:hover {
+  color: $blue;
+}
+
+p, pre {
+  font-size: 1.1em;
+}
+
+pre {
+  margin-left: 1em;
+  margin-right: 1em;
+  border: 1px solid $rvm_red;
+  padding: 0.75em;
+  overflow: auto;
+  font-family: $monoFontFamily;
+}
+
+@mixin rounded_corners($radius: 15px) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+h1.title {
+  margin-top: 0.5em auto 0 !important;
+  padding: 0;
+  color: $rvm_red;
+  font-family: $monoFontFamily;
+}
+
+h2.description {
+  margin-top: 0 !important;
+  padding: 0 5px 5px;
+  text-align: center;
+  color: $dark_grey;
+}
+
+article { }
+
+footer {
+  background-color: $rvm_red;
+  color: $white;
+}
+footer > .container { display: table; }
+footer p {
+  height: $footer_height;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: $monoFontFamily;
+}
+
+footer p a:link, footer p a:visited {
+  color: $white;
+}
+
+article ul#files li.file {
+  list-style-type: none;
+  clear: both;
+  display: block;
+  width: 100%;
+}

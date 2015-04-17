@@ -13,7 +13,7 @@ gem 'mime-types', '~> 1.25.1'
 gem 'nokogiri', '~> 1.5.11'
 
 group :development do
-  gem 'bootstrap-sass', '~> 2.3.2.2'
+  gem 'bootstrap-sass', '~> 3.3.4'
   gem 'compass', '~> 0.12'
   gem 'foreman'
   gem 'travis-lint'
