@@ -5,8 +5,7 @@
 
 // Import Bootstrap for Sass
 @import "bootstrap";
-// Import Bootstrap responsive
-@import "bootstrap-responsive.min";
+// DO NOT IMPORT RESPONSIVE, causes menu issues at lower res w/ collapse plugin
 
 // Import RVM::FW styles
 @import "rvmfw";

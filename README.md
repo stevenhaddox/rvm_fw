@@ -52,8 +52,8 @@ To update bootstrap, update the version of `bootstrap-sass` and run `bundle upda
 If you modfy the variables (`sass/_boostrap_variables.scss`) or the main application styles (`sass/_rvmfw.scss`) then be sure to update the generated CSS files with the appropriate environment command:
 
 ```
-$ bundle exec compass compile --output-style compressed --force -e production
-$ bundle exec compass compile --output-style nested --force -e development
+$ bundle exec compass compile --output-style compressed -e production
+$ bundle exec compass compile --output-style nested -e development
 ```
 
 ## I Want to Help!
