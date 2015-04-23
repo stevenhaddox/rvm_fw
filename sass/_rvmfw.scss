@@ -99,15 +99,15 @@ pre {
   border-radius: $radius;
 }
 
-h1.title {
-  margin-top: 0.5em auto 0 !important;
+header h1.title {
+  margin: 0.5em auto 0;
   padding: 0;
   color: $rvm_red;
   font-family: $monoFontFamily;
 }
 
-h2.description {
-  margin-top: 0 !important;
+header h2.description {
+  margin-top: 0;
   padding: 0 5px 5px;
   text-align: center;
   color: $dark_grey;
