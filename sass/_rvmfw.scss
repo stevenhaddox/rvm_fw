@@ -28,12 +28,12 @@ body {
 
 .navbar, .navbar-default, .navbar-fixed-top {
   // height: 40px;
-  font-family: $monoFontFamily !important;
+  font-family: $monoFontFamily;
   background-color: $rvm_red;
   .navbar-header {
     a.navbar-brand, a:link, a:visited, a:hover {
       font-size: 1.35em;
-      color: $white !important;
+      color: $white;
       font-weight: bold;
     }
   }
@@ -41,18 +41,21 @@ body {
     ul.nav {
       font-size: 1.25em;
       a:link, a:visited {
-        color: $rvm_tan !important;
-        font-weight: normal;
+        color: $rvm_tan;
+        font-weight: bold;
       }
       a:hover {
-        color: $white !important;
-        font-weight: bold !important;
+        color: $rvm_tan;
+        font-weight: bold;
+        text-decoration: underline;
       }
     }
   }
 }
 
-h1, h2, h3, h4, h5, h6 { font-family: $sansFontFamily; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: $sansFontFamily;
+}
 
 h1 {
   text-align: center;
