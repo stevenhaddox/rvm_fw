@@ -7,6 +7,6 @@
   - @rubies.sort.each do |filename, params|
     %li.file
       %div.filename.col-md-4.col-md-offset-2
-        %a{:href => "/rubies/#{params[:path_prefix]}#{filename}"} #{filename}
+        %a{:href => "#{ENV['HOST']}/rubies/#{params[:path_prefix]}#{filename}"} #{filename}
       %div.md5.col-md-6
         #{params[:md5]}
