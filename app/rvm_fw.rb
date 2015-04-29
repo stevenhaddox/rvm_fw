@@ -62,6 +62,8 @@ class RvmFw < Sinatra::Base
 
   get '/files' do
     @rubies = Dir.glob('public/rubies/**/*.[a-zA-Z]*')
+    @rubies = @rubies.map{ |ruby| ruby unless ruby =~ /pre(.)$/}
+    @rubies = @rubies.compact if @rubies.include?(nil)
     haml :files
   end
 
