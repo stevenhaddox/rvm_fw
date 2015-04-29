@@ -3,14 +3,14 @@ rvm-1.18.14.tar.gz:
   :md5: ef07d0373073113b9aaa0d2a00f64da1
   :path_prefix: packages/rvm/
   :url: https://github.com/wayneeseguin/rvm/archive/1.18.14.tar.gz
-ruby-2.2.1.tar.bz2:
+ruby-2.2.2.tar.bz2:
   :md5:
   :path_prefix: ruby-lang/2.2/
-  :url: http://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.1.tar.bz2
-ruby-2.2.0.tar.bz2:
+  :url: http://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.2.tar.bz2
+ruby-2.1.6.tar.bz2:
   :md5:
-  :path_prefix: ruby-lang/2.2/
-  :url: http://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.0.tar.bz2
+  :path_prefix: ruby-lang/2.1/
+  :url: http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.6.tar.bz2
 ruby-2.1.5.tar.bz2:
   :md5:
   :path_prefix: ruby-lang/2.1/
@@ -19,18 +19,18 @@ ruby-2.1.0.tar.bz2:
   :md5: 1546eeb763ac7754365664be763a1e8f
   :path_prefix: ruby-lang/2.1/
   :url: http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0.tar.bz2
-ruby-2.0.0-p353.tar.bz2:
+ruby-2.0.0-p645.tar.bz2:
   :md5: 20eb8f067d20f6b76b7e16cce2a85a55
   :path_prefix: ruby-lang/2.0/
-  :url: http://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p353.tar.bz2
-ruby-1.9.3-p484.tar.bz2:
-  :md5: 03f5b08804927ceabe5122cb90f5d0a9
+  :url: http://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p645.tar.bz2
+ruby-1.9.3-p551.tar.bz2:
+  :md5:
   :path_prefix: ruby-lang/1.9/
-  :url: http://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p484.tar.bz2
-ruby-1.9.2-p320.tar.bz2:
-  :md5: b226dfe95d92750ee7163e899b33af00
+  :url: http://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p551.tar.bz2
+ruby-1.9.2-p330.tar.bz2:
+  :md5:
   :path_prefix: ruby-lang/1.9/
-  :url: http://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p320.tar.bz2
+  :url: http://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p330.tar.bz2
 ruby-1.9.1-p431.tar.bz2:
   :md5: 03179138ae95dbfae872ef49e9cc6da7
   :path_prefix: ruby-lang/1.9/
@@ -43,10 +43,14 @@ ruby-1.8.6-p420.tar.bz2:
   :md5: 1c7a978e9ffd4f56dc2ad74bbd2c34f3
   :path_prefix: ruby-lang/1.8/
   :url: http://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.6-p420.tar.bz2
-rubygems-2.1.11.tgz:
-  :md5: b561b7aaa70d387e230688066e46e448
+rubygems-2.4.6.tgz:
+  :md5:
   :path_prefix: rubygems/
-  :url: http://production.cf.rubygems.org/rubygems/rubygems-2.1.11.tgz
+  :url: http://production.cf.rubygems.org/rubygems/rubygems-2.4.6.tgz
+rubygems-1.8.29.tgz:
+  :md5:
+  :path_prefix: rubygems/
+  :url: http://production.cf.rubygems.org/rubygems/rubygems-1.8.29.tgz
 rubygems-1.8.25.tgz:
   :md5: 1376a258d43c53750a8df30e67853e10
   :path_prefix: rubygems/
@@ -55,10 +59,22 @@ rubygems-1.3.7.tgz:
   :md5: e85cfadd025ff6ab689375adbf344bbe
   :path_prefix: rubygems/
   :url: http://rubyforge.org/frs/download.php/70696/rubygems-1.3.7.tgz
+jruby-bin-9.0.0.0.pre1.tar.gz:
+  :md5:
+  :path_prefix: jruby/9.0.0.0.pre1/
+  :url: http://jruby.org.s3.amazonaws.com/downloads/9.0.0.0.pre1/jruby-bin-9.0.0.0.pre1.tar.gz
+jruby-bin-1.7.19.tar.gz:
+  :md5:
+  :path_prefix: jruby/1.7.19/
+  :url: http://jruby.org.s3.amazonaws.com/downloads/1.7.19/jruby-bin-1.7.19.tar.gz
 jruby-bin-1.7.10.tar.gz:
   :md5: c84fe9245a73f9cd29f56343b7d2e39a
   :path_prefix: jruby/1.7.10/
   :url: http://jruby.org.s3.amazonaws.com/downloads/1.7.10/jruby-bin-1.7.10.tar.gz
+jruby-bin-1.7.9.tar.gz:
+  :md5:
+  :path_prefix: jruby/1.7.9/
+  :url: http://jruby.org.s3.amazonaws.com/downloads/1.7.9/jruby-bin-1.7.9.tar.gz
 jruby-bin-1.7.8.tar.gz:
   :md5: 1e68f39d6dba7b6d9db81e24bb6b7d0a
   :path_prefix: jruby/1.7.8/
@@ -79,6 +95,14 @@ jruby-bin-1.6.8.tar.gz:
   :md5: a76ac5845640e4a1ebdfa74421efc935
   :path_prefix: jruby/1.6.8/
   :url: http://jruby.org.s3.amazonaws.com/downloads/1.6.8/jruby-bin-1.6.8.tar.gz
+rubinius-2.5.2.tar.bz2:
+  :md5:
+  :path_prefix: rbx/
+  :url: http://releases.rubini.us/rubinius-2.5.2.tar.bz2
+rubinius-2.4.1.tar.bz2:
+  :md5:
+  :path_prefix: rbx/
+  :url: http://releases.rubini.us/rubinius-2.4.1.tar.bz2
 rubinius-2.2.1.tar.bz2:
   :md5: 83c4d61d5fdb070d11babd867852277b
   :path_prefix: rbx/
@@ -107,10 +131,10 @@ curl-7.19.7.tar.gz:
   :md5: ecb2e37e45c9933e2a963cabe03670ab
   :path_prefix: packages/curl/
   :url: http://curl.haxx.se/download/curl-7.19.7.tar.gz
-openssl-1.0.1g.tar.gz:
-  :md5: de62b43dfcd858e66a74bee1c834e959
+openssl-1.0.1m.tar.gz:
+  :md5:
   :path_prefix: packages/openssl/
-  :url: http://www.openssl.org/source/openssl-1.0.1g.tar.gz
+  :url: http://www.openssl.org/source/openssl-1.0.1m.tar.gz
 zlib-1.2.7.tar.gz:
   :md5: 60df6a37c56e7c1366cca812414f7b85
   :path_prefix: packages/zlib/

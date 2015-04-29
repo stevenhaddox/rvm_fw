@@ -134,6 +134,7 @@ footer p a:link, footer p a:visited {
 }
 
 article ul#files li.file {
+  font-family: $monoFontFamily;
   list-style-type: none;
   clear: both;
   display: block;

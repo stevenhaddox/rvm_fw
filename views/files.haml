@@ -4,9 +4,9 @@
       %h3 Ruby Filename
     %div.md5.col-md-6
       %h3 MD5 Hash
-  - @rubies.sort.each do |filename, params|
+  - @rubies.sort.reverse.each do |ruby_path|
     %li.file
       %div.filename.col-md-4.col-md-offset-2
-        %a{:href => "#{ENV['HOST']}/rubies/#{params[:path_prefix]}#{filename}"} #{filename}
-      %div.md5.col-md-6
-        #{params[:md5]}
+        %a{:href => "#{ENV['HOST']}/#{ruby_path}"} #{ruby_path.split('/')[-1]}
+      %div.md5.col-md-6.code
+        = Digest::MD5.hexdigest(File.open(ruby_path, "rb") { |f| f.read })

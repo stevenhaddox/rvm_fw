@@ -31,7 +31,7 @@ namespace :boot do
       sleep 5
     end
 
-    # I Haz ALL the RUBIES!!!!
+    # All your rubies are belong to us.
     rubies = YAML::load_file(rubies_yaml_file)
     rubies.each do |ruby, params|
       unless File.exist? "#{RUBIES_PATH}/#{params[:path_prefix]}/#{ruby}"
@@ -69,21 +69,28 @@ namespace :boot do
       end
     end
 
-    # Symlink Ruby 2.1.0+ files to fit old Ruby patch naming style:
-    sem_ver_rubies = {
-      '2.2' => '2.2.0',
-      '2.1' => '2.1.0'
-    }
-    sem_ver_rubies.each do |folder, version|
-      unless File.symlink? "#{RUBIES_PATH}/ruby-lang/#{folder}/ruby-#{version}-p0.tar.bz2"
-        puts "Creating symlink from MRI ruby-#{version}.tar.bz2 to ruby-#{version}-p0.tar.bz2\r\n\r\n"
-        File.symlink( "#{RUBIES_PATH}/ruby-lang/#{folder}/ruby-#{version}.tar.bz2", "#{RUBIES_PATH}/ruby-lang/#{folder}/ruby-#{version}-p0.tar.bz2" )
+    # Symlink Ruby 2.1+ files to fit old Ruby patch naming convention:
+    sem_ver_rubies = %w(2.1 2.2)
+    sem_ver_rubies.each do |version|
+      Dir.glob("#{RUBIES_PATH}/ruby-lang/#{version}/*").each do |ruby_path|
+        # Skip the file if it is a symlink, we delete it before creating it l8r
+        next if File.symlink?(ruby_path)
+
+        # Determine if we need to create a symlink (any file without -p0)
+        unless ruby_path =~ /-p0/
+          # Determine the symlink to create
+          symlink_path = ruby_path.gsub('.tar.bz2', '-p0.tar.bz2')
+          FileUtils.rm symlink_path if File.symlink?(symlink_path)
+          puts "Creating symlink for #{ruby_path}"
+          puts "symlink_path: #{symlink_path}\r\n\r\n"
+          File.symlink( ruby_path, symlink_path )
+        end
       end
     end
 
     # Symlink yaml dir to libyaml or vice-versa for backwards compatibility
     # We don't control the config/rubies.yml which dictates paths, so we'll be
-    # dynamic to handle both possible situations. We're nice like that ;)
+    # dynamic and handle both possible situations. We're nice like that ;)
     if File.exist?(File.expand_path("#{RUBIES_PATH}/packages/yaml"))
       # Create symlink for libyaml
       puts "Creating symlink from yaml to libyaml\r\n\r\n"
