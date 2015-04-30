@@ -2,14 +2,14 @@
 
 if hash wget 2>/dev/null; then
   # Use wget
-  \wget -q -O - <%= HOST %>/releases/rvm-install-latest | bash
-  \wget -q <%= HOST %>/db -O ~/.rvm/user/db
-  \wget -q <%= HOST %>/known -O ~/.rvm/config/known
+  \wget -q -O - <%= RVM_HOST %>/releases/rvm-install-latest | bash
+  \wget -q <%= RVM_HOST %>/db -O ~/.rvm/user/db
+  \wget -q <%= RVM_HOST %>/known -O ~/.rvm/config/known
 else
   # Use curl
-  \curl <%= HOST %>/releases/rvm-install-latest | bash
-  \curl -s <%= HOST %>/db -o ~/.rvm/user/db
-  \curl -s <%= HOST %>/known -o ~/.rvm/config/known
+  \curl <%= RVM_HOST %>/releases/rvm-install-latest | bash
+  \curl -s <%= RVM_HOST %>/db -o ~/.rvm/user/db
+  \curl -s <%= RVM_HOST %>/known -o ~/.rvm/config/known
 fi
 
 source $HOME/.bash_profile
