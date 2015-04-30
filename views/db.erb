@@ -5,11 +5,11 @@ niceness=0
 interpreter=ruby
 default_ruby=ruby
 ruby_configure_flags=--disable-install-doc
-ruby_url=<%= HOST %>/rubies/ruby-lang
-ruby_2.1_url=<%= HOST %>/rubies/ruby-lang/2.1
-ruby_2.0_url=<%= HOST %>/rubies/ruby-lang/2.0
-ruby_1.9_url=<%= HOST %>/rubies/ruby-lang/1.9
-ruby_1.8_url=<%= HOST %>/rubies/ruby-lang/1.8
+ruby_url=<%= RVM_HOST %>/rubies/ruby-lang
+ruby_2.1_url=<%= RVM_HOST %>/rubies/ruby-lang/2.1
+ruby_2.0_url=<%= RVM_HOST %>/rubies/ruby-lang/2.0
+ruby_1.9_url=<%= RVM_HOST %>/rubies/ruby-lang/1.9
+ruby_1.8_url=<%= RVM_HOST %>/rubies/ruby-lang/1.8
 ruby_version=2.1.0
 ruby_2.1.0_patch_level=p0
 ruby_2.0.0_patch_level=p353
@@ -20,7 +20,7 @@ ruby_1.8.7_patch_level=p374
 ruby_1.8.6_patch_level=p420
 ruby_1.8.5_patch_level=p231
 
-rubygems_url=<%= HOST %>/rubies/rubygems
+rubygems_url=<%= RVM_HOST %>/rubies/rubygems
 rubygems_version=1.8.25
 ruby_2.1.0_rubygems_version=2.1.11
 ruby_2.0.0_rubygems_version=2.1.11
@@ -28,12 +28,12 @@ ruby_2.0.0_rubygems_version=2.1.11
 
 rbx_version=2.2.1
 rbx_1.2.4_patch_level=20110705
-rbx_url=<%= HOST %>/rubies/rbx
+rbx_url=<%= RVM_HOST %>/rubies/rbx
 
 ree_version=1.8.7
 ree_configure_flags=--dont-install-useful-gems --no-dev-docs
 ree_1.8.7_patch_level=2012.02
-ree_1.8.7_url=<%= HOST %>/rubies/ree
+ree_1.8.7_url=<%= RVM_HOST %>/rubies/ree
 
 jruby_version=1.7.10
 jruby_1.7.10_patch_level=
@@ -42,23 +42,23 @@ jruby_1.7.8_patch_level=
 jruby_1.7.5_patch_level=
 jruby_1.7.4_patch_level=
 jruby_1.7.3_patch_level=
-jruby_url=<%= HOST %>/rubies/jruby
+jruby_url=<%= RVM_HOST %>/rubies/jruby
 
-macruby_url=<%= HOST %>/rubies/macruby
+macruby_url=<%= RVM_HOST %>/rubies/macruby
 macruby_version=0.12
 
 # Packages
-readline_url=<%= HOST %>/rubies/packages/readline
-libiconv_url=<%= HOST %>/rubies/packages/iconv
-curl_url=<%= HOST %>/rubies/packages/curl
-openssl_url=<%= HOST %>/rubies/packages/openssl
+readline_url=<%= RVM_HOST %>/rubies/packages/readline
+libiconv_url=<%= RVM_HOST %>/rubies/packages/iconv
+curl_url=<%= RVM_HOST %>/rubies/packages/curl
+openssl_url=<%= RVM_HOST %>/rubies/packages/openssl
 openssl_version=1.0.1m
-zlib_url=<%= HOST %>/rubies/packages/zlib
-autoconf_url=<%= HOST %>/rubies/packages/autoconf
-ncurses_url=<%= HOST %>/rubies/packages/ncurses
-pkg-config_url=<%= HOST %>/rubies/packages/pkgconfig
-gettext_url=<%= HOST %>/rubies/packages/gettext
-libxml2_url=<%= HOST %>/rubies/packages/libxml2
-libxslt_url=<%= HOST %>/rubies/packages/libxslt
-yaml_url=<%= HOST %>/rubies/packages/libyaml
-glib_url=<%= HOST %>/rubies/packages/glib
+zlib_url=<%= RVM_HOST %>/rubies/packages/zlib
+autoconf_url=<%= RVM_HOST %>/rubies/packages/autoconf
+ncurses_url=<%= RVM_HOST %>/rubies/packages/ncurses
+pkg-config_url=<%= RVM_HOST %>/rubies/packages/pkgconfig
+gettext_url=<%= RVM_HOST %>/rubies/packages/gettext
+libxml2_url=<%= RVM_HOST %>/rubies/packages/libxml2
+libxslt_url=<%= RVM_HOST %>/rubies/packages/libxslt
+yaml_url=<%= RVM_HOST %>/rubies/packages/libyaml
+glib_url=<%= RVM_HOST %>/rubies/packages/glib
