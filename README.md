@@ -10,6 +10,8 @@ RVM::FW works really well to make it possible to use RVM (or rbenv even) inside 
 
         $ git clone git://github.com/stevenhaddox/rvm_fw.git
         $ bundle install
+        # For Ruby < 1.9.3 RVM::FW runs in production mode only:
+        $ bundle install --without development test
 
 2. [Create & modify config/rubies.yml](#adding-more-rubiez).
 
