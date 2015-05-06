@@ -47,10 +47,10 @@ rubygems-2.4.6.tgz:
   :md5:
   :path_prefix: rubygems/
   :url: http://production.cf.rubygems.org/rubygems/rubygems-2.4.6.tgz
-rubygems-2.0.15.tgz:
+rubygems-2.0.14.tgz:
   :md5:
   :path_prefix: rubygems/
-  :url: http://production.cf.rubygems.org/rubygems/rubygems-2.0.15.tgz
+  :url: http://production.cf.rubygems.org/rubygems/rubygems-2.0.14.tgz
 rubygems-1.8.29.tgz:
   :md5:
   :path_prefix: rubygems/
