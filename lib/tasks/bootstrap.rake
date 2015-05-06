@@ -69,25 +69,6 @@ namespace :boot do
       end
     end
 
-    # Symlink Ruby 2.1+ files to fit old Ruby patch naming convention:
-    sem_ver_rubies = %w(2.1 2.2)
-    sem_ver_rubies.each do |version|
-      Dir.glob("#{RUBIES_PATH}/ruby-lang/#{version}/*").each do |ruby_path|
-        # Skip the file if it is a symlink, we delete it before creating it l8r
-        next if File.symlink?(ruby_path)
-
-        # Determine if we need to create a symlink (any file without -p0)
-        unless ruby_path =~ /-p0/
-          # Determine the symlink to create
-          symlink_path = ruby_path.gsub('.tar.bz2', '-p0.tar.bz2')
-          FileUtils.rm symlink_path if File.symlink?(symlink_path)
-          puts "Creating symlink for #{ruby_path}"
-          puts "symlink_path: #{symlink_path}\r\n\r\n"
-          File.symlink( ruby_path, symlink_path )
-        end
-      end
-    end
-
     # Symlink yaml dir to libyaml or vice-versa for backwards compatibility
     # We don't control the config/rubies.yml which dictates paths, so we'll be
     # dynamic and handle both possible situations. We're nice like that ;)
