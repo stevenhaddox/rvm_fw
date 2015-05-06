@@ -47,14 +47,14 @@ rubygems-2.4.6.tgz:
   :md5:
   :path_prefix: rubygems/
   :url: http://production.cf.rubygems.org/rubygems/rubygems-2.4.6.tgz
-rubygems-2.0.14.tgz:
+rubygems-2.0.15.tgz:
   :md5:
   :path_prefix: rubygems/
-  :url: http://production.cf.rubygems.org/rubygems/rubygems-2.0.14.tgz
-rubygems-1.8.29.tgz:
+  :url: https://github.com/rubygems/rubygems/releases/download/v2.0.15/rubygems-2.0.15.tgz
+rubygems-1.8.30.tgz:
   :md5:
   :path_prefix: rubygems/
-  :url: http://production.cf.rubygems.org/rubygems/rubygems-1.8.29.tgz
+  :url: https://github.com/rubygems/rubygems/releases/download/v1.8.30/rubygems-1.8.30.tgz
 rubygems-1.8.25.tgz:
   :md5: 1376a258d43c53750a8df30e67853e10
   :path_prefix: rubygems/
