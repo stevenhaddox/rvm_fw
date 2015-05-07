@@ -1,5 +1,5 @@
 ---
-rvm-1.18.14.tar.gz:
+1.18.14.tar.gz:
   :md5: ef07d0373073113b9aaa0d2a00f64da1
   :path_prefix: packages/rvm/
   :url: https://github.com/wayneeseguin/rvm/archive/1.18.14.tar.gz
@@ -67,10 +67,6 @@ rubygems-1.3.5.tgz:
   :md5:
   :path_prefix: rubygems/
   :url: https://github.com/rubygems/rubygems/archive/v1.3.5.tar.gz
-jruby-bin-9.0.0.0.pre1.tar.gz:
-  :md5:
-  :path_prefix: jruby/9.0.0.0.pre1/
-  :url: http://jruby.org.s3.amazonaws.com/downloads/9.0.0.0.pre1/jruby-bin-9.0.0.0.pre1.tar.gz
 jruby-bin-1.7.19.tar.gz:
   :md5:
   :path_prefix: jruby/1.7.19/
