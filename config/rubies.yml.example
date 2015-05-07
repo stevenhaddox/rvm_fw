@@ -107,6 +107,14 @@ rubinius-2.5.2.tar.gz:
   :md5:
   :path_prefix: rbx/
   :url: https://github.com/rubinius/rubinius/archive/v2.5.2.tar.gz
+rubinius-2.4.1.tar.gz:
+  :md5:
+  :path_prefix: rbx/
+  :url: https://github.com/rubinius/rubinius/archive/v2.4.1.tar.gz
+rubinius-2.2.1.tar.gz:
+  :md5: 83c4d61d5fdb070d11babd867852277b
+  :path_prefix: rbx/
+  :url: https://github.com/rubinius/rubinius/archive/v2.2.1.tar.gz
 rubinius-1.4.6.tar.gz:
   :md5:
   :path_prefix: rbx/
