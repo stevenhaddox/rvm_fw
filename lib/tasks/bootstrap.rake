@@ -45,43 +45,14 @@ namespace :boot do
 
         # Download each ruby from params[:url]
         puts "Downloading #{ruby}..."
-        `wget --no-check-certificate #{params[:url]} -P #{RUBIES_PATH}/#{params[:path_prefix]}`
+        `wget --no-check-certificate #{params[:url]} -O #{RUBIES_PATH}/#{params[:path_prefix]}#{ruby}`
         puts "Completed download\r\n\r\n\r\n"
       else
         puts "-"*80
         puts "Skipping #{ruby}..."
-        puts "File already exists: #{RUBIES_PATH}/#{params[:path_prefix]}/#{ruby}"
+        puts "File already exists: #{RUBIES_PATH}/#{params[:path_prefix]}#{ruby}"
         puts "-"*80
         puts "\r\n\r\n"
-      end
-    end
-
-    # Rename rvm packages to fit old script naming style:
-    Dir.glob(File.expand_path("#{RUBIES_PATH}/packages/rvm/*")).each do |rvm_file|
-      unless File.basename(rvm_file).include? '.tar.gz'
-        puts "Renaming #{File.basename(rvm_file)} to rvm-#{File.basename(rvm_file)}.tar.gz\r\n\r\n"
-        File.rename( rvm_file, rvm_file.gsub( File.basename(rvm_file), "rvm-#{File.basename(rvm_file)}.tar.gz" ) )
-      end
-      # Symlink RVM's <version>.tar.gz to rvm-<version>.tar.gz so it's still downloadable
-      unless File.exists? "rvm-#{File.basename(rvm_file)}"
-        puts "Creating symlink from <version> to rvm-<version>\r\n\r\n"
-        File.symlink( rvm_file, "#{File.dirname(rvm_file)}/rvm-#{File.basename(rvm_file)}" )
-      end
-    end
-
-    # Symlink Rubinius Github download filename to RVM expected filename
-    Dir.glob("#{RUBIES_PATH}/rbx/*").each do |rbx_path|
-      # Skip the file if it is a symlink, we delete it before creating it l8r
-      next if File.symlink?(rbx_path)
-
-      # Determine if we need to create a symlink (any file without -p0)
-      unless rbx_path =~ /rubinius-/
-        # Determine the symlink to create
-        symlink_path = rbx_path.gsub('\/v', 'rubinius-')
-        FileUtils.rm symlink_path if File.symlink?(symlink_path)
-        puts "Creating symlink for #{rbx_path}"
-        puts "symlink_path: #{symlink_path}\r\n\r\n"
-        File.symlink( rbx_path, symlink_path )
       end
     end
 
