@@ -103,18 +103,18 @@ jruby-bin-1.6.8.tar.gz:
   :md5: a76ac5845640e4a1ebdfa74421efc935
   :path_prefix: jruby/1.6.8/
   :url: http://jruby.org.s3.amazonaws.com/downloads/1.6.8/jruby-bin-1.6.8.tar.gz
-rubinius-2.5.2.tar.bz2:
+rubinius-2.5.2.tar.gz:
   :md5:
   :path_prefix: rbx/
-  :url: http://releases.rubini.us/rubinius-2.5.2.tar.bz2
-rubinius-2.4.1.tar.bz2:
+  :url: https://github.com/rubinius/rubinius/archive/v2.5.2.tar.gz
+rubinius-2.4.1.tar.gz:
   :md5:
   :path_prefix: rbx/
-  :url: http://releases.rubini.us/rubinius-2.4.1.tar.bz2
-rubinius-2.2.1.tar.bz2:
+  :url: https://github.com/rubinius/rubinius/archive/v2.4.1.tar.gz
+rubinius-2.2.1.tar.gz:
   :md5: 83c4d61d5fdb070d11babd867852277b
   :path_prefix: rbx/
-  :url: http://releases.rubini.us/rubinius-2.2.1.tar.bz2
+  :url: https://github.com/rubinius/rubinius/archive/v2.2.1.tar.gz
 ruby-enterprise-1.8.7-2012.02.tar.gz:
   :md5: 8d086d2fe68a4c57ba76228e97fb3116
   :path_prefix: ree/

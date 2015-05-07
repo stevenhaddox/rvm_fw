@@ -69,6 +69,22 @@ namespace :boot do
       end
     end
 
+    # Symlink Rubinius Github download filename to RVM expected filename
+    Dir.glob("#{RUBIES_PATH}/rbx/*").each do |rbx_path|
+      # Skip the file if it is a symlink, we delete it before creating it l8r
+      next if File.symlink?(rbx_path)
+
+      # Determine if we need to create a symlink (any file without -p0)
+      unless rbx_path =~ /rubinius-/
+        # Determine the symlink to create
+        symlink_path = rbx_path.gsub('\/v', 'rubinius-')
+        FileUtils.rm symlink_path if File.symlink?(symlink_path)
+        puts "Creating symlink for #{rbx_path}"
+        puts "symlink_path: #{symlink_path}\r\n\r\n"
+        File.symlink( rbx_path, symlink_path )
+      end
+    end
+
     # Symlink yaml dir to libyaml or vice-versa for backwards compatibility
     # We don't control the config/rubies.yml which dictates paths, so we'll be
     # dynamic and handle both possible situations. We're nice like that ;)
