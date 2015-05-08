@@ -67,14 +67,14 @@ rubygems-1.3.5.tgz:
   :md5: d977bdf0d5af95abaf2bea0cc1d82dcf
   :path_prefix: rubygems/
   :url: https://github.com/rubygems/rubygems/archive/v1.3.5.tar.gz
-jruby-bin-9.0.0.0.pre1.tar.gz:
-  :md5: d5c8b30648348aa883f893d464d46bf1
+jruby-bin-9.0.0.0.pre2.tar.gz:
+  :md5:
   :path_prefix: jruby/9.0.0.0.pre1/
   :url: http://jruby.org.s3.amazonaws.com/downloads/9.0.0.0.pre1/jruby-bin-9.0.0.0.pre1.tar.gz
-jruby-bin-1.7.19.tar.gz:
-  :md5: bc38596757d8000d6ca4c4c3f8eacea6
-  :path_prefix: jruby/1.7.19/
-  :url: http://jruby.org.s3.amazonaws.com/downloads/1.7.19/jruby-bin-1.7.19.tar.gz
+jruby-bin-1.7.20.tar.gz:
+  :md5:
+  :path_prefix: jruby/1.7.20/
+  :url: http://jruby.org.s3.amazonaws.com/downloads/1.7.20/jruby-bin-1.7.20.tar.gz
 jruby-bin-1.7.10.tar.gz:
   :md5: c84fe9245a73f9cd29f56343b7d2e39a
   :path_prefix: jruby/1.7.10/
