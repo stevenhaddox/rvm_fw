@@ -46,6 +46,11 @@ class RvmFw < Sinatra::Base
     erb :known
   end
 
+  get '/packages' do
+    content_type 'text/plain', :charset => 'utf-8'
+    erb :packages
+  end
+
   get '/rubies/*' do
     file_path = params['splat'].is_a?(Array) ? params['splat'][0] : params['splat']
     # matches /rubies/filename.tar.gz, /rubies/filename.zip, etc.
