@@ -5,11 +5,13 @@ if hash wget 2>/dev/null; then
   \wget -q -O - <%= RVM_HOST %>/releases/rvm-install-latest | bash
   \wget -q <%= RVM_HOST %>/db -O ~/.rvm/user/db
   \wget -q <%= RVM_HOST %>/known -O ~/.rvm/config/known
+  \wget -q <%= RVM_HOST %>/packages -O ~/.rvm/config/packages
 else
   # Use curl
   \curl <%= RVM_HOST %>/releases/rvm-install-latest | bash
   \curl -s <%= RVM_HOST %>/db -o ~/.rvm/user/db
   \curl -s <%= RVM_HOST %>/known -o ~/.rvm/config/known
+  \curl -s <%= RVM_HOST %>/packages -o ~/.rvm/config/packages
 fi
 
 source $HOME/.bash_profile
@@ -27,5 +29,5 @@ echo " "
 echo "*******************************************************************************"
 echo "Install with: "
 echo "rvm install <ruby_type-version-patch>"
-echo "e.g.: $ rvm install ruby-2.1.0-p0"
+echo "e.g.: $ rvm install ruby-2.2.2"
 echo "*******************************************************************************"

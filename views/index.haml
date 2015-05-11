@@ -16,14 +16,14 @@
 
 %pre
   :preserve
-    $ rvm pkg install libyaml
+    $ rvm pkg install libyaml --verify-downloads 1
     $ rvm pkg install zlib --verify-downloads 1
-    $ rvm pkg install readline
-    $ rvm pkg install iconv
+    $ rvm pkg install readline --verify-downloads 1
+    $ rvm pkg install iconv --verify-downloads 1
     $ rvm pkg install libxml2 --verify-downloads 1
     $ rvm pkg install libxslt --verify-downloads 1
     $ rvm pkg install ncurses --verify-downloads 1
-    $ rvm pkg install openssl
+    $ rvm pkg install openssl --verify-downloads 1
     # NOTE: OpenSSL will install properly, but then throw an error if it can't download updated CA Certificates
 
 %h4#ruby-install Install Rubies
@@ -36,7 +36,7 @@
     $ rvm list known
     # Install a Ruby without RVM packages (defaulting to any system installed packages):
     $ rvm install &lt;ruby_version&gt; --verify-downloads 1
-    # e.g.: rvm install ruby-2.1.0-p0 --verify-downloads 1
+    # e.g.: rvm install ruby-2.2.2 --verify-downloads 1
 
 %p
   With RVM installed packages:
@@ -45,7 +45,7 @@
   :preserve
     $ rvm list known
     $ rvm install &lt;ruby_version&gt; --with-opt-dir=${HOME}/.rvm/usr --verify-downloads 1
-    # e.g.: rvm install ruby-2.1.0-p0 --with-opt-dir=${HOME}/.rvm/usr --verify-downloads 1
+    # e.g.: rvm install ruby-2.2.2 --with-opt-dir=${HOME}/.rvm/usr --verify-downloads 1
 
 %h2#about About RVM::FW:
 
