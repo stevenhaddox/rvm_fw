@@ -139,10 +139,10 @@ libiconv-1.13.1.tar.gz:
   :md5: 7ab33ebd26687c744a37264a330bbe9a
   :path_prefix: packages/iconv/
   :url: http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz
-curl-7.19.7.tar.gz:
-  :md5: ecb2e37e45c9933e2a963cabe03670ab
+curl-7.42.1.tar.gz:
+  :md5: 8df5874c4a67ad55496bf3af548d99a2
   :path_prefix: packages/curl/
-  :url: http://curl.haxx.se/download/curl-7.19.7.tar.gz
+  :url: http://curl.haxx.se/download/curl-7.42.1.tar.gz
 openssl-1.0.1m.tar.gz:
   :md5: d143d1555d842a069cb7cc34ba745a06
   :path_prefix: packages/openssl/

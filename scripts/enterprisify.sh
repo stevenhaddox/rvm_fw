@@ -1,5 +1,6 @@
 #!/bin/bash
 
+GREEN='\033[1;32m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
@@ -8,6 +9,9 @@ echo "Script directory: ${script_dir}"
 rubies_dir=$( cd "$( dirname "${script_dir}/../public/rubies/." )" && pwd )
 echo "Rubies directory: ${rubies_dir}"
 cd ${script_dir}
+
+# Import common files to delete that fail clamav or McAfee virus scans
+IFS=$'\r\n' GLOBIGNORE='*' :; flagged_files=($(cat ${script_dir}/../config/flagged_files.txt))
 
 source ${script_dir}/spinner.sh
 start_spinner "Loading dependencies..."
@@ -30,16 +34,15 @@ stop_spinner $?
 shopt -s globstar
 for file in ${rubies_dir}/**/* ; do
   if [ -f "$file" ]; then
-    printf "\r\n"
-    printf "\r\n"
+    printf "\r\n\r\n"
     dirpath=$(dirname "${file}")
     filename="$(basename "${file}")"
-    echo "Filename: $filename"
+    echo "Filename: ${filename}"
     echo "File: ${file}"
     cd "${dirpath}"
     start_spinner "Backing up..."
-    sleep 0.5
-    cp "$filename" "${filename}.bak"
+      sleep 0.5
+      cp "$filename" "${filename}.bak"
     stop_spinner $?
     start_spinner "Extracting ${filename}..."
       sleep 0.5
@@ -50,14 +53,30 @@ for file in ${rubies_dir}/**/* ; do
       printf "${RED}Extracted directory not found, skipping to next ruby...${NC}"
       continue
     fi
-    start_spinner "Removing .dat binaries..."
+    # Determine if any files need to be deleted
+    start_spinner "Removing files flagged by McAfee Enteprise or ClamAV..."
       sleep 0.5
-      find "./${extracted_dir}" -type f -name "*.dat" -exec rm -f {} \;
+      flagged_files_present=0
+      for flagged_file in ${flagged_files[@]} ; do
+        if [ -f "${rubies_dir}/${flagged_file}" ] ; then
+          flagged_files_present=1
+          rm "${rubies_dir}/${flagged_file}"
+          #printf "\r\n  ${RED}Removing flagged file: ${NC}${flagged_file}"
+        fi
+      done
     stop_spinner $?
-    start_spinner "Repackaging file..."
-      sleep 0.5
-      compress "${file}" "${extracted_dir}"
-    stop_spinner $?
+    if [ ${flagged_files_present} -eq 0 ] ; then
+      start_spinner "No files removed, restoring backup..."
+        sleep 0.5
+        mv "${filename}.bak" "${filename}"
+      stop_spinner $?
+    else
+      printf "${GREEN}Flagged files removed${NC}\r\n"
+      start_spinner "Repackaging file..."
+        sleep 0.5
+        compress "${file}" "${extracted_dir}"
+      stop_spinner $?
+    fi
     start_spinner "Cleaning up..."
       sleep 0.5
       # Remove extracted files (based upon last created directory)
@@ -72,5 +91,7 @@ for file in ${rubies_dir}/**/* ; do
     cd "${script_dir}"
   fi
 done
+
+# Display changed ruby files
 
 exit 0

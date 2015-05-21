@@ -28,10 +28,10 @@ function _spinner() {
 
     local on_success="DONE"
     local on_fail="FAIL"
-    local white="\e[1;37m"
-    local green="\e[1;32m"
-    local red="\e[1;31m"
-    local nc="\e[0m"
+    local white='\033[1;37m'
+    local green='\033[1;32m'
+    local red='\033[0;31m'
+    local nc='\033[0m' # No Color
 
     case $1 in
         start)
