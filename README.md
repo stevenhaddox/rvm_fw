@@ -19,6 +19,10 @@ RVM::FW works really well to make it possible to use RVM (or rbenv even) inside 
 
         $ bundle exec rake boot:strap
 
+Or, to keep pre-downloaded Rubies and just add to them:
+
+        $ KEEP=true bundle exe rake boot:strap
+
 4. Archive your local setup of RVM::FW and import it into your network.
 
 5. Deploy! RVM::FW is a simple Sinatra application so you can deploy it anywhere you have Ruby or Rack available internally!
@@ -42,6 +46,18 @@ We're looking into [rendering the views for db.erb and known.erb dynamically](ht
 * customize config/rubies.yml (defaults to: [config/rubies.yml.example](config/rubies.yml.example))
 * update [views/db.erb](views/db.erb)
 * update [views/known.erb](views/known.erb)
+
+Any rubies that are found in `/public/rubies` will be rendered dynamically in the `/rubies` route on the site. The MD5 sums will also be calculated dynamically to ensure users can compare original MD5s vs possibly modified RVM::FW MD5s.
+
+## Enterprise Concerns
+
+I've recently hit an issue when trying to import certain rubies into my corporate environment. The virus scanner fails on several files. I've tried to add these files to a flagged_file list in the config folder and written a bash script that will remove those files and repackage the ruby. All of these files seem Rdoc or test related thus far so the only real con is that the MD5 sum of the file changes, but at least it allows for automated importing of rubies for those who may hit similar issues with either the ClamAV or McAfee Enterprise virus scanners.
+
+To remove these files from your packages be sure to add any files you need to your `config/flagged_files.txt` file unless you are only using the default rubies.yml file. Then run:
+
+        $ ./scripts/enterprisify.sh
+
+This process will take a while as it has to extract each ruby / package file, scan for matching flagged files, remove them and then re-compress or restore the original file as needed.
 
 # Development
 

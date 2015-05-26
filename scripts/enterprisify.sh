@@ -46,7 +46,8 @@ for file in ${rubies_dir}/**/* ; do
     stop_spinner $?
     start_spinner "Extracting ${filename}..."
       sleep 0.5
-      extract "$file" >/dev/null 2>&1
+      file_args=("${filename}")
+      extract "${file_args[@]}" >/dev/null 2>&1
     stop_spinner $?
     extracted_dir=$(ls -tdr */ | tail -n1)
     if [ -z "${extracted_dir}" ]; then
@@ -74,7 +75,8 @@ for file in ${rubies_dir}/**/* ; do
       printf "${GREEN}Flagged files removed${NC}\r\n"
       start_spinner "Repackaging file..."
         sleep 0.5
-        compress "${file}" "${extracted_dir}"
+        file_args=("${file}" "${extracted_dir}")
+        compress "${file_args[@]}"
       stop_spinner $?
     fi
     start_spinner "Cleaning up..."

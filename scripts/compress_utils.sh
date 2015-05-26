@@ -2,67 +2,71 @@
 
 # Function to extract most file types
 function extract () {
+  local args_array=( "$@" )
+  local file="${args_array[0]}"
+
   if [ $# -lt 1 ]
   then
-    echo "Usage : $0 filename_with_path"
+    echo "Usage : $0 \"filename\""
     return 1
   fi
-  if [ -f $1 ] ; then
-    local filename="$(basename "${1}")"
-    cd $(dirname "${1}")
-    case $filename in
-      *.tar.bz2)  tar xjf $1    ;;
-      *.tar.gz)   tar xzf $1    ;;
-      *.tar.xz)   tar Jxf $1    ;;
-      *.bz2)      bunzip2 $1    ;;
-      *.rar)      unrar x $1    ;;
-      *.gz)       gunzip $1     ;;
-      *.tar)      tar xf $1     ;;
-      *.tbz2)     tar xjf $1    ;;
-      *.tgz)      tar xzf $1    ;;
-      *.zip)      unzip $1      ;;
-      *.Z)        uncompress $1 ;;
-      *.7z)       7z x $1       ;;
-      *)          echo "don't know how to extract '$1'..." && return 1 ;;
+
+  if [ -f "${file}" ] ; then
+    case $file in
+      *.tar.bz2)  tar xjf    "${file}" ;;
+      *.tar.gz)   tar xzf    "${file}" ;;
+      *.tar.xz)   tar Jxf    "${file}" ;;
+      *.bz2)      bunzip2    "${file}" ;;
+      *.rar)      unrar x    "${file}" ;;
+      *.gz)       gunzip     "${file}" ;;
+      *.tar)      tar xf     "${file}" ;;
+      *.tbz2)     tar xjf    "${file}" ;;
+      *.tgz)      tar xzf    "${file}" ;;
+      *.zip)      unzip      "${file}" ;;
+      *.Z)        uncompress "${file}" ;;
+      *.7z)       7z x       "${file}" ;;
+      *)          echo "don't know how to extract '${file}'..." && return 1 ;;
     esac
   else
-    echo "'$filename is not a valid file!"
+    echo "'$file is not a valid file!"
     return 1
   fi
 }
 
 # Function to compress most file types
 function compress () {
+  local args_array=( "$@" )
+  local file="${args_array[0]}"
+  local extracted_dir="${args_array[1]}"
+
   if [ $# -lt 2 ]
   then
-    echo "Usage : $0 target_filename_with_path extracted_folder"
+    echo "Usage : $0 \"target_filename\" \"extracted_directory\""
     return 1
   fi
-  if [ -f $1 ] ; then
-    local filename="$(basename "${1}")"
-    cd $(dirname "${1}")
+  if [ -f "${file}" ] ; then
     # Remove the file to be created if it already exists
-    if [ -e "${filename}" ]
+    if [ -e "${file}" ]
     then
-      rm "${filename}"
+      rm "${file}"
     fi
-    case $filename in
-      *.tar.bz2)  tar -cjf $1 $2 ;;
-      *.tar.gz)   tar -czf $1 $2 ;;
-      *.tar.xz)   tar -cJf $1 $2 ;;
-      *.bz2)      bzip2 $2       ;;
-      *.rar)      rar a $1 $2    ;;
-      *.gz)       gzip $2        ;;
-      *.tar)      tar -cf $1 $2  ;;
-      *.tbz2)     tar -cjf $1 $2 ;;
-      *.tgz)      tar -czf $1 $2 ;;
-      *.zip)      zip -r $1 $2   ;;
-      *.Z)        compress $2    ;;
-      *.7z)       7z a $1 $2     ;;
-      *)          echo "don't know how to compress '$1'..." && return 1 ;;
+    case $file in
+      *.tar.bz2)  tar -cjf $file $extracted_dir ;;
+      *.tar.gz)   tar -czf $file $extracted_dir ;;
+      *.tar.xz)   tar -cJf $file $extracted_dir ;;
+      *.bz2)      bzip2          $extracted_dir ;;
+      *.rar)      rar a    $file $extracted_dir ;;
+      *.gz)       gzip           $extracted_dir ;;
+      *.tar)      tar -cf  $file $extracted_dir ;;
+      *.tbz2)     tar -cjf $file $extracted_dir ;;
+      *.tgz)      tar -czf $file $extracted_dir ;;
+      *.zip)      zip -r   $file $extracted_dir ;;
+      *.Z)        compress       $extracted_dir ;;
+      *.7z)       7z a     $file $extracted_dir ;;
+      *)          echo "don't know how to compress '${file}'..." && return 1 ;;
     esac
   else
-    echo "'$filename' is not a valid compression type!"
+    echo "'$file' is not a valid compression type!"
     return 1
   fi
 }
