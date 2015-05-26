@@ -93,7 +93,4 @@ for file in ${rubies_dir}/**/* ; do
     cd "${script_dir}"
   fi
 done
-
-# Display changed ruby files
-
 exit 0
