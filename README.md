@@ -18,9 +18,7 @@ RVM::FW works really well to make it possible to use RVM (or rbenv even) inside 
 3. Download Rubiez and packages:  
 
         $ bundle exec rake boot:strap
-
-Or, to keep pre-downloaded Rubies and just add to them:
-
+        # Or, to keep pre-downloaded Rubies and just add to them:
         $ KEEP=true bundle exe rake boot:strap
 
 4. Archive your local setup of RVM::FW and import it into your network.
