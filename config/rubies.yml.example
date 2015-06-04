@@ -3,6 +3,22 @@
   :md5: ef07d0373073113b9aaa0d2a00f64da1
   :path_prefix: packages/rvm/
   :url: https://github.com/wayneeseguin/rvm/archive/1.18.14.tar.gz
+chruby-0.3.9.tar.gz:
+  :md5:
+  :path_prefix: packages/chruby/
+  :url: https://github.com/postmodern/chruby/archive/v0.3.9.tar.gz
+ruby-install-0.5.0.tar.gz:
+  :md5:
+  :path_prefix: packages/chruby/
+  :url: https://github.com/postmodern/ruby-install/archive/v0.5.0.tar.gz
+rbenv-5b9e4f05846f6bd03b09b8572142f53fd7a46e62.tar.gz:
+  :md5:
+  :path_prefix: packages/rbenv/
+  :url: https://github.com/sstephenson/rbenv/archive/5b9e4f05846f6bd03b09b8572142f53fd7a46e62.tar.gz
+ruby-build-e932d47195d76d6be9635a012056069e794039e0.tar.gz:
+  :md5:
+  :path_prefix: packages/rbenv/
+  :url: https://github.com/sstephenson/ruby-build/archive/e932d47195d76d6be9635a012056069e794039e0.tar.gz
 ruby-2.2.2.tar.bz2:
   :md5: af6eb4fa7247f1f7b2e19c8e6f3e3145
   :path_prefix: ruby-lang/2.2/

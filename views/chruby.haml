@@ -1,0 +1,78 @@
+%h2#tldr Using chruby with RVM::FW
+
+%p
+  chruby is an alternative environment manager to RVM. It is the least intrusive environment manager and is very well suited to system wide and production environment ruby installs.
+
+%p
+  The initial installation of chruby needs to be run either as the root user or with sudo privileges:
+
+%h3#chruby-install Installing chruby
+
+%pre
+  :preserve
+    # Download chruby with wget
+    $ wget -O chruby-#{CHRUBY_VERSION}.tar.gz #{RVM_HOST}/rubies/packages/chruby/chruby-#{CHRUBY_VERSION}.tar.gz
+    $ tar xzvf chruby-#{CHRUBY_VERSION}.tar.gz
+    $ cd chruby-#{CHRUBY_VERSION}
+    $ ./scripts/setup.sh
+
+%p
+  Once chruby is installed you need to source it either server-wise or on a per-user basis. To expose chruby to all users on the server add the following to the <code>/etc/profile.d/chruby.sh</code> file:
+
+%pre
+  :preserve
+    # /etc/profile.d/chruby.sh
+    if [ -n "$BASH_VERSION" ] || [ -n "$ZSH_VERSION" ]; then
+      source /usr/local/share/chruby/chruby.sh
+    fi
+    # Set MRI Ruby 2.2.2 as the default ruby on login
+    if [ -d "/opt/rubies/ruby-2.2.2" ]; then
+      chruby 2.2.2
+    fi
+
+%p
+  To enable chruby on a per-user basis instruct each user to add the following to their profile file:
+
+%pre
+  :preserve
+    # ~/.bashrc
+    source /usr/local/share/chruby/chruby.sh
+    # Set MRI Ruby 2.2.2 as the default ruby on login
+    chruby 2.2.2
+
+%p
+  After you've implemented loading chruby, restart your terminal / shell session.
+
+%h3#ruby-install Installing ruby-install
+
+%pre
+  :preserve
+    # Download ruby-install with wget
+    $ wget -O ruby-install-#{RUBY_INSTALL_VERSION}.tar.gz ${RVM_HOST}/rubies/packages/chruby/ruby-install-#{RUBY_INSTALL_VERSION}.tar.gz
+    $ tar xzvf ruby-install-#{RUBY_INSTALL_VERSION}.tar.gz
+    $ cd ruby-install-#{RUBY_INSTALL_VERSION}
+    $ sudo make install
+
+%h2#using-chruby Installing Rubies with chruby
+
+%p
+  Installing rubies with chruby and RVM::FW is easy. Simply copy the URL for the ruby you want to install from the
+  %a{:href => "#{RVM_HOST}/rubies"}RVM::FW Rubies
+  page and then use that URL:
+
+%pre
+  :preserve
+    # System wide ruby installation
+    sudo ruby-install --no-verify -u #{RVM_HOST}/rubies/ruby-lang/2.2/ruby-2.2.2.tar.bz2
+    
+    # Single user installation
+    ruby-install --no-verify -u #{RVM_HOST}/rubies/ruby-lang/2.2/ruby-2.2.2.tar.bz2
+
+%p
+  Once you've installed a ruby you can change rubies and verify it installed properly with:
+
+%pre
+  :preserve
+    $ chruby 2.2.2
+    $ ruby -v
+    #=> ruby 2.2p95...
