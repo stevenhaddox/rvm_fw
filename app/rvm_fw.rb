@@ -14,10 +14,14 @@ class RvmFw < Sinatra::Base
 
   before do
     #app variables
-    IGNORED_FILES ||= ENV['IGNORED_FILES'] || ['.','..','.DS_Store','.git','.svn']
-    APP_ROOT      ||= ENV['APP_ROOT']      || File.expand_path('../..', __FILE__)
-    RUBIES_PATH   ||= ENV['RUBIES_PATH']   || File.expand_path('../../public/rubies', __FILE__)
-    RVM_VERSION   ||= ENV['RVM_VERSION']   || '1.18.14'
+    IGNORED_FILES        ||= ENV['IGNORED_FILES'] || ['.','..','.DS_Store','.git','.svn']
+    APP_ROOT             ||= ENV['APP_ROOT']      || File.expand_path('../..', __FILE__)
+    RUBIES_PATH          ||= ENV['RUBIES_PATH']   || File.expand_path('../../public/rubies', __FILE__)
+    RVM_VERSION          ||= ENV['RVM_VERSION']
+    CHRUBY_VERSION       ||= ENV['CHRUBY_VERSION']
+    RUBY_INSTALL_VERSION ||= ENV['RUBY_INSTALL_VERSION']
+    RBENV_VERSION        ||= ENV['RBENV_VERSION']
+    RUBY_BUILD_VERSION   ||= ENV['RUBY_BUILD_VERSION']
     if ENV['HOST']
       HOST ||= ENV['HOST']
     else
@@ -91,6 +95,14 @@ class RvmFw < Sinatra::Base
   get '/md5' do
     content_type 'text/plain', :charset => 'utf-8'
     "I'll eventually return a customized ~/.rvm/config/md5 file if it is needed..."
+  end
+
+  get '/chruby' do
+    haml :chruby
+  end
+
+  get '/rbenv' do
+    haml :rbenv
   end
 
   # start the server if ruby file executed directly
