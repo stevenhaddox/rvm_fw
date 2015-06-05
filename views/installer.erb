@@ -1,22 +1,46 @@
 #!/usr/bin/env bash
 
-if hash wget 2>/dev/null; then
-  # Use wget
-  \wget -q -O - <%= RVM_HOST %>/releases/rvm-install-latest | bash
-  \wget -q <%= RVM_HOST %>/db -O ~/.rvm/user/db
-  \wget -q <%= RVM_HOST %>/known -O ~/.rvm/config/known
-  \wget -q <%= RVM_HOST %>/packages -O ~/.rvm/config/packages
+# Detect if it's a regular user install or server wide install
+if [ ${UID} -eq 0 ]; then
+  # server-wide install
+  if hash wget 2>/dev/null; then
+    # Use wget
+    \wget -q -O - <%= RVM_HOST %>/releases/rvm-install-latest | bash
+    \wget -q <%= RVM_HOST %>/db -O /usr/local/rvm/user/db
+    \wget -q <%= RVM_HOST %>/known -O /usr/local/rvm/config/known
+    \wget -q <%= RVM_HOST %>/packages -O /usr/local/rvm/config/packages
+    #\wget -q <%= RVM_HOST %>/md5 -O /usr/local/rvm/user/md5
+  else
+    # Use curl
+    \curl <%= RVM_HOST %>/releases/rvm-install-latest | bash
+    \curl -s <%= RVM_HOST %>/db -o /usr/local/rvm/user/db
+    \curl -s <%= RVM_HOST %>/known -o /usr/local/rvm/config/known
+    \curl -s <%= RVM_HOST %>/packages -o /usr/local/rvm/config/packages
+    #\curl -s <%= RVM_HOST %>/md5 -o /usr/local/rvm/user/md5
+  fi
+  if [ -f "/etc/profile" ]; then source /etc/profile; fi
+  if [ -f "/etc/bashrc" ]; then source /etc/bashrc; fi
+  if [ -f "/etc/bash.bashrc" ]; then source /etc/bash.bashrc; fi
+  if [ -f "/etc/profile.d/rvm.sh" ]; then source /etc/profile.d/rvm.sh; fi
 else
-  # Use curl
-  \curl <%= RVM_HOST %>/releases/rvm-install-latest | bash
-  \curl -s <%= RVM_HOST %>/db -o ~/.rvm/user/db
-  \curl -s <%= RVM_HOST %>/known -o ~/.rvm/config/known
-  \curl -s <%= RVM_HOST %>/packages -o ~/.rvm/config/packages
+  # normal install
+  if hash wget 2>/dev/null; then
+    # Use wget
+    \wget -q -O - <%= RVM_HOST %>/releases/rvm-install-latest | bash
+    \wget -q <%= RVM_HOST %>/db -O ~/.rvm/user/db
+    \wget -q <%= RVM_HOST %>/known -O ~/.rvm/config/known
+    \wget -q <%= RVM_HOST %>/packages -O ~/.rvm/config/packages
+  else
+    # Use curl
+    \curl <%= RVM_HOST %>/releases/rvm-install-latest | bash
+    \curl -s <%= RVM_HOST %>/db -o ~/.rvm/user/db
+    \curl -s <%= RVM_HOST %>/known -o ~/.rvm/config/known
+    \curl -s <%= RVM_HOST %>/packages -o ~/.rvm/config/packages
+  fi
+  source $HOME/.bash_profile
+  source $HOME/.bashrc
+  source $HOME/.rvm/scripts/rvm
 fi
-
-source $HOME/.bash_profile
-source $HOME/.bashrc
-source $HOME/.rvm/scripts/rvm
 
 echo " "
 echo "*******************************************************************************"
