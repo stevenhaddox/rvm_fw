@@ -20,6 +20,15 @@
     # Using wget:
     $ \wget -q -O - #{RVM_HOST}/install | bash
 
+%h4#rvm-install Multi-User (server-wide) RVM Install:
+
+%pre
+  :preserve
+    # Using curl:
+    $ \curl #{RVM_HOST}/install | sudo bash
+    # Using wget:
+    $ \wget -q -O - #{RVM_HOST}/install | sudo bash
+
 %h4#packages Packages (Optional)
 
 %p
