@@ -18,6 +18,7 @@ if [ ${UID} -eq 0 ]; then
     \curl -s <%= RVM_HOST %>/packages -o /usr/local/rvm/config/packages
     #\curl -s <%= RVM_HOST %>/md5 -o /usr/local/rvm/user/md5
   fi
+  echo "export rvm_path=/usr/local/rvm" > /etc/rvmrc
   if [ -f "/etc/profile" ]; then source /etc/profile; fi
   if [ -f "/etc/bashrc" ]; then source /etc/bashrc; fi
   if [ -f "/etc/bash.bashrc" ]; then source /etc/bash.bashrc; fi
@@ -55,3 +56,10 @@ echo "Install with: "
 echo "rvm install <ruby_type-version-patch>"
 echo "e.g.: $ rvm install ruby-2.2.2"
 echo "*******************************************************************************"
+
+if [ ${UID} -eq 0 ]; then
+  echo " "
+  echo "Run the following to add each user who needs to use RVM to the rvm group: "
+  echo "$ sudo usermod -aG rvm <user>"
+  echo "Finally you'll need to log out and log back in for RVM to work properly."
+fi
