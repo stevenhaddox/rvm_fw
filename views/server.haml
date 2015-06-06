@@ -1,17 +1,6 @@
 %h2#tldr Getting Started:
 
-%p
-  RVM::FW now also works with both
-  %strong
-    %a{:href => "#{RVM_HOST}/chruby"}chruby
-  and
-  %strong
-    %a{:href => "#{RVM_HOST}/rbenv"}rbenv
-
-%p
-  The below instructions will guide you through installing RVM with RVM::FW
-
-%h3#rvm-install Install RVM and configuration files:
+%h4#rvm-install Install RVM and configuration files:
 
 %pre
   :preserve
@@ -19,15 +8,6 @@
     $ \curl #{RVM_HOST}/install | bash
     # Using wget:
     $ \wget -q -O - #{RVM_HOST}/install | bash
-
-%h4#rvm-install Multi-User (server-wide) RVM Install:
-
-%pre
-  :preserve
-    # Using curl:
-    $ \curl #{RVM_HOST}/install | sudo bash
-    # Using wget:
-    $ \wget -q -O - #{RVM_HOST}/install | sudo bash
 
 %h4#packages Packages (Optional)
 
@@ -46,7 +26,7 @@
     $ rvm pkg install openssl --verify-downloads 1
     # NOTE: OpenSSL will install properly, but then throw an error if it can't download updated CA Certificates
 
-%h3#ruby-install Install Rubies
+%h4#ruby-install Install Rubies
 
 %p
   With system installed packages only:

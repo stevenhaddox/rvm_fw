@@ -1,0 +1,49 @@
+%h2#tldr Using rbenv with RVM::FW
+
+%p
+  rbenv is an alternative environment manager to RVM. It is a less intrusive environment manager and is intended to be used as a single-user environment manager.
+
+%h3#rbenv-install Installing rbenv
+
+%pre
+  :preserve
+    wget -O rbenv-#{RBENV_VERSION}.tar.gz #{RVM_HOST}/rubies/packages/rbenv/rbenv-#{RBENV_VERSION}.tar.gz
+    tar xzvf rbenv-#{RBENV_VERSION}.tar.gz
+    mv rbenv-#{RBENV_VERSION} ~/.rbenv
+    echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+    echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+    # Restart terminal / shell session
+    type rbenv
+
+%h3#ruby-build Installing ruby-build
+
+%p
+  ruby-build is a project to build rubies that works as an rbenv plugin.
+
+%pre
+  :preserve
+    mkdir ~/.rbenv/plugins
+    wget -O rbenv-#{RUBY_BUILD_VERSION}.tar.gz #{RVM_HOST}/rubies/packages/rbenv/ruby-build-#{RUBY_BUILD_VERSION}.tar.gz
+    tar xzvf ruby-build-#{RUBY_BUILD_VERSION}.tar.gz
+    mv ruby-build-#{RUBY_BUILD_VERSION} ~/.rbenv/plugins/ruby-build
+
+%h2#using-chruby Installing Rubies with rbenv
+
+%p
+  The easiest way to install
+  %a{:href => "#{RVM_HOST}/rubies"}RVM::FW Rubies
+  with rbenv is to download the ruby file into the rbenv cache directory and let rbenv install from the cache, like so:
+
+%pre
+  :preserve
+    # Create the default cache directory that ruby-build uses with rbenv
+    mkdir -p ~/.rbenv/cache
+    # Download the ruby you want into the cache directory:
+    wget #{RVM_HOST}/rubies/ruby-lang/2.2/ruby-2.2.2.tar.bz2 -O ~/.rbenv/cache/ruby-2.2.2.tar.bz2
+     
+    # If you're installing an MRI ruby be sure to modify the config file to reflect the RVM::FW bz2 format:
+    # e.g., edit the file: $HOME/.rbenv/plugins/ruby-build/share/ruby-build/2.2.2
+    install_package "ruby-2.2.2" "http://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.2.tar.bz2" ldflags_dirs standard verify_openssl
+     
+    # Then install the appropriate ruby with:
+    rbenv install 2.2.2
