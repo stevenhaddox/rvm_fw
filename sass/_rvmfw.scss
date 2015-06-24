@@ -139,4 +139,7 @@ article ul#files li.file {
   clear: both;
   display: block;
   width: 100%;
+  .filename {
+    text-align: right;
+  }
 }
