@@ -21,8 +21,10 @@ end
 
 group :test do
   gem 'capybara', '~> 2.0.3' # Ruby < 1.9.3 compatible
-  gem 'rubyzip', '~> 0.9.9' # Ruby < 1.9.3 compatible
+  gem 'codeclimate-test-reporter', require: nil
   gem 'cucumber-sinatra'
   gem 'cucumber'
   gem 'rspec'
+  gem 'rubocop'
+  gem 'rubyzip', '~> 0.9.9' # Ruby < 1.9.3 compatible
 end

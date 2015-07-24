@@ -6,5 +6,4 @@ rvm:
 # uncomment this line if your project needs to run something other than `rake`:
 before_install:
 - 'echo ''gem: --no-ri --no-rdoc'' > ~/.gemrc'
-script: bundle exec cucumber
-#script: bundle exec rspec spec
+script: bundle exec rake
