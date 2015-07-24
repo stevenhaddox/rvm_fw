@@ -1,9 +1,10 @@
 sudo: false
 language: ruby
 cache: bundler
-bundler_args: --without development --path=~/.bundle
+# bundler_args: --without development --path=~/.bundle
 rvm:
-  - 2.0.0
   - 1.9.3
+  - 2.0.0
+  - 2.2.2
 before_install:
 - 'echo ''gem: --no-ri --no-rdoc'' > ~/.gemrc'
