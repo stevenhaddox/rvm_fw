@@ -13,6 +13,21 @@ class RvmFw < Sinatra::Base
   set :root, File.expand_path('../',File.dirname(__FILE__))
 
   before do
+    # TODO: Change $VERBOSE to only set to nil in production environments
+    $VERBOSE = nil # Quiet warnings on duplicate initialization of constants
+
+    # Ruby 1.8.7 hack, constant must exist before ||= can be used
+    IGNORED_FILES        = nil
+    APP_ROOT             = nil
+    RUBIES_PATH          = nil
+    RVM_VERSION          = nil
+    CHRUBY_VERSION       = nil
+    RUBY_INSTALL_VERSION = nil
+    RBENV_VERSION        = nil
+    RUBY_BUILD_VERSION   = nil
+    HOST                 = nil
+    RVM_HOST             = nil
+
     #app variables
     IGNORED_FILES        ||= ENV['IGNORED_FILES'] || ['.','..','.DS_Store','.git','.svn']
     APP_ROOT             ||= ENV['APP_ROOT']      || File.expand_path('../..', __FILE__)

@@ -21,7 +21,7 @@ end
 
 group :test do
   gem 'capybara', '~> 2.0.3' # Ruby < 1.9.3 compatible
-  gem 'codeclimate-test-reporter', require: nil
+  gem 'codeclimate-test-reporter', :require => nil
   gem 'cucumber-sinatra'
   gem 'cucumber'
   gem 'rspec'

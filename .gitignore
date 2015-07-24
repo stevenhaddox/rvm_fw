@@ -1,6 +1,7 @@
 config/rubies.yml
 public/rubies
 coverage
+.env.*
 *.log
 .bundle
 .env
