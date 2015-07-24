@@ -1,9 +1,9 @@
+sudo: false
 language: ruby
-bundler_args: --without development --path=~/.bundle
+cache: bundler
 rvm:
-  - 2.0.0
   - 1.9.3
-# uncomment this line if your project needs to run something other than `rake`:
+  - 2.0.0
+  - 2.2.2
 before_install:
 - 'echo ''gem: --no-ri --no-rdoc'' > ~/.gemrc'
-script: bundle exec rake
