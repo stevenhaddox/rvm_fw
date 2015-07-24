@@ -1,3 +1,6 @@
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
 require File.dirname(__FILE__) + "/../app/rvm_fw.rb"
 require 'rubygems'
 require 'sinatra'
