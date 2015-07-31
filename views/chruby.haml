@@ -17,7 +17,7 @@
     $ ./scripts/setup.sh
 
 %p
-  Once chruby is installed you need to source it either server-wise or on a per-user basis. To expose chruby to all users on the server add the following to the <code>/etc/profile.d/chruby.sh</code> file:
+  Once chruby is installed you need to source it either server-wide or on a per-user basis. To expose chruby to all users on the server add the following to the <code>/etc/profile.d/chruby.sh</code> file:
 
 %pre
   :preserve
@@ -48,7 +48,7 @@
 %pre
   :preserve
     # Download ruby-install with wget
-    $ wget -O ruby-install-#{RUBY_INSTALL_VERSION}.tar.gz ${RVM_HOST}/rubies/packages/chruby/ruby-install-#{RUBY_INSTALL_VERSION}.tar.gz
+    $ wget -O ruby-install-#{RUBY_INSTALL_VERSION}.tar.gz #{RVM_HOST}/rubies/packages/chruby/ruby-install-#{RUBY_INSTALL_VERSION}.tar.gz
     $ tar xzvf ruby-install-#{RUBY_INSTALL_VERSION}.tar.gz
     $ cd ruby-install-#{RUBY_INSTALL_VERSION}
     $ sudo make install
