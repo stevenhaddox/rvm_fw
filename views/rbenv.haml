@@ -23,7 +23,7 @@
 %pre
   :preserve
     mkdir ~/.rbenv/plugins
-    wget -O rbenv-#{RUBY_BUILD_VERSION}.tar.gz #{RVM_HOST}/rubies/packages/rbenv/ruby-build-#{RUBY_BUILD_VERSION}.tar.gz
+    wget -O ruby-build-#{RUBY_BUILD_VERSION}.tar.gz #{RVM_HOST}/rubies/packages/rbenv/ruby-build-#{RUBY_BUILD_VERSION}.tar.gz
     tar xzvf ruby-build-#{RUBY_BUILD_VERSION}.tar.gz
     mv ruby-build-#{RUBY_BUILD_VERSION} ~/.rbenv/plugins/ruby-build
 
