@@ -36,6 +36,9 @@
               %a{:href => "#{RVM_HOST}/db", :target => '_blank' } DB
             %li
               %a{:href => "#{RVM_HOST}/known", :target => '_blank' } Known
+            - if ENV['CREDITS']
+              %li
+                %a{:href => "#{HOST}/credits"} Thanks
 
     .container
       %header
