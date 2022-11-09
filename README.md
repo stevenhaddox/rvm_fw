@@ -20,6 +20,8 @@ RVM::FW works really well to make it possible to use RVM (or rbenv even) inside 
         $ bundle exec rake boot:strap
         # Or, to keep pre-downloaded Rubies and just add to them:
         $ KEEP=true bundle exe rake boot:strap
+        # Launch the local webrick server:
+        $ bundle exec rackup config.ru  # Ensure you have configured your `.env` / ENV params appropriately
 
 4. Archive your local setup of RVM::FW and import it into your network.
 
