@@ -5,6 +5,7 @@ gem 'json', '~>1.8.0'
 gem 'rake', '~> 10.0'
 gem 'sinatra', :require => 'sinatra/base'
 gem 'rack'
+gem 'thin'
 
 # Important compatibility versions
 gem 'tilt', '~> 1.4.1'
