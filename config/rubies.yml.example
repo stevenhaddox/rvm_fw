@@ -19,6 +19,22 @@ ruby-build-e932d47195d76d6be9635a012056069e794039e0.tar.gz:
   :md5:
   :path_prefix: packages/rbenv/
   :url: https://github.com/sstephenson/ruby-build/archive/e932d47195d76d6be9635a012056069e794039e0.tar.gz
+ruby-3.1.2.tar.gz:
+  :md5:
+  :url: https://cache.ruby-lang.org/pub/ruby/3.1/ruby-3.1.2.tar.gz
+  :path_prefix: ruby-lang/3.1/
+ruby-3.0.4.tar.gz:
+  :md5:
+  :url: https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.4.tar.gz
+  :path_prefix: ruby-lang/3.0/
+ruby-2.7.6.tar.gz:
+  :md5:
+  :url: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz
+  :path_prefix: ruby-lang/2.7/
+ruby-2.6.10.tar.gz:
+  :md5:
+  :url: https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.10.tar.gz
+  :path_prefix: ruby-lang/2.6/
 ruby-2.3.1.tar.bz2:
   :md5:
   :url: https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.1.tar.bz2
@@ -31,42 +47,14 @@ ruby-2.1.9.tar.bz2:
   :md5:
   :path_prefix: ruby-lang/2.1/
   :url: http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.9.tar.bz2
-ruby-2.1.8.tar.bz2:
-  :md5:
-  :path_prefix: ruby-lang/2.1/
-  :url: http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.8.tar.bz2
-ruby-2.1.6.tar.bz2:
-  :md5: e1a8e6c6bfbb09bb7f8d6be8f508e4a1
-  :path_prefix: ruby-lang/2.1/
-  :url: http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.6.tar.bz2
-ruby-2.1.0.tar.bz2:
-  :md5: 1546eeb763ac7754365664be763a1e8f
-  :path_prefix: ruby-lang/2.1/
-  :url: http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0.tar.bz2
-ruby-2.0.0-p645.tar.bz2:
-  :md5: d576240c97cfcc3ed9bdc457eb1e8280
-  :path_prefix: ruby-lang/2.0/
-  :url: http://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p645.tar.bz2
 ruby-1.9.3-p551.tar.bz2:
   :md5: 0d8b272b05c3449dc848bb7570f65bfe
   :path_prefix: ruby-lang/1.9/
   :url: http://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p551.tar.bz2
-ruby-1.9.2-p330.tar.bz2:
-  :md5: 8ba4aaf707023e76f80fc8f455c99858
-  :path_prefix: ruby-lang/1.9/
-  :url: http://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p330.tar.bz2
-ruby-1.9.1-p431.tar.bz2:
-  :md5: 03179138ae95dbfae872ef49e9cc6da7
-  :path_prefix: ruby-lang/1.9/
-  :url: http://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-p431.tar.bz2
 ruby-1.8.7-p374.tar.bz2:
   :md5: 83c92e2b57ea08f31187060098b2200b
   :path_prefix: ruby-lang/1.8/
   :url: http://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p374.tar.bz2
-ruby-1.8.6-p420.tar.bz2:
-  :md5: 1c7a978e9ffd4f56dc2ad74bbd2c34f3
-  :path_prefix: ruby-lang/1.8/
-  :url: http://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.6-p420.tar.bz2
 rubygems-2.4.6.tgz:
   :md5: 5909df4829e5350ca431644322ea9e89
   :path_prefix: rubygems/
