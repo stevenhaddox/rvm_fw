@@ -1,3 +1,4 @@
+ruby '2.7.6', patchlevel: '219'
 source 'http://rubygems.org'
 gem 'dotenv', '~> 2.0'
 gem 'haml', '~> 3.1.8' # < 4.0 for Ruby 1.8.7
@@ -5,6 +6,7 @@ gem 'json', '~>1.8.0'
 gem 'rake', '~> 10.0'
 gem 'sinatra', :require => 'sinatra/base'
 gem 'rack'
+gem 'thin'
 
 # Important compatibility versions
 gem 'tilt', '~> 1.4.1'
